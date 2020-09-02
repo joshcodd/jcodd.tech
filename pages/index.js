@@ -1,6 +1,8 @@
 import Head from "next/head";
-import GlitchText from "../components/GlitchText/GlitchText";
+import Title from "../components/Title/Title.jsx";
 import Sidebar from "../components/Sidebar/Sidebar";
+import NavBar from "../components/NavBar/NavBar";
+import React from "react";
 
 export default function Home() {
   return (
@@ -11,8 +13,9 @@ export default function Home() {
       </Head>
 
       <div>
+        <NavBar />
         <Sidebar />
-        <GlitchText />
+        <Title />
       </div>
     </div>
   );

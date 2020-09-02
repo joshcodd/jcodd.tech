@@ -1,15 +1,17 @@
 .sidebar {
   position: fixed;
   height: 100vh;
-  width: 50px;
+  width: 60px;
+  top: 0px;
 }
 
 .name {
   position: fixed;
-  top: 0;
-  left: -45px;
+  top: 25px;
+  left: -40px;
   transform: rotate(-90deg);
-  font-family: "Playfair Display", serif;
-  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
   width: 150px;
 }
