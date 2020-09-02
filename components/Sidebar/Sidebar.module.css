@@ -1,0 +1,15 @@
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 50px;
+}
+
+.name {
+  position: fixed;
+  top: 0;
+  left: -45px;
+  transform: rotate(-90deg);
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  width: 150px;
+}
