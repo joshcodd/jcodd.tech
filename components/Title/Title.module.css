@@ -1,0 +1,45 @@
+.titleContainer {
+  margin-left: 60px;
+  margin-top: 30vh;
+  width: 80vw;
+}
+
+.glitchName {
+  position: relative;
+  margin-left: 200px;
+  top: -25px;
+}
+
+.glitchOther {
+  position: relative;
+  top: -100px;
+  margin-left: 150px;
+}
+
+.hiText {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  left: 100px;
+  top: 88px;
+  opacity: 0.9;
+}
+
+.imAText {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  left: 100px;
+  top: -205px;
+  opacity: 0.9;
+}
+
+.email {
+  position: relative;
+  top: 40px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  padding: 5px 20px;
+  font-weight: 100;
+  border-bottom: 2px solid black;
+}
