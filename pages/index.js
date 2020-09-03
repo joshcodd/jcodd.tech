@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Title from "../components/Title/Title.jsx";
-import Sidebar from "../components/Sidebar/Sidebar";
-import NavBar from "../components/NavBar/NavBar";
+import Title from "../components/Title.jsx";
+import Sidebar from "../components/Sidebar";
+import NavBar from "../components/NavBar";
 import styles from "../styles/index.module.css";
 import React from "react";
 
