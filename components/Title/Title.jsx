@@ -19,10 +19,6 @@ function Title() {
         </span>
         <a className={styles.email}>jjc21@live.co.uk</a>
       </div>
-
-      {/* <div className={styles.glitchOther}>
-        <GlitchText text="Full-Stack " />
-      </div> */}
     </div>
   );
 }

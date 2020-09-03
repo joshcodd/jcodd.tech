@@ -2,6 +2,7 @@ import Head from "next/head";
 import Title from "../components/Title/Title.jsx";
 import Sidebar from "../components/Sidebar/Sidebar";
 import NavBar from "../components/NavBar/NavBar";
+import styles from "../styles/index.module.css";
 import React from "react";
 
 export default function Home() {
@@ -13,9 +14,13 @@ export default function Home() {
       </Head>
 
       <div>
-        <NavBar />
-        <Sidebar />
-        <Title />
+        <section className={styles.home}>
+          <NavBar />
+          <Sidebar />
+          <Title />
+        </section>
+
+        <section className={styles.about}></section>
       </div>
     </div>
   );
