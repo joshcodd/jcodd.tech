@@ -1,36 +1,27 @@
 .titleContainer {
-  margin-left: 60px;
+  margin-left: 150px;
   margin-top: 30vh;
-  width: 80vw;
 }
 
 .glitchName {
   position: relative;
-  margin-left: 200px;
-  top: -25px;
-}
-
-.glitchOther {
-  position: relative;
-  top: -100px;
-  margin-left: 150px;
+  margin-left: 90px;
 }
 
 .hiText {
   position: relative;
-  font-family: "Playfair Display", serif;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
   font-size: 25px;
-  left: 100px;
-  top: 88px;
+  top: 110px;
   opacity: 0.9;
 }
 
 .imAText {
   position: relative;
-  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-family: "EB Garamond", serif;
   font-size: 25px;
-  left: 100px;
-  top: -205px;
   opacity: 0.9;
 }
 
@@ -38,8 +29,34 @@
   position: relative;
   top: 40px;
   font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  padding: 5px 20px;
+  font-size: 19px;
+  padding: 5px 40px;
   font-weight: 100;
   border-bottom: 2px solid black;
+  color: black;
+}
+
+.email::after {
+  position: absolute;
+  content: "";
+  background: rgb(22, 22, 22);
+  z-index: -1;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.email:hover {
+  color: white;
+}
+
+.email:hover:after {
+  color: white;
+  height: 100%;
 }
