@@ -7,101 +7,73 @@
 
 .colour {
   position: relative;
-  display: grid;
-
   mix-blend-mode: darken;
   color: transparent;
-  width: 350px;
-  height: 100px;
 }
 
 .pink {
   text-shadow: 0 0 1.5px #ff20ff;
-  animation: pinkAnimation 6s infinite;
 }
 
 .yellow {
-  /* left: -300px; */
-  top: -100px;
+  position: absolute;
+  left: 0;
   text-shadow: 0 0 1.5px #feff1f;
   animation: yellowAnimation 6s infinite;
 }
 
 .blue {
-  /* left: -600px; */
-  top: -200px;
+  position: absolute;
+  left: 0;
+
   text-shadow: 0 0 1.5px #20ffff;
   animation: blueAnimation 6s infinite;
 }
 
-@keyframes pinkAnimation {
-  0% {
-    transform: translate(2.5px, 2.5px);
-  }
-  65% {
-    transform: translate(2.5px, 2.5px);
-  }
-  69% {
-    transform: translate(2.5px, 2.5px);
-  }
-  70% {
-    transform: translate(2.5px, 2.5px);
-  }
-  73% {
-    transform: translate(2.5px, 2.5px);
-  }
-  74% {
-    transform: translate(2.5px, 2.5px);
-  }
-  100% {
-    transform: translate(2.5px, 2.5px);
-  }
-}
-
 @keyframes blueAnimation {
   0% {
-    transform: translate(0px, 0px);
+    transform: translate(-2.5px, -2.5px);
   }
   65% {
-    transform: translate(0px, 0px);
+    transform: translate(-2.5px, -2.5px);
   }
   69% {
-    transform: translate(0px, 0px);
+    transform: translate(2.5px, 2.5px);
   }
   70% {
-    transform: translate(2.5px, 2.5px);
+    transform: translate(0px, 0px);
   }
   73% {
-    transform: translate(2.5px, 2.5px);
+    transform: translate(0px, 0px);
   }
   74% {
-    transform: translate(0px, 0px);
+    transform: translate(-2.5px, -2.5px);
   }
   100% {
-    transform: translate(0px, 0px);
+    transform: translate(-2.5px, -2.5px);
   }
 }
 
 @keyframes yellowAnimation {
   0% {
-    transform: translate(5px, 5px);
+    transform: translate(2.5px, 2.5px);
   }
   65% {
-    transform: translate(5px, 5px);
+    transform: translate(2.5px, 2.5px);
   }
   69% {
-    transform: translate(5px, 5px);
+    transform: translate(-2.5px, -2.5px);
   }
   70% {
-    transform: translate(2.5px, 2.5px);
+    transform: translate(0px, 0px);
   }
   73% {
-    transform: translate(2.5px, 2.5px);
+    transform: translate(0px, 0px);
   }
   74% {
-    transform: translate(5px, 5px);
+    transform: translate(2.5px, 2.5px);
   }
   100% {
-    transform: translate(5px, 5px);
+    transform: translate(2.5px, 2.5px);
   }
 }

@@ -16,5 +16,5 @@
   border-radius: 100px;
   background-color: #e0e0e0;
 
-  transition: all ease-in-out 1s;
+  transition: all ease-out 0.5s;
 }
