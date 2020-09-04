@@ -14,10 +14,10 @@ const Title = styled.div`
   display: inline-block;
   float: right;
   width: 50%;
-  font-family: "Nunito", sans-serif;
-  font-size: 25px;
-  font-weight: 100;
-  margin-top: 20vh;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 20vh 0 15px 0;
 `;
 
 const SubHeading = styled.div`
@@ -44,9 +44,12 @@ const AboutContent = styled.div`
   display: inline-block;
   float: right;
   width: 50%;
-  font-family: "Nunito", sans-serif;
-  font-size: 15px;
+  font-family: "EB Garamond", serif;
+  line-height: 26px;
+  font-size: 17px;
   font-weight: 100;
+  font-style: normal;
+
   margin: 0 0 20px 0;
 `;
 
@@ -80,12 +83,9 @@ function About() {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor
         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-        qui officia deserunt mollit anim id est laborum.
+        pariatur.
       </AboutContent>
 
       <TagContainer>
