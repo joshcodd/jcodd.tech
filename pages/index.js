@@ -3,6 +3,7 @@ import Title from "../components/Title.jsx";
 import Sidebar from "../components/Sidebar";
 import NavBar from "../components/NavBar";
 import About from "../components/About";
+import Projects from "../components/Projects";
 import styles from "../styles/index.module.css";
 import React from "react";
 
@@ -26,7 +27,9 @@ export default function Home() {
           <About />
         </section>
 
-        <section className={styles.projects}></section>
+        <section className={styles.projects}>
+          <Projects />
+        </section>
       </div>
     </div>
   );
