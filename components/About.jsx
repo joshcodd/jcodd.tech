@@ -50,6 +50,7 @@ const AboutContent = styled.div`
   font-size: 17px;
   font-weight: 100;
   font-style: normal;
+
   margin: 0 0 20px 0;
 `;
 

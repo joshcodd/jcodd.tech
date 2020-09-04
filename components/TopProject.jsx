@@ -4,14 +4,13 @@ import styled from "styled-components";
 
 const TopProjectContainer = styled.div`
   width: 80%;
-  height: 50%;
-  margin: 30px auto 0 auto;
+  height: 350px;
+  margin: 80px auto 150px auto;
 `;
 
 const ProjectTitle = styled.div`
   display: inline-block;
-  position: relative;
-  padding: 10px 40px;
+  padding: 20px 80px;
   border-radius: 2px;
   background-color: white;
   font-family: "Nunito", sans-serif;
@@ -26,7 +25,6 @@ const ProjectImage = styled.img`
   display: inline-block;
   position: relative;
   width: 50%;
-  margin: 70px 0 0 0;
   height: auto;
   border-radius: 5px;
   float: ${(props) => (props.float === "right" ? "right" : "left")};
@@ -65,8 +63,8 @@ function TopProject(props) {
       <ProjectDescription float={textFloat}>{description}</ProjectDescription>
 
       <ProjectTagContainer float={textFloat}>
-        {tags.map((tag) => {
-          return <Tag text={tag} />;
+        {tags.map((tag, index) => {
+          return <Tag key={index} text={tag} />;
         })}
       </ProjectTagContainer>
     </TopProjectContainer>
