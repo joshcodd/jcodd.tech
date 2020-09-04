@@ -1,11 +1,16 @@
 .home {
   margin: 0;
-  height: 65vh;
+  height: 100vh;
   width: 100vw;
 }
 
 .about {
   height: 100vh;
   width: 100vw;
-  background-color: rgb(247, 247, 247);
+  /* background-color: rgb(247, 247, 247); */
+}
+
+.projects {
+  height: 100vh;
+  width: 100vw;
 }

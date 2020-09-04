@@ -3,8 +3,8 @@ import GlitchText from "./GlitchText";
 import styled from "styled-components";
 
 const TitleContainer = styled.div`
-  margin-left: 150px;
-  margin-top: 35vh;
+  margin-left: 15vw;
+  padding-top: 35vh;
 `;
 
 const GlitchName = styled.div`
