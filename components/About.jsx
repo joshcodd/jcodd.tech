@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import GlitchImage from "./GlitchImage";
+import Tag from "./Tag";
 import styled from "styled-components";
 
 const AboutContainer = styled.div`
@@ -49,20 +50,7 @@ const AboutContent = styled.div`
   font-size: 17px;
   font-weight: 100;
   font-style: normal;
-
   margin: 0 0 20px 0;
-`;
-
-const Tag = styled.div`
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2px 10px;
-  margin: 0 7px 5px 0;
-
-  font-family: "Nunito", sans-serif;
-  font-size: 13px;
-  font-weight: 100;
 `;
 
 const TagContainer = styled.div`
@@ -90,28 +78,28 @@ function About() {
 
       <TagContainer>
         <SubHeading>Languages</SubHeading>
-        <Tag>Java</Tag>
-        <Tag>Javascript</Tag>
-        <Tag>React</Tag>
-        <Tag>Git</Tag>
-        <Tag>Javsdfsfda</Tag>
-        <Tag>Javdfascript</Tag>
-        <Tag>Readct</Tag>
-        <Tag>Git</Tag>
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
       </TagContainer>
 
       <TagContainer>
         <SubHeading>Frameworks</SubHeading>
-        <Tag>Neewext JS</Tag>
-        <Tag>Jawewva</Tag>
-        <Tag>Jadwvascript</Tag>
-        <Tag>Reewact</Tag>
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
+        <Tag text="Java" />
       </TagContainer>
 
       <TagContainer>
         <SubHeading>Tools</SubHeading>
-        <Tag>Neewext JS</Tag>
-        <Tag>Jawewva</Tag>
+        <Tag text="Java" />
+        <Tag text="Java" />
       </TagContainer>
     </AboutContainer>
   );
