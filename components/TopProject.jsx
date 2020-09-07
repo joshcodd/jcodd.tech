@@ -31,7 +31,6 @@ const ProjectContent = styled.div`
 const ProjectTitle = styled.div`
   display: inline-block;
   font-family: "Playfair Display", serif;
-
   font-weight: 100;
   font-size: 25px;
 `;

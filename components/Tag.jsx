@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const TagStyle = styled.div`
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #242424;
   border-radius: 5px;
   padding: 2px 10px;
   margin: 0 7px 5px 0;

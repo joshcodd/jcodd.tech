@@ -36,13 +36,13 @@ const pinkAnimation = keyframes`
     transform: translate(0px, 0px) skew(-10deg);
   }
   7% {
-    transform: translate(2.5px, 2.5px) ;
+    transform: translate(-4px, 0px) ;
   }
   8% {
-   transform: translate(-2.5px, -2.5px) skew(-20deg);
+   transform: translate(2.5px, -2.5px) skew(-20deg);
   }
   9% {
-    transform: translate(-2.5px, -2.5px) skew(10deg);
+    transform: translate(7.5px, -2.5px) skew(10deg);
   }
   10% {
     transform: translate(0px, 0px);
@@ -51,10 +51,10 @@ const pinkAnimation = keyframes`
     transform: translate(0px, 0px);
   }
   14% {
-    transform: translate(17px, -2.5px) ;
+    transform: translate(0px, 0px) ;
   }
   15% {
-   transform: translate(-2.5px, -2.5px) skew(-10deg);
+   transform: translate(60px, 0px) skew(-10deg);
   }
   16% {
    transform: translate(0px, 0px) ;
@@ -145,7 +145,7 @@ const blueAnimation = keyframes`
     transform: translate(0px, 0px)skew(-10deg);
   }
   7% {
-   transform: translate(20px, -2.5px) ;
+   transform: translate(-50px, -2.5px) ;
   }
   7.5% {
    transform: translate(2.5px, 2.5px) skew(-20deg);

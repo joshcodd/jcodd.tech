@@ -16,6 +16,7 @@ const NameLogo = styled.div`
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 18px;
+  color: #242424;
   width: 150px;
 `;
 

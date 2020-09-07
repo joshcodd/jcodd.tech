@@ -39,12 +39,12 @@ const Email = styled.div`
   padding: 5px 40px;
   font-weight: 100;
   border-bottom: 2px solid #2f2f2f;
-  color: black;
+  color: #242424;
 
   ::after {
     position: absolute;
     content: "";
-    background: #2f2f2f;
+    background: #242424;
     z-index: -1;
     height: 0;
     left: 0;

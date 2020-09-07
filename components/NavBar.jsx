@@ -29,7 +29,7 @@ const NavItem = styled.li`
 const TopHalf = styled.a`
   position: absolute;
   text-decoration: none;
-  color: black;
+  color: #242424;
   clip-path: inset(0% 0% 50% 0px);
 
   ${NavItem}:hover & {
@@ -40,7 +40,7 @@ const TopHalf = styled.a`
 const BottomHalf = styled.a`
   position: relative;
   text-decoration: none;
-  color: black;
+  color: #242424;
   clip-path: inset(50% 0px 0px 0px);
 
   ${NavItem}:hover & {

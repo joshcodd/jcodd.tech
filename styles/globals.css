@@ -11,4 +11,6 @@ body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  color: #242424;
+  /* color: #2e3a16; */
 }

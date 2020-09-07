@@ -7,7 +7,7 @@ const ModeSwitch = styled.div`
   display: inline-block;
   width: 40px;
   height: 16px;
-  border: 1px solid black;
+  border: 1px solid #242424;
   border-radius: 50px;
   background-color: #fff;
 `;
