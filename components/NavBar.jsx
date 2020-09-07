@@ -26,18 +26,43 @@ const NavItem = styled.li`
   font-weight: 100;
 `;
 
+const TopHalf = styled.a`
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  clip-path: inset(0% 0% 50% 0px);
+
+  ${NavItem}:hover & {
+    transform: translate(7.5px, 0px);
+  }
+`;
+
+const BottomHalf = styled.a`
+  position: relative;
+  text-decoration: none;
+  color: black;
+  clip-path: inset(50% 0px 0px 0px);
+
+  ${NavItem}:hover & {
+    left: -5px;
+  }
+`;
+
 function NavBar() {
   return (
     <Navbar>
       <NavList>
         <NavItem>
-          <a>ABOUT</a>
+          <TopHalf href="#about">ABOUT</TopHalf>
+          <BottomHalf href="#about">ABOUT</BottomHalf>
         </NavItem>
         <NavItem>
-          <a>PROJECTS</a>
+          <TopHalf href="#projects"> PROJECTS</TopHalf>
+          <BottomHalf href="#about">PROJECTS</BottomHalf>
         </NavItem>
         <NavItem>
-          <a>CONTACT</a>
+          <TopHalf href="#">CONTACT</TopHalf>
+          <BottomHalf href="#about">CONTACT</BottomHalf>
         </NavItem>
         <NavItem>
           <Switch />

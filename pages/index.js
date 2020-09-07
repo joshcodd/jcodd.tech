@@ -20,15 +20,15 @@ export default function Home() {
         <NavBar />
         <Sidebar />
 
-        <section className={styles.home}>
+        <section className={styles.home} id="home">
           <Title />
         </section>
 
-        <section className={styles.about}>
+        <section className={styles.about} id="about">
           <About />
         </section>
 
-        <section className={styles.projects}>
+        <section className={styles.projects} id="projects">
           <Projects />
         </section>
         <Footer />
