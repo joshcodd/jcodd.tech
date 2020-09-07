@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import NavBar from "../components/NavBar";
 import About from "../components/About";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 import styles from "../styles/index.module.css";
 import React from "react";
 
@@ -30,6 +31,7 @@ export default function Home() {
         <section className={styles.projects}>
           <Projects />
         </section>
+        <Footer />
       </div>
     </div>
   );

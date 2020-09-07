@@ -5,7 +5,7 @@ import styled from "styled-components";
 const TopProjectContainer = styled.div`
   width: 100%;
   height: 300px;
-  margin: 0px auto 130px auto;
+  margin: 60px auto 100px auto;
 `;
 
 const ProjectTitle = styled.div`

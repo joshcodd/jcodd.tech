@@ -6,14 +6,13 @@ import styled from "styled-components";
 
 const ProjectsContainer = styled.div`
   width: 75vw;
-  height: 165vh;
   margin: 0 auto 0 auto;
+  padding: 150px 0;
 `;
 
 const GlitchTitle = styled.div`
   position: relative;
   display: inline-block;
-  margin: 150px 0 70px 10px;
 `;
 
 const Title = styled.h1`
