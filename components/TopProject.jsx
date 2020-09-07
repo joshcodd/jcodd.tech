@@ -3,9 +3,9 @@ import Tag from "./Tag";
 import styled from "styled-components";
 
 const TopProjectContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: 300px;
-  margin: 0px auto 80px auto;
+  margin: 0px auto 130px auto;
 `;
 
 const ProjectTitle = styled.div`

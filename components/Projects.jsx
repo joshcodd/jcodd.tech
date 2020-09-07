@@ -13,7 +13,7 @@ const ProjectsContainer = styled.div`
 const GlitchTitle = styled.div`
   position: relative;
   display: inline-block;
-  margin: 90px 0 70px 10px;
+  margin: 150px 0 70px 10px;
 `;
 
 const Title = styled.h1`
