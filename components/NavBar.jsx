@@ -26,23 +26,24 @@ const NavItem = styled.li`
   font-weight: 100;
 `;
 
-const TopHalf = styled.a`
-  position: absolute;
+const Link = styled.a`
   text-decoration: none;
   color: #242424;
-  clip-path: inset(0% 0% 50% 0px);
+`;
 
+const TopHalf = styled.div`
+  position: absolute;
+
+  clip-path: inset(0% 0% 50% 0px);
   ${NavItem}:hover & {
     transform: translate(7.5px, 0px);
   }
 `;
 
-const BottomHalf = styled.a`
+const BottomHalf = styled.div`
   position: relative;
-  text-decoration: none;
-  color: #242424;
-  clip-path: inset(50% 0px 0px 0px);
 
+  clip-path: inset(50% 0px 0px 0px);
   ${NavItem}:hover & {
     left: -5px;
   }
@@ -52,17 +53,23 @@ function NavBar() {
   return (
     <Navbar>
       <NavList>
-        <NavItem>
-          <TopHalf href="#about">ABOUT</TopHalf>
-          <BottomHalf href="#about">ABOUT</BottomHalf>
+        <NavItem href="#about">
+          <Link href="#about">
+            <TopHalf>ABOUT</TopHalf>
+            <BottomHalf>ABOUT</BottomHalf>
+          </Link>
         </NavItem>
         <NavItem>
-          <TopHalf href="#projects"> PROJECTS</TopHalf>
-          <BottomHalf href="#about">PROJECTS</BottomHalf>
+          <Link href="#projects">
+            <TopHalf> PROJECTS</TopHalf>
+            <BottomHalf>PROJECTS</BottomHalf>
+          </Link>
         </NavItem>
         <NavItem>
-          <TopHalf href="#">CONTACT</TopHalf>
-          <BottomHalf href="#about">CONTACT</BottomHalf>
+          <Link href="#">
+            <TopHalf>CONTACT</TopHalf>
+            <BottomHalf>CONTACT</BottomHalf>
+          </Link>
         </NavItem>
         <NavItem>
           <Switch />

@@ -16,6 +16,7 @@ const GlitchTitle = styled.div`
 `;
 
 const Title = styled.h1`
+  margin: 150px 0 0 0;
   font-family: "Nunito", sans-serif;
   font-weight: 100;
   font-size: 20px;
