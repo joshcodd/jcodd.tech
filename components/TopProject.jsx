@@ -8,42 +8,42 @@ const TopProjectContainer = styled.div`
   margin: 60px auto 100px auto;
 `;
 
-const ProjectTitle = styled.div`
-  display: inline-block;
-  padding: 20px 80px;
-  border-radius: 2px;
-  background-color: white;
-  font-family: "Nunito", sans-serif;
-  font-weight: 100;
-  font-size: 25px;
-  background-color: #2f2f2f;
-  float: ${(props) => (props.float === "right" ? "right" : "left")};
-  color: #fff;
-`;
-
 const ProjectImage = styled.img`
   display: inline-block;
   position: relative;
   width: 50%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   float: ${(props) => (props.float === "right" ? "right" : "left")};
+
+  position: relative;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1);
+`;
+
+const ProjectContent = styled.div`
+  width: 35%;
+  float: ${(props) => (props.float === "right" ? "right" : "left")};
+  text-align: ${(props) => (props.float === "right" ? "right" : "left")};
+  border-radius: 5px;
+`;
+
+const ProjectTitle = styled.div`
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+
+  font-weight: 100;
+  font-size: 25px;
 `;
 
 const ProjectDescription = styled.p`
+  line-height: 26px;
   display: inline-block;
-  width: 40%;
-  margin: 30px 0 0 0;
-  float: ${(props) => (props.float === "right" ? "right" : "left")};
-  text-align: ${(props) => (props.float === "right" ? "right" : "left")};
+  margin: 20px 0 0 0;
 `;
 
 const ProjectTagContainer = styled.div`
-  margin: 20px 0 0 0;
-  display: flex;
-  justify-content: flex-end;
-  float: ${(props) => (props.float === "right" ? "right" : "left")};
-  width: 40%;
+  margin: 30px 0 0 0;
 `;
 
 function TopProject(props) {
@@ -56,17 +56,19 @@ function TopProject(props) {
 
   return (
     <TopProjectContainer>
-      <ProjectTitle float={textFloat}>{title}</ProjectTitle>
-
       <ProjectImage src={imageSrc} float={imageFloat}></ProjectImage>
 
-      <ProjectDescription float={textFloat}>{description}</ProjectDescription>
+      <ProjectContent float={textFloat}>
+        <ProjectTitle float={textFloat}>{title}</ProjectTitle>
 
-      <ProjectTagContainer float={textFloat}>
-        {tags.map((tag, index) => {
-          return <Tag key={index} text={tag} />;
-        })}
-      </ProjectTagContainer>
+        <ProjectDescription float={textFloat}>{description}</ProjectDescription>
+
+        <ProjectTagContainer float={textFloat}>
+          {tags.map((tag, index) => {
+            return <Tag key={index} text={tag} />;
+          })}
+        </ProjectTagContainer>
+      </ProjectContent>
     </TopProjectContainer>
   );
 }
