@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const TopProjectContainer = styled.div`
   width: 80%;
-  height: 350px;
-  margin: 80px auto 150px auto;
+  height: 300px;
+  margin: 0px auto 80px auto;
 `;
 
 const ProjectTitle = styled.div`
@@ -35,7 +35,7 @@ const ProjectDescription = styled.p`
   width: 40%;
   margin: 30px 0 0 0;
   float: ${(props) => (props.float === "right" ? "right" : "left")};
-  text-align: right;
+  text-align: ${(props) => (props.float === "right" ? "right" : "left")};
 `;
 
 const ProjectTagContainer = styled.div`

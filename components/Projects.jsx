@@ -1,6 +1,7 @@
 import React from "react";
 import GlitchText from "./GlitchText";
 import TopProject from "./TopProject";
+import AltProject from "./AltProject";
 import styled from "styled-components";
 
 const ProjectsContainer = styled.div`
@@ -12,7 +13,14 @@ const ProjectsContainer = styled.div`
 const GlitchTitle = styled.div`
   position: relative;
   display: inline-block;
-  margin: 90px 0 0 10px;
+  margin: 90px 0 70px 10px;
+`;
+
+const Title = styled.h1`
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
 `;
 
 function Projects() {
@@ -45,6 +53,36 @@ function Projects() {
         suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
         eget mi proin sed libero. Consequat id porta nibh
       </TopProject>
+
+      <Title> Other Projects </Title>
+
+      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
+        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
+        eget mi proin sed libero. Consequat id porta nibh
+      </AltProject>
+
+      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
+        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
+        eget mi proin sed libero. Consequat id porta nibh
+      </AltProject>
+
+      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
+        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
+        eget mi proin sed libero. Consequat id porta nibh
+      </AltProject>
+
+      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
+        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
+        eget mi proin sed libero. Consequat id porta nibh
+      </AltProject>
     </ProjectsContainer>
   );
 }

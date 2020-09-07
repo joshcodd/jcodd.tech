@@ -63,7 +63,7 @@ function About() {
   return (
     <AboutContainer>
       <GlitchImageContainer>
-        <GlitchImage src="/Headshot-dark.jpg" />
+        <GlitchImage src="/Headshot2.jpg" />
       </GlitchImageContainer>
 
       <Title> About Me </Title>
