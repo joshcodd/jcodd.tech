@@ -7,6 +7,13 @@ const Navbar = styled.div`
   top: 0;
   width: 100%;
   height: 100px;
+  background-color: white;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.9) 100%
+  );
 `;
 
 const NavList = styled.ul`

@@ -8,6 +8,7 @@ const SidebarContainer = styled.div`
   height: 100vh;
   width: 60px;
   top: 0px;
+  z-index: 2;
 `;
 
 const NameLogo = styled.div`
