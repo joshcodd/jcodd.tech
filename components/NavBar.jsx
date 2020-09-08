@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Switch from "./Switch";
+import Slide from "react-reveal/Slide";
 
 const Navbar = styled.div`
   position: fixed;
@@ -59,29 +60,31 @@ const BottomHalf = styled.div`
 function NavBar() {
   return (
     <Navbar>
-      <NavList>
-        <NavItem href="#about">
-          <Link href="#about">
-            <TopHalf>ABOUT</TopHalf>
-            <BottomHalf>ABOUT</BottomHalf>
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link href="#projects">
-            <TopHalf> PROJECTS</TopHalf>
-            <BottomHalf>PROJECTS</BottomHalf>
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link href="#">
-            <TopHalf>CONTACT</TopHalf>
-            <BottomHalf>CONTACT</BottomHalf>
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Switch />
-        </NavItem>
-      </NavList>
+      <Slide right duration={1000} delay={1300}>
+        <NavList>
+          <NavItem href="#about">
+            <Link href="#about">
+              <TopHalf>ABOUT</TopHalf>
+              <BottomHalf>ABOUT</BottomHalf>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#projects">
+              <TopHalf> PROJECTS</TopHalf>
+              <BottomHalf>PROJECTS</BottomHalf>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="#">
+              <TopHalf>CONTACT</TopHalf>
+              <BottomHalf>CONTACT</BottomHalf>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Switch />
+          </NavItem>
+        </NavList>
+      </Slide>
     </Navbar>
   );
 }

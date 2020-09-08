@@ -1,6 +1,7 @@
 import React from "react";
 import GlitchText from "./GlitchText";
 import styled from "styled-components";
+import Rotate from "react-reveal/Rotate";
 
 const TitleContainer = styled.div`
   margin-left: 15vw;
@@ -70,14 +71,27 @@ const Email = styled.div`
 function Title() {
   return (
     <TitleContainer>
-      <HiText>Hi, I'm</HiText>
-      <GlitchName>
-        <GlitchText text="Josh" />
-      </GlitchName>
+      <Rotate top left>
+        <HiText>Hi, I'm</HiText>
+      </Rotate>
 
-      <ImAText>I'm a software engineer based in Swansea, Wales.</ImAText>
-      <ImAText>Focused on writing efficient, clean and readable code.</ImAText>
-      <Email>jjc21@live.co.uk</Email>
+      <Rotate top left delay={200}>
+        <GlitchName>
+          <GlitchText text="Josh" />
+        </GlitchName>
+      </Rotate>
+
+      <Rotate top left delay={400}>
+        <ImAText>I'm a software engineer based in Swansea, Wales.</ImAText>
+      </Rotate>
+      <Rotate top left delay={600}>
+        <ImAText>
+          Focused on writing efficient, clean and readable code.
+        </ImAText>
+      </Rotate>
+      <Rotate top left delay={800}>
+        <Email>jjc21@live.co.uk</Email>
+      </Rotate>
     </TitleContainer>
   );
 }

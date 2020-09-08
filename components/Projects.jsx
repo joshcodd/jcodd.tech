@@ -3,6 +3,9 @@ import GlitchText from "./GlitchText";
 import TopProject from "./TopProject";
 import AltProject from "./AltProject";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
+import Rotate from "react-reveal/Rotate";
 
 const ProjectsContainer = styled.div`
   width: 75vw;
@@ -26,63 +29,71 @@ const Title = styled.h1`
 function Projects() {
   return (
     <ProjectsContainer>
-      <GlitchTitle>
-        <GlitchText text="Projects" />
-      </GlitchTitle>
+      <Slide right>
+        <GlitchTitle>
+          <GlitchText text="Projects" />
+        </GlitchTitle>
+      </Slide>
 
-      <TopProject
-        title="Listening Habits"
-        img="/ListeningHabits.jpg"
-        float="right"
-        tags={["JavaScript", "React"]}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
-      </TopProject>
+      <Fade delay={100}>
+        <TopProject
+          title="Listening Habits"
+          img="/ListeningHabits.jpg"
+          float="right"
+          tags={["JavaScript", "React"]}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam
+          lacus suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui
+          sapien eget mi proin sed libero. Consequat id porta nibh
+        </TopProject>
+      </Fade>
 
-      <TopProject
-        title="Sorting Visualizer"
-        img="/SortingVisualizer.jpg"
-        float="left"
-        tags={["JavaScript", "React"]}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
-      </TopProject>
+      <Fade delay={200}>
+        <TopProject
+          title="Sorting Visualizer"
+          img="/SortingVisualizer.jpg"
+          float="left"
+          tags={["JavaScript", "React"]}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam
+          lacus suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui
+          sapien eget mi proin sed libero. Consequat id porta nibh
+        </TopProject>
+      </Fade>
 
-      <Title> Other Projects </Title>
+      <Fade delay={200}>
+        <Title> Other Projects </Title>
 
-      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
-      </AltProject>
+        <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam
+          lacus suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui
+          sapien eget mi proin sed libero. Consequat id porta nibh
+        </AltProject>
 
-      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
-      </AltProject>
+        <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam
+          lacus suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui
+          sapien eget mi proin sed libero. Consequat id porta nibh
+        </AltProject>
 
-      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
-      </AltProject>
+        <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam
+          lacus suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui
+          sapien eget mi proin sed libero. Consequat id porta nibh
+        </AltProject>
 
-      <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
-      </AltProject>
+        <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam
+          lacus suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui
+          sapien eget mi proin sed libero. Consequat id porta nibh
+        </AltProject>
+      </Fade>
     </ProjectsContainer>
   );
 }

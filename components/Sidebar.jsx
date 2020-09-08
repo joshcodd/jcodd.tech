@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Slide from "react-reveal/Slide";
 
 const SidebarContainer = styled.div`
   position: fixed;
+  left: 0px;
   height: 100vh;
   width: 60px;
   top: 0px;
   z-index: 2;
+
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
 `;
 
 const NameLogo = styled.div`
-  position: fixed;
+  position: relative;
   top: 25px;
   left: -40px;
   transform: rotate(-90deg);
@@ -25,8 +32,8 @@ const NameLogo = styled.div`
 
 const IconList = styled.ul`
   list-style-type: none;
-  position: fixed;
-  bottom: 30px;
+  position: absolute;
+  bottom: 0px;
   left: -20px;
 `;
 
@@ -68,19 +75,21 @@ const Icon = styled(FontAwesomeIcon)`
 
 function Sidebar() {
   return (
-    <SidebarContainer>
-      <NameLogo>josh codd</NameLogo>
+    <Slide left duration={1000} delay={1300}>
+      <SidebarContainer>
+        <NameLogo>josh codd</NameLogo>
 
-      <IconList>
-        <IconListItem>
-          <Icon icon={faGithub} size="xs" transform={{ rotate: -90 }} />
-        </IconListItem>
+        <IconList>
+          <IconListItem>
+            <Icon icon={faGithub} size="xs" transform={{ rotate: -90 }} />
+          </IconListItem>
 
-        <IconListItem>
-          <Icon icon={faLinkedin} size="xs" transform={{ rotate: -90 }} />
-        </IconListItem>
-      </IconList>
-    </SidebarContainer>
+          <IconListItem>
+            <Icon icon={faLinkedin} size="xs" transform={{ rotate: -90 }} />
+          </IconListItem>
+        </IconList>
+      </SidebarContainer>
+    </Slide>
   );
 }
 
