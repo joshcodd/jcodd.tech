@@ -2,12 +2,10 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://joshcodd.github.io/personal-website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "deploy": "gh-pages -d build"
+    "start": "next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
