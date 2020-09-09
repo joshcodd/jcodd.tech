@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const AltProjectContainer = styled.div`
   width: 80%;
-
   margin: auto;
   padding: 15px 30px;
 `;

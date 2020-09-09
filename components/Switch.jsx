@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
+import { Colours, ColoursContext } from "../components/ColoursContext";
 
 const ModeSwitch = styled.div`
   position: relative;
@@ -13,7 +14,8 @@ const ModeSwitch = styled.div`
 `;
 
 const Ball = styled.div`
-  margin-left: ${(props) => (props.switchValue ? "24px" : "0px")};
+  margin-left: ${(props) =>
+    props.coloursContext === Colours.light ? "0px" : "24px"};
   width: 14px;
   height: 14px;
   border: 1px solid #bebebe;
@@ -23,17 +25,17 @@ const Ball = styled.div`
 `;
 
 function Switch(props) {
-  const [switchValue, setSwitchValue] = useState(false);
+  const coloursContext = useContext(ColoursContext);
 
   function handleClick() {
-    const value = switchValue === false ? true : false;
-    setSwitchValue(value);
-    props.setDarkMode(value);
+    props.setColours(
+      coloursContext === Colours.light ? Colours.dark : Colours.light
+    );
   }
 
   return (
     <ModeSwitch onClick={handleClick}>
-      <Ball switchValue={switchValue}></Ball>
+      <Ball coloursContext={coloursContext}></Ball>
     </ModeSwitch>
   );
 }

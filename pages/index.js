@@ -6,55 +6,44 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import styles from "../styles/index.module.css";
-import React, { useState, useEffect, useReducer } from "react";
+import styled from "styled-components";
+import React, { useState } from "react";
+import { Colours, ColoursContext } from "../components/ColoursContext";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [textColour, setTextColor] = useState("#242424");
-  const [backgroundColour, setBackgroundColour] = useState("#FFFFFF");
+  const [colours, setColours] = useState(Colours.light);
 
-  useEffect(() => {
-    const textColourValue = darkMode ? "#FFFFFF" : "#242424";
-    const backgroundColourValue = darkMode ? "#131417" : "#FFFFFF";
-    setTextColor(textColourValue);
-    setBackgroundColour(backgroundColourValue);
-  }, [darkMode]);
+  const documentStyle = {
+    backgroundColor: colours.background,
+    color: colours.foreground,
+  };
 
   return (
-    <div style={{ backgroundColor: backgroundColour }}>
-      <Head>
-        <title> Josh </title>
-        <link rel="icon" href="" />
-      </Head>
+    <ColoursContext.Provider value={colours}>
+      <div style={documentStyle}>
+        <Head>
+          <title> Josh </title>
+          <link rel="icon" href="" />
+        </Head>
 
-      <div>
-        <NavBar
-          textColour={textColour}
-          backgroundColour={backgroundColour}
-          setDarkMode={setDarkMode}
-        />
-        <Sidebar textColour={textColour} backgroundColour={backgroundColour} />
+        <div>
+          <NavBar setColours={setColours} />
+          <Sidebar />
 
-        <section className={styles.home} id="home">
-          <Title
-            darkMode={darkMode}
-            textColour={textColour}
-            backgroundColour={backgroundColour}
-          />
-        </section>
+          <section className={styles.home} id="home">
+            <Title />
+          </section>
 
-        <section className={styles.about} id="about">
-          <About textColour={textColour} backgroundColour={backgroundColour} />
-        </section>
+          <section className={styles.about} id="about">
+            <About />
+          </section>
 
-        <section className={styles.projects} id="projects">
-          <Projects
-            textColour={textColour}
-            backgroundColour={backgroundColour}
-          />
-        </section>
-        <Footer />
+          <section className={styles.projects} id="projects">
+            <Projects />
+          </section>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </ColoursContext.Provider>
   );
 }

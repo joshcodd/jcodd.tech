@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Switch from "./Switch";
 import Slide from "react-reveal/Slide";
+import { ColoursContext } from "./ColoursContext";
 
 const Navbar = styled.div`
   position: fixed;
@@ -42,7 +43,6 @@ const Link = styled.a`
 
 const TopHalf = styled.div`
   position: absolute;
-
   clip-path: inset(0% 0% 50% 0px);
   ${NavItem}:hover & {
     transform: translate(7.5px, 0px);
@@ -51,7 +51,6 @@ const TopHalf = styled.div`
 
 const BottomHalf = styled.div`
   position: relative;
-
   clip-path: inset(50% 0px 0px 0px);
   ${NavItem}:hover & {
     left: -5px;
@@ -59,30 +58,32 @@ const BottomHalf = styled.div`
 `;
 
 function NavBar(props) {
+  const { foreground, background } = useContext(ColoursContext);
+
   return (
-    <Navbar backgroundColour={props.backgroundColour}>
+    <Navbar backgroundColour={background}>
       <Slide right duration={1000} delay={1300}>
-        <NavList textColour={props.textColour}>
+        <NavList textColour={foreground}>
           <NavItem href="#about">
-            <Link href="#about" textColour={props.textColour}>
+            <Link href="#about" textColour={foreground}>
               <TopHalf>ABOUT</TopHalf>
               <BottomHalf>ABOUT</BottomHalf>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="#projects" textColour={props.textColour}>
+            <Link href="#projects" textColour={foreground}>
               <TopHalf> PROJECTS</TopHalf>
               <BottomHalf>PROJECTS</BottomHalf>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="#" textColour={props.textColour}>
+            <Link href="#" textColour={foreground}>
               <TopHalf>CONTACT</TopHalf>
               <BottomHalf>CONTACT</BottomHalf>
             </Link>
           </NavItem>
           <NavItem>
-            <Switch setDarkMode={props.setDarkMode} />
+            <Switch setColours={props.setColours} />
           </NavItem>
         </NavList>
       </Slide>

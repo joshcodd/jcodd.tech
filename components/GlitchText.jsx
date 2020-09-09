@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
+import { Colours, ColoursContext } from "./ColoursContext";
 
 const GlitchContainer = styled.div`
   font-family: "Playfair Display", serif;
   font-weight: 600;
   display: inline-block;
   font-size: 70px;
-  ::selection {
-    background: #fff; /* WebKit/Blink Browsers */
-  }
 `;
 const ColourSplit = styled.span`
   position: absolute;
@@ -192,11 +190,12 @@ const Wrapper = ({ children, condition, wrapper }) =>
   condition ? wrapper(children) : children;
 
 function GlitchText(props) {
+  const coloursContext = useContext(ColoursContext);
   const text = props.text;
   return (
     <GlitchContainer>
       <Wrapper
-        condition={props.darkMode}
+        condition={coloursContext === Colours.dark}
         wrapper={(children) => <mark>{children}</mark>}
       >
         <Hidden>{text}</Hidden>

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import GlitchText from "./GlitchText";
 import styled from "styled-components";
 import Rotate from "react-reveal/Rotate";
+import { ColoursContext } from "./ColoursContext";
 
 const TitleContainer = styled.div`
   margin-left: 15vw;
@@ -67,11 +68,13 @@ const Email = styled.div`
   }
 `;
 
-function Title(props) {
+function Title() {
+  const { foreground, background } = useContext(ColoursContext);
+
   return (
-    <TitleContainer style={{ color: props.textColour }}>
+    <TitleContainer>
       <GlitchName>
-        <GlitchText text="Hi, I'm Josh" darkMode={props.darkMode} />
+        <GlitchText text="Hi, I'm Josh" />
       </GlitchName>
 
       <Rotate top left delay={400}>
@@ -82,10 +85,7 @@ function Title(props) {
         </ImAText>
       </Rotate>
       <Rotate top left delay={800}>
-        <Email
-          textColour={props.textColour}
-          backgroundColour={props.backgroundColour}
-        >
+        <Email textColour={foreground} backgroundColour={background}>
           jjc21@live.co.uk
         </Email>
       </Rotate>

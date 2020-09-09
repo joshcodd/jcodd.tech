@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Slide from "react-reveal/Slide";
+import { ColoursContext } from "./ColoursContext";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -73,24 +74,19 @@ const Icon = styled(FontAwesomeIcon)`
   height: 20px;
 `;
 
-function Sidebar(props) {
+function Sidebar() {
+  const { foreground, background } = useContext(ColoursContext);
   return (
     <Slide left duration={1000} delay={1300}>
-      <SidebarContainer style={{ color: props.textColour }}>
+      <SidebarContainer>
         <NameLogo>josh codd</NameLogo>
 
         <IconList>
-          <IconListItem
-            textColour={props.textColour}
-            backgroundColour={props.backgroundColour}
-          >
+          <IconListItem textColour={foreground} backgroundColour={background}>
             <Icon icon={faGithub} size="xs" transform={{ rotate: -90 }} />
           </IconListItem>
 
-          <IconListItem
-            textColour={props.textColour}
-            backgroundColour={props.backgroundColour}
-          >
+          <IconListItem textColour={foreground} backgroundColour={background}>
             <Icon icon={faLinkedin} size="xs" transform={{ rotate: -90 }} />
           </IconListItem>
         </IconList>

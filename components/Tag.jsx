@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const TagStyle = styled.div`
   display: inline-block;
-  border: 1px solid ${(props) => props.backgroundColour};
+  border: 1px solid;
   border-radius: 5px;
   padding: 2px 10px;
   margin: 0 7px 5px 0;
@@ -14,7 +14,7 @@ const TagStyle = styled.div`
 `;
 
 function Tag(props) {
-  return <TagStyle colour={props.backgroundColour}>{props.text}</TagStyle>;
+  return <TagStyle>{props.text}</TagStyle>;
 }
 
 export default Tag;
