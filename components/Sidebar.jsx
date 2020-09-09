@@ -12,11 +12,6 @@ const SidebarContainer = styled.div`
   width: 60px;
   top: 0px;
   z-index: 2;
-
-  -webkit-transition: all 1.5s;
-  -moz-transition: all 1.5s;
-  -o-transition: all 1.5s;
-  transition: all 1.5s;
 `;
 
 const NameLogo = styled.div`
