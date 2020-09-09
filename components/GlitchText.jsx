@@ -186,22 +186,28 @@ const Blue = styled(ColourSplit)`
   animation: ${blueAnimation} 6s infinite;
 `;
 
+//Conditionally wrap, courtesy of:
+//https://arjayosma.com/how-to-conditionally-wrap-a-react-component/
+const Wrapper = ({ children, condition, wrapper }) =>
+  condition ? wrapper(children) : children;
+
 function GlitchText(props) {
   const text = props.text;
   return (
     <GlitchContainer>
-      {console.log("hello")}
-      {/* <mark> */}
-      <Hidden>{text}</Hidden>
+      <Wrapper
+        condition={props.darkMode}
+        wrapper={(children) => <mark>{children}</mark>}
+      >
+        <Hidden>{text}</Hidden>
 
-      <Blue>{text}</Blue>
+        <Blue>{text}</Blue>
+        <Yellow>{text}</Yellow>
+        <Pink>{text}</Pink>
 
-      <Yellow>{text}</Yellow>
-      <Pink>{text}</Pink>
-
-      <Blue>{text}</Blue>
-      <Yellow>{text}</Yellow>
-      {/* </mark> */}
+        <Blue>{text}</Blue>
+        <Yellow>{text}</Yellow>
+      </Wrapper>
     </GlitchContainer>
   );
 }

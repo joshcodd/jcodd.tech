@@ -71,7 +71,7 @@ function Title(props) {
   return (
     <TitleContainer style={{ color: props.textColour }}>
       <GlitchName>
-        <GlitchText text="Hi, I'm Josh" />
+        <GlitchText text="Hi, I'm Josh" darkMode={props.darkMode} />
       </GlitchName>
 
       <Rotate top left delay={400}>

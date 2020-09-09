@@ -36,7 +36,11 @@ export default function Home() {
         <Sidebar textColour={textColour} backgroundColour={backgroundColour} />
 
         <section className={styles.home} id="home">
-          <Title textColour={textColour} backgroundColour={backgroundColour} />
+          <Title
+            darkMode={darkMode}
+            textColour={textColour}
+            backgroundColour={backgroundColour}
+          />
         </section>
 
         <section className={styles.about} id="about">

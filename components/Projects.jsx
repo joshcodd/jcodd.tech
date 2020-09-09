@@ -5,7 +5,6 @@ import AltProject from "./AltProject";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
-import Rotate from "react-reveal/Rotate";
 
 const ProjectsContainer = styled.div`
   width: 75vw;
