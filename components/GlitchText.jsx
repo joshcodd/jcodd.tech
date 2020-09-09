@@ -3,9 +3,12 @@ import styled, { keyframes } from "styled-components";
 
 const GlitchContainer = styled.div`
   font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-block;
-  font-size: 100px;
+  font-size: 70px;
+  ::selection {
+    background: #fff; /* WebKit/Blink Browsers */
+  }
 `;
 const ColourSplit = styled.span`
   position: absolute;
@@ -187,13 +190,18 @@ function GlitchText(props) {
   const text = props.text;
   return (
     <GlitchContainer>
+      {console.log("hello")}
+      {/* <mark> */}
       <Hidden>{text}</Hidden>
+
       <Blue>{text}</Blue>
+
       <Yellow>{text}</Yellow>
       <Pink>{text}</Pink>
 
       <Blue>{text}</Blue>
       <Yellow>{text}</Yellow>
+      {/* </mark> */}
     </GlitchContainer>
   );
 }

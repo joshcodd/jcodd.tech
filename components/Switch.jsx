@@ -13,7 +13,7 @@ const ModeSwitch = styled.div`
 `;
 
 const Ball = styled.div`
-  margin-left: ${(props) => (props.switchValue === "light" ? "24px" : "0px")};
+  margin-left: ${(props) => (props.switchValue ? "24px" : "0px")};
   width: 14px;
   height: 14px;
   border: 1px solid #bebebe;
@@ -22,12 +22,13 @@ const Ball = styled.div`
   transition: all ease-out 0.5s;
 `;
 
-function Switch() {
-  const [switchValue, setSwitchValue] = useState("light");
+function Switch(props) {
+  const [switchValue, setSwitchValue] = useState(false);
 
   function handleClick() {
-    const value = switchValue === "light" ? "dark" : "light";
+    const value = switchValue === false ? true : false;
     setSwitchValue(value);
+    props.setDarkMode(value);
   }
 
   return (

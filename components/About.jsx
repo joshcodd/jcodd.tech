@@ -60,10 +60,10 @@ const TagContainer = styled.div`
   width: 50%;
 `;
 
-function About() {
+function About(props) {
   return (
     <Fade delay={200}>
-      <AboutContainer>
+      <AboutContainer style={{ color: props.textColour }}>
         <GlitchImageContainer>
           <GlitchImage src="/Headshot2.jpg" />
         </GlitchImageContainer>

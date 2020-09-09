@@ -26,9 +26,9 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-function Projects() {
+function Projects(props) {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer style={{ color: props.textColour }}>
       <Slide right>
         <GlitchTitle>
           <GlitchText text="Projects" />

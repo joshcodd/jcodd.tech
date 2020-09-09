@@ -14,3 +14,7 @@ body {
   color: #242424;
   /* color: #2e3a16; */
 }
+
+mark {
+  background-color: #44aafdde;
+}

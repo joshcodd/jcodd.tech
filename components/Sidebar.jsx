@@ -26,7 +26,7 @@ const NameLogo = styled.div`
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #242424;
+
   width: 150px;
 `;
 
@@ -44,7 +44,7 @@ const IconListItem = styled.li`
   ::after {
     position: absolute;
     content: "";
-    background: #242424;
+    background: ${(props) => props.textColour};
     z-index: -1;
     height: 100%;
     right: 0;
@@ -58,11 +58,11 @@ const IconListItem = styled.li`
   }
 
   :hover {
-    color: white;
+    color: ${(props) => props.backgroundColour};
   }
 
   :hover:after {
-    color: white;
+    color: ${(props) => props.backgroundColour};
     width: 100%;
   }
 `;
@@ -73,18 +73,24 @@ const Icon = styled(FontAwesomeIcon)`
   height: 20px;
 `;
 
-function Sidebar() {
+function Sidebar(props) {
   return (
     <Slide left duration={1000} delay={1300}>
-      <SidebarContainer>
+      <SidebarContainer style={{ color: props.textColour }}>
         <NameLogo>josh codd</NameLogo>
 
         <IconList>
-          <IconListItem>
+          <IconListItem
+            textColour={props.textColour}
+            backgroundColour={props.backgroundColour}
+          >
             <Icon icon={faGithub} size="xs" transform={{ rotate: -90 }} />
           </IconListItem>
 
-          <IconListItem>
+          <IconListItem
+            textColour={props.textColour}
+            backgroundColour={props.backgroundColour}
+          >
             <Icon icon={faLinkedin} size="xs" transform={{ rotate: -90 }} />
           </IconListItem>
         </IconList>

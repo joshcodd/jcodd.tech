@@ -13,7 +13,7 @@ const Navbar = styled.div`
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.9) 100%
+    ${(props) => props.backgroundColour} 100%
   );
 `;
 
@@ -24,6 +24,7 @@ const NavList = styled.ul`
   margin: 0;
   padding: 0;
   float: right;
+  color: ${(props) => props.textColour};
 `;
 
 const NavItem = styled.li`
@@ -36,7 +37,7 @@ const NavItem = styled.li`
 
 const Link = styled.a`
   text-decoration: none;
-  color: #242424;
+  color: ${(props) => props.textColour};
 `;
 
 const TopHalf = styled.div`
@@ -57,31 +58,31 @@ const BottomHalf = styled.div`
   }
 `;
 
-function NavBar() {
+function NavBar(props) {
   return (
-    <Navbar>
+    <Navbar backgroundColour={props.backgroundColour}>
       <Slide right duration={1000} delay={1300}>
-        <NavList>
+        <NavList textColour={props.textColour}>
           <NavItem href="#about">
-            <Link href="#about">
+            <Link href="#about" textColour={props.textColour}>
               <TopHalf>ABOUT</TopHalf>
               <BottomHalf>ABOUT</BottomHalf>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="#projects">
+            <Link href="#projects" textColour={props.textColour}>
               <TopHalf> PROJECTS</TopHalf>
               <BottomHalf>PROJECTS</BottomHalf>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="#">
+            <Link href="#" textColour={props.textColour}>
               <TopHalf>CONTACT</TopHalf>
               <BottomHalf>CONTACT</BottomHalf>
             </Link>
           </NavItem>
           <NavItem>
-            <Switch />
+            <Switch setDarkMode={props.setDarkMode} />
           </NavItem>
         </NavList>
       </Slide>
