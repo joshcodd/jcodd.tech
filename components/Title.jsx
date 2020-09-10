@@ -23,7 +23,7 @@ const LeftContainer = styled.div`
 const RocketContainer = styled.div`
   position: relative;
   padding-top: 10vh;
-  width: 40%;
+  width: 35%;
   height: 100%;
   float: right;
 `;
