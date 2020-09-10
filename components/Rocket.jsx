@@ -1,11 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const RocketContainer = styled.div`
   display: inline-block;
   position: relative;
-  transform: rotate(-45deg);
+  transform: rotate(-40deg);
+
   width: 40%;
+  opacity: 0.8;
 `;
 
 const RocketImage = styled.img`
@@ -16,6 +18,31 @@ const RocketImage = styled.img`
   width: 100%;
 `;
 
+const boosterAnimation = keyframes`
+
+  0% {
+    transform: skew(3deg) translateX(6.5px) scaleX(-1)  ;
+  }
+  20% {
+    transform: skew(-3deg) translateX(-6.5px) scaleX(-1) ;
+
+  }
+  40% {
+    transform: skew(3deg) translateX(6.5px) scaleX(-1) ;
+  }
+  60% {
+    transform: skew(3deg) translateX(6.5px) scaleX(1) ;
+  }
+  80% {
+    transform: skew(-3deg) translateX(-6.5px) scaleX(1) ;
+
+  }
+  100% {
+    transform: skew(3deg) translateX(6.5px) scaleX(-1) ;
+  }
+
+`;
+
 const BoosterImage = styled.img`
   position: absolute;
   top: 83%;
@@ -23,6 +50,10 @@ const BoosterImage = styled.img`
   right: 0px;
   height: auto;
   width: 100%;
+
+  clip-path: inset(9% 0px 0px 0px);
+  opacity: 0.5;
+  animation: ${boosterAnimation} 0.3s infinite;
 `;
 
 function Sphere() {
