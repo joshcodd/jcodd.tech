@@ -6,7 +6,7 @@ import Rotate from "react-reveal/Rotate";
 import { ColoursContext } from "./ColoursContext";
 
 const TitleContainer = styled.div`
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
 `;
 
@@ -14,15 +14,16 @@ const LeftContainer = styled.div`
   padding-left: 15vw;
   padding-top: 50vh;
   height: 100%;
-  width: 60%;
+  width: 65%;
   float: left;
 
   box-sizing: border-box;
 `;
 
 const RocketContainer = styled.div`
+  box-sizing: border-box;
   position: relative;
-  padding-top: 10vh;
+  padding-top: 15vh;
   width: 35%;
   height: 100%;
   float: right;
