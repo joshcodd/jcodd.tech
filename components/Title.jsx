@@ -1,27 +1,36 @@
 import React, { useContext } from "react";
 import GlitchText from "./GlitchText";
+import Rocket from "./Rocket";
 import styled from "styled-components";
 import Rotate from "react-reveal/Rotate";
 import { ColoursContext } from "./ColoursContext";
 
 const TitleContainer = styled.div`
-  margin-left: 15vw;
+  height: 100vh;
+  width: 100vw;
+`;
+
+const LeftContainer = styled.div`
+  padding-left: 15vw;
   padding-top: 45vh;
+  height: 100%;
+  width: 50%;
+  float: left;
+
+  box-sizing: border-box;
+`;
+
+const RocketContainer = styled.div`
+  position: relative;
+  padding-top: 10vh;
+  width: 50%;
+  height: 100%;
+  float: right;
 `;
 
 const GlitchName = styled.div`
   position: relative;
   top: 15px;
-`;
-
-const HiText = styled.span`
-  position: relative;
-
-  font-family: "EB Garamond", serif;
-  font-weight: 400;
-  font-size: 25px;
-  top: -10px;
-  opacity: 0.9;
 `;
 
 const ImAText = styled.p`
@@ -73,22 +82,28 @@ function Title() {
 
   return (
     <TitleContainer>
-      <GlitchName>
-        <GlitchText text="Hi, I'm Josh" />
-      </GlitchName>
+      <LeftContainer>
+        <GlitchName>
+          <GlitchText text="Hi, I'm Josh" />
+        </GlitchName>
 
-      <Rotate top left delay={400}>
-        <ImAText>
-          I'm a software engineer based in Swansea, Wales.
-          <br />
-          Focused on writing efficient, clean and readable code.
-        </ImAText>
-      </Rotate>
-      <Rotate top left delay={800}>
-        <Email textColour={foreground} backgroundColour={background}>
-          jjc21@live.co.uk
-        </Email>
-      </Rotate>
+        <Rotate top left delay={400}>
+          <ImAText>
+            I'm a software engineer based in Swansea, Wales.
+            <br />
+            Focused on writing efficient, clean and readable code.
+          </ImAText>
+        </Rotate>
+        <Rotate top left delay={800}>
+          <Email textColour={foreground} backgroundColour={background}>
+            jjc21@live.co.uk
+          </Email>
+        </Rotate>
+      </LeftContainer>
+
+      <RocketContainer>
+        <Rocket />
+      </RocketContainer>
     </TitleContainer>
   );
 }

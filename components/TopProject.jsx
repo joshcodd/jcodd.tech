@@ -15,9 +15,7 @@ const ProjectImage = styled.img`
   height: auto;
   border-radius: 10px;
   float: ${(props) => (props.float === "right" ? "right" : "left")};
-
   position: relative;
-  mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1);
 `;
 

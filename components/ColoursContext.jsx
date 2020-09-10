@@ -7,7 +7,7 @@ export const Colours = {
   },
   dark: {
     foreground: "#FFFFFF",
-    background: "#252525",
+    background: "#131417",
   },
 };
 
