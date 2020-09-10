@@ -82,7 +82,7 @@ function NavBar(props) {
               <BottomHalf>CONTACT</BottomHalf>
             </Link>
           </NavItem>
-          <NavItem>
+          <NavItem style={{ display: "none" }}>
             <Switch setColours={props.setColours} />
           </NavItem>
         </NavList>

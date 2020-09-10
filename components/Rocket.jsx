@@ -4,9 +4,8 @@ import styled, { keyframes } from "styled-components";
 const RocketContainer = styled.div`
   display: inline-block;
   position: relative;
-  transform: rotate(-40deg);
-
-  width: 40%;
+  ${"" /* transform: rotate(-40deg); */}
+  width: 60%;
   opacity: 0.8;
 `;
 
