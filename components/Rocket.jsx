@@ -1,22 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const RocketContainer = styled.div`
-  display: inline-block;
-  position: relative;
-  ${"" /* transform: rotate(-40deg); */}
-  width: 60%;
-  opacity: 0.8;
-`;
-
-const RocketImage = styled.img`
-  position: relative;
-  top: 0px;
-  left: 0px;
-  height: auto;
-  width: 100%;
-`;
-
 const boosterAnimationTop = keyframes`
 
   0% {
@@ -46,6 +30,87 @@ const boosterAnimationBottom = keyframes`
 
 `;
 
+const glitch = keyframes`
+  1% {
+    clip-path: inset(9% 0% 70% 0%);
+    transform:  translateX(-13%);
+  }
+  1.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  2% {
+    clip-path: inset(10% 0% 20% 0%);
+  }
+  2.5% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  3% {
+    clip-path: inset(0% 0% 80% 0%);
+    transform: translateX(-43%);
+  }
+  3.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  4% {
+    clip-path: inset(22% 0% 55% 0%);
+    transform:  translateX(55%);
+  }
+  4.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+
+  5% {
+    clip-path: inset(70% 0% 90% 0%);
+    transform:  translateX(50%);
+  }
+  5.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  6% {
+    clip-path: inset(60% 0% 0% 0%);
+    transform:  translateX(-10%);
+  }
+  6.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  7% {
+    clip-path: inset(0% 0% 500% 0%);
+    transform:  translateX(70%);
+  }
+  7.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  
+ `;
+
+const RocketContainer = styled.div`
+  display: inline-block;
+  position: relative;
+  ${"" /* transform: rotate(-40deg); */}
+  width: 60%;
+  opacity: 0.8;
+`;
+
+const RocketImage = styled.img`
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  width: 100%;
+  animation: ${glitch} 10s;
+`;
+
+const RocketImageBehind = styled(RocketImage)`
+  position: absolute;
+  animation: ${glitch} 10s infinite linear alternate-reverse;
+`;
+
 const BoosterImageTop = styled.img`
   position: absolute;
   top: 82.5%;
@@ -68,6 +133,7 @@ function Sphere() {
   return (
     <RocketContainer>
       <RocketImage src="rocket-size.svg" />
+      <RocketImageBehind src="rocket-size.svg" />
       <BoosterImageTop src="rocket-short.svg" />
       <BoosterImageBottom src="rocket-short.svg" />
     </RocketContainer>
