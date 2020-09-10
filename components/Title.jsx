@@ -12,7 +12,7 @@ const TitleContainer = styled.div`
 
 const LeftContainer = styled.div`
   padding-left: 15vw;
-  padding-top: 45vh;
+  padding-top: 50vh;
   height: 100%;
   width: 60%;
   float: left;

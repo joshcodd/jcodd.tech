@@ -44,7 +44,7 @@ const boosterAnimation = keyframes`
 
 const BoosterImage = styled.img`
   position: absolute;
-  top: 83%;
+  top: 82.5%;
   left: 0px;
   right: 0px;
   height: auto;
