@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../styles/index.module.css";
 import Head from "next/head";
 import Title from "../components/Title.jsx";
 import About from "../components/About";
@@ -15,15 +14,15 @@ export default function Home() {
         <link rel="icon" href="" />
       </Head>
 
-      <section className={styles.home} id="home">
+      <section id="home">
         <Title />
       </section>
 
-      <section className={styles.about} id="about">
+      <section id="about">
         <About />
       </section>
 
-      <section className={styles.projects} id="projects">
+      <section id="projects">
         <Projects />
       </section>
       <Footer />

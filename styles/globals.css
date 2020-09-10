@@ -11,6 +11,8 @@ body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+
+  overflow: clip;
 }
 
 mark {

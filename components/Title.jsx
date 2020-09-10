@@ -8,30 +8,49 @@ import { ColoursContext } from "./ColoursContext";
 const TitleContainer = styled.div`
   height: 120vh;
   width: 100vw;
+  overflow: hidden;
 `;
 
 const LeftContainer = styled.div`
-  padding-left: 15vw;
-  padding-top: 50vh;
   height: 100%;
-  width: 65%;
+  width: 100vw;
+
   float: left;
 
   box-sizing: border-box;
+
+  @media (max-width: 875px) {
+  }
 `;
+
+// const RightContainer = styled.div`
+//   position: relative;
+//   height: 100%;
+
+//   float: right;
+//   box-sizing: border-box;
+// `;
 
 const RocketContainer = styled.div`
-  box-sizing: border-box;
   position: relative;
-  padding-top: 15vh;
-  width: 35%;
+  display: inline-block;
+  margin-top: 15vh;
+  top: 0;
+  width: 20vw;
   height: 100%;
-  float: right;
+  float: left;
+
+  @media (max-width: 1075px) {
+  }
 `;
 
-const GlitchName = styled.div`
+const TextContainer = styled.div`
   position: relative;
-  top: 15px;
+  display: inline-block;
+  margin-left: 15%;
+  margin-top: 52vh;
+  width: 50%;
+  float: left;
 `;
 
 const ImAText = styled.p`
@@ -40,6 +59,9 @@ const ImAText = styled.p`
   font-family: "EB Garamond", serif;
   font-size: 20px;
   opacity: 0.9;
+  @media (max-width: 775px) {
+    font-size: 10px;
+  }
 `;
 
 const Email = styled.div`
@@ -76,6 +98,10 @@ const Email = styled.div`
     color: ${(props) => props.backgroundColour};
     height: 100%;
   }
+
+  @media (max-width: 775px) {
+    font-size: 10px;
+  }
 `;
 
 function Title() {
@@ -84,27 +110,31 @@ function Title() {
   return (
     <TitleContainer>
       <LeftContainer>
-        <GlitchName>
+        <TextContainer>
           <GlitchText text="Hi, I'm Josh" />
-        </GlitchName>
 
-        <Rotate top left delay={400}>
-          <ImAText>
-            I'm a software engineer based in Swansea, Wales.
-            <br />
-            Focused on writing efficient, clean and readable code.
-          </ImAText>
-        </Rotate>
-        <Rotate top left delay={800}>
-          <Email textColour={foreground} backgroundColour={background}>
-            jjc21@live.co.uk
-          </Email>
-        </Rotate>
+          <Rotate top left delay={400}>
+            <ImAText>
+              I'm a software engineer based in Swansea, Wales.
+              <br />
+              Focused on writing efficient, clean and readable code.
+            </ImAText>
+          </Rotate>
+          <Rotate top left delay={800}>
+            <Email textColour={foreground} backgroundColour={background}>
+              jjc21@live.co.uk
+            </Email>
+          </Rotate>
+        </TextContainer>
+
+        <RocketContainer>
+          <Rocket />
+        </RocketContainer>
       </LeftContainer>
 
-      <RocketContainer>
-        <Rocket />
-      </RocketContainer>
+      {/* <RightContainer> */}
+      {/* <RocketContainer></RocketContainer> */}
+      {/* </RightContainer> */}
     </TitleContainer>
   );
 }

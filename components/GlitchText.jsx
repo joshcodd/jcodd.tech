@@ -7,6 +7,14 @@ const GlitchContainer = styled.div`
   font-weight: 600;
   display: inline-block;
   font-size: 70px;
+
+  @media (max-width: 775px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 435px) {
+    font-size: 25px;
+  }
 `;
 const ColourSplit = styled.span`
   position: absolute;

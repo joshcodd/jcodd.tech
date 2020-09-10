@@ -2,13 +2,11 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 const boosterAnimationTop = keyframes`
-
   0% {
     transform: skew(7deg) translateX(5.3%) scaleY(0.8) translateY(-10%) ;
   }
   50% {
     transform: skew(-7deg) translateX(-5.7%) scaleY(0.8) translateY(-10%) ;
-
   }
   100% {
     transform: skew(7deg) translateX(5.3%) scaleY(0.8) translateY(-10%);
@@ -16,18 +14,15 @@ const boosterAnimationTop = keyframes`
 `;
 
 const boosterAnimationBottom = keyframes`
-
-0% {
+  0% {
     transform: skew(7deg) translateX(5.3%) scaleY(0.6) translateY(-20.8%)  ;
   }
   50% {
     transform: skew(-7deg) translateX(-5.7%) scaleY(0.75) translateY(-12.1%)   ;
-
   }
   100% {
     transform: skew(7deg) translateX(5.3%) scaleY(0.6) translateY(-20.8%);
   }
-
 `;
 
 const glitch = keyframes`
@@ -61,7 +56,6 @@ const glitch = keyframes`
     clip-path: inset(0% 0% 0% 0%);
     transform:  translateX(0%);
   }
-
   5% {
     clip-path: inset(70% 0% 90% 0%);
     transform:  translateX(50%);
@@ -86,15 +80,14 @@ const glitch = keyframes`
     clip-path: inset(0% 0% 0% 0%);
     transform:  translateX(0%);
   }
-  
  `;
 
 const RocketContainer = styled.div`
   display: inline-block;
   position: relative;
-  ${"" /* transform: rotate(-40deg); */}
-  width: 60%;
+  width: 100%;
   opacity: 0.8;
+  min-width: 310px;
 `;
 
 const RocketImage = styled.img`
@@ -129,7 +122,7 @@ const BoosterImageBottom = styled(BoosterImageTop)`
   animation: ${boosterAnimationBottom} 0.7s infinite;
 `;
 
-function Sphere() {
+function Rocket() {
   return (
     <RocketContainer>
       <RocketImage src="rocket-size.svg" />
@@ -140,4 +133,4 @@ function Sphere() {
   );
 }
 
-export default Sphere;
+export default Rocket;

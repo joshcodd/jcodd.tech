@@ -16,6 +16,10 @@ const Navbar = styled.div`
     rgba(255, 255, 255, 0),
     ${(props) => props.backgroundColour} 100%
   );
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 const NavList = styled.ul`

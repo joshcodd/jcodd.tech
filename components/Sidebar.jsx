@@ -22,8 +22,12 @@ const NameLogo = styled.div`
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 18px;
-
   width: 150px;
+
+  @media (max-width: 450px) {
+    transform: rotate(0deg);
+    left: 30px;
+  }
 `;
 
 const IconList = styled.ul`
@@ -31,6 +35,10 @@ const IconList = styled.ul`
   position: absolute;
   bottom: 0px;
   left: -20px;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 const IconListItem = styled.li`

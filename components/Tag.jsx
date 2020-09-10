@@ -6,10 +6,8 @@ const TagStyle = styled.div`
   border: 1px solid;
   border-radius: 5px;
   padding: 2px 10px;
-  margin: 0 7px 5px 0;
-
+  margin: 5px 7px 5px 0;
   font-family: "Nunito", sans-serif;
-  font-size: 13px;
   font-weight: 100;
 `;
 
