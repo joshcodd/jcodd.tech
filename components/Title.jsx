@@ -13,13 +13,8 @@ const TitleContainer = styled.div`
 const LeftContainer = styled.div`
   height: 100%;
   width: 100vw;
-
   float: left;
-
   box-sizing: border-box;
-
-  @media (max-width: 875px) {
-  }
 `;
 
 const RocketContainer = styled.div`
@@ -30,6 +25,10 @@ const RocketContainer = styled.div`
   width: 20vw;
   height: 100%;
   float: left;
+
+  @media (max-width: 775px) {
+    left: -30px;
+  }
 `;
 
 const TextContainer = styled.div`
