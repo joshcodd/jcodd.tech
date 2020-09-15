@@ -4,19 +4,24 @@ import styled from "styled-components";
 
 const TopProjectContainer = styled.div`
   width: 100%;
-  height: 300px;
-  margin: 60px auto 100px auto;
+  margin: 0px auto 100px auto;
+  overflow: hidden;
 `;
 
 const ProjectImage = styled.img`
   display: inline-block;
   position: relative;
   width: 50%;
-  height: auto;
+
   border-radius: 10px;
   float: ${(props) => (props.float === "right" ? "right" : "left")};
   position: relative;
   filter: grayscale(100%) contrast(1);
+
+  @media (max-width: 775px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 `;
 
 const ProjectContent = styled.div`
@@ -24,23 +29,27 @@ const ProjectContent = styled.div`
   float: ${(props) => (props.float === "right" ? "right" : "left")};
   text-align: ${(props) => (props.float === "right" ? "right" : "left")};
   border-radius: 5px;
+
+  @media (max-width: 775px) {
+    width: 100%;
+    text-align: left;
+  }
 `;
 
-const ProjectTitle = styled.div`
+const ProjectTitle = styled.h1`
   display: inline-block;
-  font-family: "Playfair Display", serif;
-  font-weight: 100;
-  font-size: 25px;
 `;
 
 const ProjectDescription = styled.p`
-  line-height: 26px;
   display: inline-block;
-  margin: 20px 0 0 0;
 `;
 
 const ProjectTagContainer = styled.div`
   margin: 30px 0 0 0;
+
+  @media (max-width: 775px) {
+    margin: 0;
+  }
 `;
 
 function TopProject(props) {

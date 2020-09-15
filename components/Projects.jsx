@@ -15,13 +15,15 @@ const ProjectsContainer = styled.div`
 const GlitchTitle = styled.div`
   position: relative;
   display: inline-block;
+  margin-bottom: 40px;
+
+  @media (max-width: 775px) {
+    margin-bottom: 25px;
+  }
 `;
 
-const Title = styled.h1`
+const SubHeading = styled.h3`
   margin: 150px 0 0 0;
-  font-family: "Nunito", sans-serif;
-  font-weight: 100;
-  font-size: 20px;
   text-align: center;
 `;
 
@@ -63,7 +65,7 @@ function Projects() {
       </Fade>
 
       <Fade delay={200}>
-        <Title> Other Projects </Title>
+        <SubHeading> Other Projects </SubHeading>
 
         <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

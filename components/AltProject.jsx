@@ -8,14 +8,8 @@ const AltProjectContainer = styled.div`
   padding: 15px 30px;
 `;
 
-const ProjectTitle = styled.div`
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
-`;
-
 const ProjectDescription = styled.p`
   font-family: "Nunito", sans-serif;
-  font-weight: 100;
   margin: 5px 0 12px 0px;
 `;
 
@@ -28,7 +22,7 @@ function AltProject(props) {
 
   return (
     <AltProjectContainer>
-      <ProjectTitle>{title}</ProjectTitle>
+      <h2>{title}</h2>
 
       <ProjectDescription>{description}</ProjectDescription>
 

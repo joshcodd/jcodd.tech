@@ -23,14 +23,6 @@ const LeftContainer = styled.div`
   }
 `;
 
-// const RightContainer = styled.div`
-//   position: relative;
-//   height: 100%;
-
-//   float: right;
-//   box-sizing: border-box;
-// `;
-
 const RocketContainer = styled.div`
   position: relative;
   display: inline-block;
@@ -39,9 +31,6 @@ const RocketContainer = styled.div`
   width: 20vw;
   height: 100%;
   float: left;
-
-  @media (max-width: 1075px) {
-  }
 `;
 
 const TextContainer = styled.div`
@@ -55,10 +44,9 @@ const TextContainer = styled.div`
 
 const ImAText = styled.p`
   position: relative;
-  font-weight: 100;
-  font-family: "EB Garamond", serif;
   font-size: 20px;
   opacity: 0.9;
+
   @media (max-width: 775px) {
     font-size: 10px;
   }
@@ -131,10 +119,6 @@ function Title() {
           <Rocket />
         </RocketContainer>
       </LeftContainer>
-
-      {/* <RightContainer> */}
-      {/* <RocketContainer></RocketContainer> */}
-      {/* </RightContainer> */}
     </TitleContainer>
   );
 }

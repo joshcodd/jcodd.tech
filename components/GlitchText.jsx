@@ -13,7 +13,7 @@ const GlitchContainer = styled.div`
   }
 
   @media (max-width: 435px) {
-    font-size: 25px;
+    font-size: 30px;
   }
 `;
 const ColourSplit = styled.span`
