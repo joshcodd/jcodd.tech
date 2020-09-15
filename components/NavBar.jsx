@@ -64,6 +64,8 @@ const BottomHalf = styled.div`
 
 const NavListMobile = styled.div`
   display: none;
+  postiion: relative;
+  left: ${(props) => (props.mobileMenu ? "-60vw" : "0")};
 
   @media (max-width: 450px) {
     display: inline-block;
