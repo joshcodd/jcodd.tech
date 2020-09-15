@@ -80,6 +80,65 @@ const glitch = keyframes`
     clip-path: inset(0% 0% 0% 0%);
     transform:  translateX(0%);
   }
+
+  90.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(-0.5%);
+  }
+  91% {
+    clip-path: inset(9% 0% 70% 0%);
+    transform:  translateX(-13%);
+  }
+  91.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  92% {
+    clip-path: inset(10% 0% 20% 0%);
+  }
+  92.5% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  93% {
+    clip-path: inset(0% 0% 80% 0%);
+    transform: translateX(-43%);
+  }
+  93.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  94% {
+    clip-path: inset(22% 0% 55% 0%);
+    transform:  translateX(55%);
+  }
+  94.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  95% {
+    clip-path: inset(70% 0% 90% 0%);
+    transform:  translateX(50%);
+  }
+  95.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  96% {
+    clip-path: inset(60% 0% 0% 0%);
+    transform:  translateX(-10%);
+  }
+  96.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
+  97% {
+    clip-path: inset(0% 0% 500% 0%);
+    transform:  translateX(70%);
+  }
+  97.5% {
+    clip-path: inset(0% 0% 0% 0%);
+    transform:  translateX(0%);
+  }
  `;
 
 const RocketContainer = styled.div`
