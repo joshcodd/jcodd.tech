@@ -94,7 +94,7 @@ function Title() {
     <TitleContainer>
       <LeftContainer>
         <TextContainer>
-          <GlitchText text="Hi, I'mm Josh" />
+          <GlitchText text="Hi, I'm Josh" />
 
           <ImAText>
             I'm a software engineer based in Swansea, Wales.
