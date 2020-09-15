@@ -17,6 +17,7 @@ const Navbar = styled.div`
     rgba(255, 255, 255, 0),
     ${(props) => props.backgroundColour} 100%
   );
+  z-index: 150;
 
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
