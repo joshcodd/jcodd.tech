@@ -27,7 +27,7 @@ const RocketContainer = styled.div`
   float: left;
 
   @media (max-width: 775px) {
-    left: -30px;
+    left: -45px;
   }
 `;
 
@@ -36,7 +36,7 @@ const TextContainer = styled.div`
   display: inline-block;
   margin-left: 15vw;
   top: 52vh;
-  width: 50%;
+  width: 65%;
   float: left;
 
   @media (max-width: 450px) {
@@ -46,12 +46,8 @@ const TextContainer = styled.div`
 
 const ImAText = styled.p`
   position: relative;
-  font-size: 20px;
-  opacity: 0.9;
 
-  @media (max-width: 775px) {
-    font-size: 10px;
-  }
+  opacity: 0.9;
 `;
 
 const Email = styled.h3`

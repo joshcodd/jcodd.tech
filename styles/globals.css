@@ -68,7 +68,7 @@ p {
 @media (max-width: 775px) {
   p {
     font-size: 13px;
-    line-height: 15px;
+    line-height: 20px;
   }
 
   h1 {
