@@ -93,7 +93,9 @@ const MenuButton = styled.div`
 function NavBar(props) {
   const { foreground, background } = useContext(ColoursContext);
 
-  function handleMenuClick() {}
+  function handleMenuClick() {
+    props.setMobileMenu(props.mobileMenu ? false : true);
+  }
 
   return (
     <Navbar backgroundColour={background}>
