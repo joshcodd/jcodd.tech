@@ -36,11 +36,12 @@ const TextContainer = styled.div`
   display: inline-block;
   margin-left: 15vw;
   top: 52vh;
-  width: 65%;
+  width: 45%;
   float: left;
 
   @media (max-width: 450px) {
-    margin-left: 7%;
+    margin-left: 5%;
+    width: 65%;
   }
 `;
 

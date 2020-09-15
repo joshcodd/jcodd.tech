@@ -20,7 +20,7 @@ const SidebarContainer = styled.div`
 const NameLogo = styled.div`
   position: fixed;
   top: 25px;
-  left: -40px;
+  left: -34px;
   transform: rotate(-90deg);
   font-family: "Nunito", sans-serif;
   font-weight: 400;
