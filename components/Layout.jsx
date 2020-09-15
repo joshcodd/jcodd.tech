@@ -9,10 +9,10 @@ const LayoutStyle = styled.div`
   @media (max-width: 450px) {
     position: relative;
     left: ${(props) => (props.mobileMenu ? "-60vw" : "0")};
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 `;
 
