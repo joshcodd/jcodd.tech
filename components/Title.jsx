@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import GlitchText from "./GlitchText";
 import Rocket from "./Rocket";
 import styled from "styled-components";
-import Rotate from "react-reveal/Rotate";
 import { ColoursContext } from "./ColoursContext";
 
 const TitleContainer = styled.div`
@@ -101,18 +100,15 @@ function Title() {
         <TextContainer>
           <GlitchText text="Hi, I'm Josh" />
 
-          <Rotate top left delay={400}>
-            <ImAText>
-              I'm a software engineer based in Swansea, Wales.
-              <br />
-              Focused on writing efficient, clean and readable code.
-            </ImAText>
-          </Rotate>
-          <Rotate top left delay={800}>
-            <Email textColour={foreground} backgroundColour={background}>
-              jjc21@live.co.uk
-            </Email>
-          </Rotate>
+          <ImAText>
+            I'm a software engineer based in Swansea, Wales.
+            <br />
+            Focused on writing efficient, clean and readable code.
+          </ImAText>
+
+          <Email textColour={foreground} backgroundColour={background}>
+            jjc21@live.co.uk
+          </Email>
         </TextContainer>
 
         <RocketContainer>
