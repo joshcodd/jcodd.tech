@@ -34,7 +34,7 @@ function Layout(props) {
           setMobileMenu={setMobileMenu}
         />
         <Sidebar />
-        <MobileMenu visible={mobileMenu} />
+        <MobileMenu visible={mobileMenu} setMobileMenu={setMobileMenu} />
         {props.children}
       </LayoutStyle>
     </ColoursContext.Provider>

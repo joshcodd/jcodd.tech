@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const SideBarMenuStyle = styled.div`
+  display: none;
   @media (max-width: 450px) {
+    display: inline-block;
     left: ${(props) => (props.isVisible ? "0vw" : "60vw")};
     position: fixed;
     background-color: #efefef;
@@ -31,27 +35,38 @@ const NavItem = styled.li`
   margin: 12px 20px;
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: black;
+const Icon = styled(FontAwesomeIcon)`
+  width: 20px;
+  height: 20px;
 `;
 
 function SideBarMenu(props) {
   const isVisible = props.visible;
+
+  function handleClick(value) {
+    if (value.charAt(0) === "#") {
+      window.location.href = value;
+    } else {
+      window.open(value);
+    }
+
+    props.setMobileMenu(false);
+  }
+
   return (
     <SideBarMenuStyle isVisible={isVisible}>
       <NavList>
-        <NavItem>
-          <Link href="#">HOME</Link>
+        <NavItem onClick={() => handleClick("#")}>HOME</NavItem>
+        <NavItem onClick={() => handleClick("#about")}>ABOUT</NavItem>
+        <NavItem onClick={() => handleClick("#projects")}>PROJECTS</NavItem>
+        <NavItem onClick={() => handleClick("#contact")}>CONTACT</NavItem>
+        <NavItem onClick={() => handleClick("https://github.com/joshcodd")}>
+          <Icon icon={faGithub} />
         </NavItem>
-        <NavItem>
-          <Link href="#about">ABOUT</Link>
-        </NavItem>
-        <NavItem>
-          <Link href="#projects">PROJECTS</Link>
-        </NavItem>
-        <NavItem>
-          <Link href="#">CONTACT</Link>
+        <NavItem
+          onClick={() => handleClick("https://www.linkedin.com/in/joshcodd/")}
+        >
+          <Icon icon={faLinkedin} />
         </NavItem>
       </NavList>
     </SideBarMenuStyle>
