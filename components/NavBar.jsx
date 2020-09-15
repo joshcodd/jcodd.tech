@@ -7,16 +7,21 @@ import { ColoursContext } from "./ColoursContext";
 
 const Navbar = styled.div`
   position: fixed;
+  left: ${(props) => (props.mobileMenu ? "-60vw" : "0")};
   top: 0;
   width: 100%;
   height: 100px;
   background-color: white;
-  z-index: 1;
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0),
     ${(props) => props.backgroundColour} 100%
   );
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 `;
 
 const NavList = styled.ul`
@@ -64,9 +69,6 @@ const BottomHalf = styled.div`
 
 const NavListMobile = styled.div`
   display: none;
-  postiion: relative;
-  left: ${(props) => (props.mobileMenu ? "-60vw" : "0")};
-
   @media (max-width: 450px) {
     display: inline-block;
     width: 100%;
@@ -99,7 +101,7 @@ function NavBar(props) {
   }
 
   return (
-    <Navbar backgroundColour={background}>
+    <Navbar backgroundColour={background} mobileMenu={props.mobileMenu}>
       <NavList textColour={foreground}>
         <NavItem href="#about">
           <Link href="#about" textColour={foreground}>
