@@ -21,8 +21,12 @@ const GlitchTitle = styled.div`
 `;
 
 const SubHeading = styled.h3`
-  margin: 150px 0 0 0;
+  margin: 130px 0 0 0;
   text-align: center;
+
+  @media (max-width: 450px) {
+    margin: 80px 0 0 0;
+  }
 `;
 
 function Projects() {

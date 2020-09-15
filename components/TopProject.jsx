@@ -6,6 +6,10 @@ const TopProjectContainer = styled.div`
   width: 100%;
   margin: 0px auto 100px auto;
   overflow: hidden;
+
+  @media (max-width: 450px) {
+    margin: 0px auto 50px auto;
+  }
 `;
 
 const ProjectImage = styled.img`
