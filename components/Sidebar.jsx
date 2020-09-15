@@ -10,7 +10,7 @@ const SidebarContainer = styled.div`
   height: 100vh;
   width: 60px;
   top: 0px;
-  z-index: 2;
+  z-index: 200;
 
   @media (max-width: 450px) {
     display: none;

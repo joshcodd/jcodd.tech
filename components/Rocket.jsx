@@ -155,7 +155,6 @@ const RocketImage = styled.img`
   left: 0px;
   height: auto;
   width: 100%;
-  animation: ${glitch} 10s;
 `;
 
 const RocketImageBehind = styled(RocketImage)`
