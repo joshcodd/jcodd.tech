@@ -20,8 +20,8 @@ const LeftContainer = styled.div`
 const RocketContainer = styled.div`
   position: relative;
   display: inline-block;
-  margin-top: 15vh;
-  top: 0;
+
+  top: 15vh;
   width: 20vw;
   height: 100%;
   float: left;
@@ -34,10 +34,14 @@ const RocketContainer = styled.div`
 const TextContainer = styled.div`
   position: relative;
   display: inline-block;
-  margin-left: 15%;
-  margin-top: 52vh;
+  margin-left: 15vw;
+  top: 52vh;
   width: 50%;
   float: left;
+
+  @media (max-width: 400px) {
+    margin-left: 7%;
+  }
 `;
 
 const ImAText = styled.p`
@@ -50,14 +54,11 @@ const ImAText = styled.p`
   }
 `;
 
-const Email = styled.div`
+const Email = styled.h3`
   display: inline-block;
   position: relative;
   top: 20px;
-  font-family: "Nunito", sans-serif;
-  font-size: 18px;
   padding: 5px 40px;
-  font-weight: 100;
   border-bottom: 2px solid ${(props) => props.textColour};
   z-index: 1;
 
@@ -83,10 +84,6 @@ const Email = styled.div`
 
   :hover:after {
     height: 100%;
-  }
-
-  @media (max-width: 775px) {
-    font-size: 10px;
   }
 `;
 

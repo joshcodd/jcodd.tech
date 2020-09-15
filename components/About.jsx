@@ -25,6 +25,10 @@ const Title = styled.h1`
     width: 75%;
     margin: 0 auto;
   }
+
+  @media (max-width: 400px) {
+    width: 95%;
+  }
 `;
 
 const SubHeading = styled.h3`
@@ -48,8 +52,11 @@ const GlitchImageContainer = styled.div`
     display: block;
     float: none;
     width: 75%;
-    height: auto;
     margin: 0 auto 20px auto;
+  }
+
+  @media (max-width: 400px) {
+    width: 95%;
   }
 `;
 
@@ -62,10 +69,13 @@ const AboutContent = styled.div`
 
   @media (max-width: 775px) {
     display: block;
-    height: 50%;
     float: none;
     width: 75%;
     margin: 0 auto;
+  }
+
+  @media (max-width: 400px) {
+    width: 95%;
   }
 `;
 
