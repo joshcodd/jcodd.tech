@@ -75,8 +75,7 @@ const AboutContent = styled.div`
   }
 
   @media (max-width: 450px) {
-    width: 100%;
-    color: red;
+    width: 95%;
   }
 `;
 

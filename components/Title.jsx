@@ -39,7 +39,7 @@ const TextContainer = styled.div`
   width: 50%;
   float: left;
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     margin-left: 7%;
   }
 `;
