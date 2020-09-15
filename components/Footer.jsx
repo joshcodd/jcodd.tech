@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterStyle = styled.footer`
-  height: 200px;
+  height: 100px;
   width: 100%;
 
   display: inline-block;
@@ -18,7 +18,7 @@ const Name = styled.div`
   font-family: "Nunito", sans-serif;
   font-size: 13px;
   font-weight: 100;
-  margin-top: 130px;
+  margin-top: 40px;
 `;
 
 function Footer() {

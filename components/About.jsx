@@ -6,23 +6,24 @@ import Fade from "react-reveal/Fade";
 
 const AboutContainer = styled.div`
   max-width: 900px;
-  width: 70vw;
-  height: 100vh;
+  width: 75vw;
   align-items: center;
-  margin: 0 auto 0 auto;
+  margin: 0px auto 0px auto;
+
+  padding: 20vh 0px;
+  overflow: hidden;
 `;
 
 const Title = styled.h1`
   display: inline-block;
   float: right;
   width: 50%;
-  margin: 20vh 0 0 0;
 
   @media (max-width: 775px) {
     display: block;
     float: none;
     margin: 0;
-    width: 90%;
+    width: 75%;
     margin: 0 auto;
   }
 `;
@@ -40,14 +41,16 @@ const GlitchImageContainer = styled.div`
   max-width: 400px;
   max-height: 500px;
   width: 45%;
-  height: 50vw;
-  margin-top: 20vh;
+  height: auto;
 
   @media (max-width: 775px) {
+    max-width: none;
+    max-height: none;
     display: block;
     float: none;
-    width: 60%;
-    margin: 20vh auto 20px auto;
+    width: 75%;
+    height: auto;
+    margin: 0 auto 20px auto;
   }
 `;
 
@@ -62,7 +65,7 @@ const AboutContent = styled.div`
     display: block;
     height: 50%;
     float: none;
-    width: 90%;
+    width: 75%;
     margin: 0 auto;
   }
 `;
