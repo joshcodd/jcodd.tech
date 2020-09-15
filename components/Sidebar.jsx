@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Slide from "react-reveal/Slide";
 import { ColoursContext } from "./ColoursContext";
 
 const SidebarContainer = styled.div`
@@ -19,7 +18,7 @@ const SidebarContainer = styled.div`
 `;
 
 const NameLogo = styled.div`
-  position: relative;
+  position: fixed;
   top: 25px;
   left: -40px;
   transform: rotate(-90deg);
@@ -31,7 +30,7 @@ const NameLogo = styled.div`
 
 const IconList = styled.ul`
   list-style-type: none;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: -20px;
 `;
@@ -75,21 +74,19 @@ const Icon = styled(FontAwesomeIcon)`
 function Sidebar() {
   const { foreground, background } = useContext(ColoursContext);
   return (
-    <Slide left duration={1000} delay={1300}>
-      <SidebarContainer>
-        <NameLogo>josh codd</NameLogo>
+    <SidebarContainer>
+      <NameLogo>josh codd</NameLogo>
 
-        <IconList>
-          <IconListItem textColour={foreground} backgroundColour={background}>
-            <Icon icon={faGithub} size="xs" transform={{ rotate: -90 }} />
-          </IconListItem>
+      <IconList>
+        <IconListItem textColour={foreground} backgroundColour={background}>
+          <Icon icon={faGithub} size="xs" transform={{ rotate: -90 }} />
+        </IconListItem>
 
-          <IconListItem textColour={foreground} backgroundColour={background}>
-            <Icon icon={faLinkedin} size="xs" transform={{ rotate: -90 }} />
-          </IconListItem>
-        </IconList>
-      </SidebarContainer>
-    </Slide>
+        <IconListItem textColour={foreground} backgroundColour={background}>
+          <Icon icon={faLinkedin} size="xs" transform={{ rotate: -90 }} />
+        </IconListItem>
+      </IconList>
+    </SidebarContainer>
   );
 }
 

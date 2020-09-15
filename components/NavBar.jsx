@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import Switch from "./Switch";
-import Slide from "react-reveal/Slide";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { ColoursContext } from "./ColoursContext";
@@ -99,39 +98,37 @@ function NavBar(props) {
 
   return (
     <Navbar backgroundColour={background}>
-      <Slide right duration={1000} delay={1300}>
-        <NavList textColour={foreground}>
-          <NavItem href="#about">
-            <Link href="#about" textColour={foreground}>
-              <TopHalf>ABOUT</TopHalf>
-              <BottomHalf>ABOUT</BottomHalf>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="#projects" textColour={foreground}>
-              <TopHalf> PROJECTS</TopHalf>
-              <BottomHalf>PROJECTS</BottomHalf>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="#" textColour={foreground}>
-              <TopHalf>CONTACT</TopHalf>
-              <BottomHalf>CONTACT</BottomHalf>
-            </Link>
-          </NavItem>
-          <NavItem style={{ display: "none" }}>
-            <Switch setColours={props.setColours} />
-          </NavItem>
-        </NavList>
+      <NavList textColour={foreground}>
+        <NavItem href="#about">
+          <Link href="#about" textColour={foreground}>
+            <TopHalf>ABOUT</TopHalf>
+            <BottomHalf>ABOUT</BottomHalf>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="#projects" textColour={foreground}>
+            <TopHalf> PROJECTS</TopHalf>
+            <BottomHalf>PROJECTS</BottomHalf>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="#" textColour={foreground}>
+            <TopHalf>CONTACT</TopHalf>
+            <BottomHalf>CONTACT</BottomHalf>
+          </Link>
+        </NavItem>
+        <NavItem style={{ display: "none" }}>
+          <Switch setColours={props.setColours} />
+        </NavItem>
+      </NavList>
 
-        <NavListMobile>
-          <NameLogo>josh codd</NameLogo>
+      <NavListMobile>
+        <NameLogo>josh codd</NameLogo>
 
-          <MenuButton onClick={handleMenuClick}>
-            <FontAwesomeIcon icon={faBars} size="xs" />
-          </MenuButton>
-        </NavListMobile>
-      </Slide>
+        <MenuButton onClick={handleMenuClick}>
+          <FontAwesomeIcon icon={faBars} size="xs" />
+        </MenuButton>
+      </NavListMobile>
     </Navbar>
   );
 }

@@ -4,7 +4,6 @@ import TopProject from "./TopProject";
 import AltProject from "./AltProject";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import Slide from "react-reveal/Slide";
 
 const ProjectsContainer = styled.div`
   width: 75vw;
@@ -30,11 +29,9 @@ const SubHeading = styled.h3`
 function Projects() {
   return (
     <ProjectsContainer>
-      <Slide right>
-        <GlitchTitle>
-          <GlitchText text="Projects" />
-        </GlitchTitle>
-      </Slide>
+      <GlitchTitle>
+        <GlitchText text="Projects" />
+      </GlitchTitle>
 
       <Fade delay={100}>
         <TopProject
