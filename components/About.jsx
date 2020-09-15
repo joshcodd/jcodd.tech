@@ -26,7 +26,7 @@ const Title = styled.h1`
     margin: 0 auto;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     width: 95%;
   }
 `;
@@ -55,7 +55,7 @@ const GlitchImageContainer = styled.div`
     margin: 0 auto 20px auto;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     width: 95%;
   }
 `;
@@ -74,7 +74,7 @@ const AboutContent = styled.div`
     margin: 0 auto;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     width: 100%;
     color: red;
   }
