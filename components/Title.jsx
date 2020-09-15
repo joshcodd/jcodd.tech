@@ -60,6 +60,7 @@ const Email = styled.div`
   padding: 5px 40px;
   font-weight: 100;
   border-bottom: 2px solid ${(props) => props.textColour};
+  z-index: 1;
 
   ::after {
     position: absolute;
@@ -82,7 +83,6 @@ const Email = styled.div`
   }
 
   :hover:after {
-    color: ${(props) => props.backgroundColour};
     height: 100%;
   }
 
