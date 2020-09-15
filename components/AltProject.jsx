@@ -3,9 +3,13 @@ import Tag from "./Tag";
 import styled from "styled-components";
 
 const AltProjectContainer = styled.div`
-  width: 80%;
+  width: 90%;
   margin: auto;
-  padding: 15px 30px;
+  padding: 15px 0px;
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 const ProjectDescription = styled.p`
