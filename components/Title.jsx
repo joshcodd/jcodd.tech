@@ -25,9 +25,9 @@ const RocketContainer = styled.div`
   width: 20vw;
   height: 100%;
   float: left;
-
+  left: 15%;
   @media (max-width: 775px) {
-    left: -45px;
+    left: -20px;
   }
 `;
 
@@ -36,10 +36,11 @@ const TextContainer = styled.div`
   display: inline-block;
   margin-left: 15vw;
   top: 52vh;
-  width: 45%;
+  width: 48%;
+  max-width: 450px;
   float: left;
 
-  @media (max-width: 450px) {
+  @media (max-width: 630px) {
     margin-left: 5%;
     width: 65%;
   }
@@ -94,9 +95,8 @@ function Title() {
           <GlitchText text="Hi, I'm Josh" />
 
           <ImAText>
-            I'm a software engineer based in Swansea, Wales.
-            <br />
-            Focused on writing efficient, clean and readable code.
+            I'm a software engineer based in Swansea, Wales. Focused on writing
+            efficient, clean and readable code.
           </ImAText>
 
           <Email textColour={foreground} backgroundColour={background}>

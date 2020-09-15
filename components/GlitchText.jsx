@@ -9,11 +9,15 @@ const GlitchContainer = styled.div`
   font-size: 70px;
 
   @media (max-width: 775px) {
-    font-size: 40px;
+    font-size: 50px;
   }
 
-  @media (max-width: 435px) {
-    font-size: 30px;
+  @media (max-width: 415px) {
+    font-size: 45px;
+  }
+
+  @media (max-width: 365px) {
+    font-size: 35px;
   }
 `;
 const ColourSplit = styled.span`

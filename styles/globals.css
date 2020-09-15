@@ -60,14 +60,14 @@ h4 {
 p {
   font-family: "EB Garamond", serif;
   line-height: 26px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 100;
   font-style: normal;
 }
 
 @media (max-width: 775px) {
   p {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 20px;
   }
 
