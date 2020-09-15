@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import Switch from "./Switch";
 import Slide from "react-reveal/Slide";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { ColoursContext } from "./ColoursContext";
 
 const Navbar = styled.div`
@@ -16,10 +18,6 @@ const Navbar = styled.div`
     rgba(255, 255, 255, 0),
     ${(props) => props.backgroundColour} 100%
   );
-
-  @media (max-width: 450px) {
-    display: none;
-  }
 `;
 
 const NavList = styled.ul`
@@ -30,6 +28,10 @@ const NavList = styled.ul`
   padding: 0;
   float: right;
   color: ${(props) => props.textColour};
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 const NavItem = styled.li`
@@ -61,8 +63,37 @@ const BottomHalf = styled.div`
   }
 `;
 
+const NavListMobile = styled.div`
+  display: none;
+
+  @media (max-width: 450px) {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const NameLogo = styled.div`
+  display: inline-block;
+  font-family: "nunito", serif;
+  font-size: 20px;
+  font-weight: 700px;
+  margin: 5% 0 0 5%;
+  float: left;
+`;
+
+const MenuButton = styled.div`
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 6% 5% 0 0;
+  float: right;
+`;
+
 function NavBar(props) {
   const { foreground, background } = useContext(ColoursContext);
+
+  function handleMenuClick() {}
 
   return (
     <Navbar backgroundColour={background}>
@@ -90,6 +121,14 @@ function NavBar(props) {
             <Switch setColours={props.setColours} />
           </NavItem>
         </NavList>
+
+        <NavListMobile>
+          <NameLogo>josh codd</NameLogo>
+
+          <MenuButton onClick={handleMenuClick}>
+            <FontAwesomeIcon icon={faBars} size="xs" />
+          </MenuButton>
+        </NavListMobile>
       </Slide>
     </Navbar>
   );
