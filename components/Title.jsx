@@ -23,14 +23,14 @@ const RocketContainer = styled.div`
   position: absolute;
   display: inline-block;
 
-  bottom: 34vh;
+  transform: rotate(-30deg);
+
+  bottom: 35vh;
   height: 72vh;
   width: auto;
-  float: right;
-  right: 10vw;
+  right: 15vw;
   opacity: 0.5;
   @media (max-width: 775px) {
-    right: -20vw;
     opacity: 0.5;
   }
 `;
@@ -39,7 +39,7 @@ const TextContainer = styled.div`
   position: absolute;
   display: inline-block;
   margin-left: 15vw;
-  bottom: 38vh;
+  bottom: 43vh;
   width: 48%;
   max-width: 450px;
   float: left;
