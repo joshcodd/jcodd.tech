@@ -144,17 +144,17 @@ const glitch = keyframes`
 const RocketContainer = styled.div`
   display: inline-block;
   position: relative;
-  width: 100%;
+  height: 100%;
   opacity: 0.8;
-  min-width: 310px;
+  ${"" /* min-width: 310px; */}
 `;
 
 const RocketImage = styled.img`
   position: relative;
   top: 0px;
   left: 0px;
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
 `;
 
 const RocketImageBehind = styled(RocketImage)`

@@ -12,6 +12,7 @@ const TitleContainer = styled.div`
 `;
 
 const LeftContainer = styled.div`
+  position: relative;
   height: 100%;
   width: 100vw;
   float: left;
@@ -19,24 +20,26 @@ const LeftContainer = styled.div`
 `;
 
 const RocketContainer = styled.div`
-  position: relative;
+  position: absolute;
   display: inline-block;
 
-  top: 15vh;
-  width: 20vw;
-  height: 100%;
-  float: left;
-  left: 15%;
+  bottom: 34vh;
+  height: 72vh;
+  width: auto;
+  float: right;
+  right: 10vw;
+  opacity: 0.5;
   @media (max-width: 775px) {
-    left: -20px;
+    right: -20vw;
+    opacity: 0.5;
   }
 `;
 
 const TextContainer = styled.div`
-  position: relative;
+  position: absolute;
   display: inline-block;
   margin-left: 15vw;
-  top: 52vh;
+  bottom: 38vh;
   width: 48%;
   max-width: 450px;
   float: left;
@@ -92,6 +95,9 @@ function Title() {
   return (
     <TitleContainer>
       <LeftContainer>
+        <RocketContainer>
+          <Rocket />
+        </RocketContainer>
         <TextContainer>
           <ScrollAnimation animateIn="animate__backInDown" duration={2}>
             <GlitchText text="Hi, I'm Josh" />
@@ -106,8 +112,6 @@ function Title() {
             </Email>
           </ScrollAnimation>
         </TextContainer>
-
-        <RocketContainer>{/* <Rocket /> */}</RocketContainer>
       </LeftContainer>
     </TitleContainer>
   );
