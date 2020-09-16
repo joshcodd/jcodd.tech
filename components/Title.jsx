@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import GlitchText from "./GlitchText";
 import Rocket from "./Rocket";
 import styled from "styled-components";
@@ -21,17 +21,24 @@ const LeftContainer = styled.div`
 
 const RocketContainer = styled.div`
   position: absolute;
-  display: inline-block;
 
   transform: rotate(-30deg);
 
-  bottom: 35vh;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+
+  bottom: ${(props) => props.rocketPosition.bottom};
   height: 72vh;
   width: auto;
-  right: 15vw;
+  right: ${(props) => props.rocketPosition.right};
   opacity: 0.5;
-  @media (max-width: 775px) {
-    opacity: 0.5;
+
+  @media (max-width: 450px) {
+    height: 50vh;
+    bottom: ${(props) => props.rocketPosition.bottomMobile};
+    right: ${(props) => props.rocketPosition.rightMobile};
   }
 `;
 
@@ -46,7 +53,7 @@ const TextContainer = styled.div`
 
   @media (max-width: 630px) {
     margin-left: 5%;
-    width: 65%;
+    width: 75%;
   }
 `;
 
@@ -91,11 +98,27 @@ const Email = styled.h3`
 
 function Title() {
   const { foreground, background } = useContext(ColoursContext);
+  const [rocketPosition, setRocketPosition] = useState({
+    right: "-100vw",
+    bottom: "-100vh",
+    rightMobile: "-100vw",
+    bottomMobile: "-100vh",
+  });
+
+  useEffect(() => {
+    const rocketPosition = {
+      right: "15vw",
+      bottom: "35vh",
+      rightMobile: "20vh",
+      bottomMobile: "60vh",
+    };
+    setTimeout(() => setRocketPosition(rocketPosition), 2000);
+  });
 
   return (
     <TitleContainer>
       <LeftContainer>
-        <RocketContainer>
+        <RocketContainer rocketPosition={rocketPosition}>
           <Rocket />
         </RocketContainer>
         <TextContainer>
