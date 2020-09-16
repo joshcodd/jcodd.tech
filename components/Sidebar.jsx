@@ -17,7 +17,7 @@ const SidebarContainer = styled.div`
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     display: none;
   }
 `;

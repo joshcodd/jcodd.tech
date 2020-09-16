@@ -34,7 +34,7 @@ const NavList = styled.ul`
   float: right;
   color: ${(props) => props.textColour};
 
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     display: none;
   }
 `;
@@ -42,14 +42,29 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   display: inline-block;
   font-size: 15px;
-  margin: 0 60px 0 0;
+  margin: 0 50px 0 0;
   font-family: "Nunito", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 `;
 
 const Link = styled.a`
   text-decoration: none;
   color: ${(props) => props.textColour};
+`;
+
+const BoxLink = styled.div`
+  padding: 0px 30px;
+  border: 1px solid #242424;
+
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+
+  ${NavItem}:hover & {
+    color: white;
+    background: #242424;
+  }
 `;
 
 const TopHalf = styled.div`
@@ -70,7 +85,7 @@ const BottomHalf = styled.div`
 
 const NavListMobile = styled.div`
   display: none;
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -129,6 +144,16 @@ function NavBar(props) {
           <Link href="#" textColour={foreground}>
             <TopHalf>CONTACT</TopHalf>
             <BottomHalf>CONTACT</BottomHalf>
+          </Link>
+        </NavItem>
+        <NavItem>
+          <Link href="#" textColour={foreground}>
+            <TopHalf>
+              <BoxLink>CV</BoxLink>
+            </TopHalf>
+            <BottomHalf>
+              <BoxLink>CV</BoxLink>
+            </BottomHalf>
           </Link>
         </NavItem>
         <NavItem style={{ display: "none" }}>

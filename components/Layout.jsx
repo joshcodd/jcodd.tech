@@ -6,7 +6,7 @@ import MobileMenu from "../components/MobileMenu";
 import { Colours, ColoursContext } from "../components/ColoursContext";
 
 const LayoutStyle = styled.div`
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     position: relative;
     left: ${(props) => (props.mobileMenu ? "-60vw" : "0")};
     -webkit-transition: all 0.5s ease-in-out;

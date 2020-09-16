@@ -5,7 +5,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const SideBarMenuStyle = styled.div`
   display: none;
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     display: inline-block;
     left: ${(props) => (props.isVisible ? "0vw" : "60vw")};
     position: fixed;
@@ -60,6 +60,7 @@ function SideBarMenu(props) {
         <NavItem onClick={() => handleClick("#about")}>ABOUT</NavItem>
         <NavItem onClick={() => handleClick("#projects")}>PROJECTS</NavItem>
         <NavItem onClick={() => handleClick("#contact")}>CONTACT</NavItem>
+        <NavItem onClick={() => handleClick("#CV")}>CV</NavItem>
         <NavItem onClick={() => handleClick("https://github.com/joshcodd")}>
           <Icon icon={faGithub} />
         </NavItem>
