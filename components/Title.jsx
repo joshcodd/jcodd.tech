@@ -16,6 +16,7 @@ const LeftContainer = styled.div`
   width: 100vw;
   float: left;
   box-sizing: border-box;
+  overflow: hidden;
 `;
 
 const RocketContainer = styled.div`
@@ -23,10 +24,10 @@ const RocketContainer = styled.div`
 
   transform: rotate(-30deg);
 
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 2s ease-in-out;
-  -o-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 
   bottom: ${(props) => props.rocketPosition.bottom};
   height: 72vh;
@@ -55,6 +56,12 @@ const TextContainer = styled.div`
     margin-left: 5%;
     width: 75%;
   }
+`;
+
+//Element to stop browser focusing on rocket
+//when animating from out of page.
+const Anchor = styled.div`
+  visibility: hidden;
 `;
 
 const ImAText = styled.p`
@@ -99,8 +106,8 @@ const Email = styled.h3`
 function Title() {
   const { foreground, background } = useContext(ColoursContext);
   const [rocketPosition, setRocketPosition] = useState({
-    right: "-150vw",
-    bottom: "-300vh",
+    right: "-25vw",
+    bottom: "-50vh",
     rightMobile: "-100vw",
     bottomMobile: "-100vh",
   });
@@ -112,11 +119,12 @@ function Title() {
       rightMobile: "20vh",
       bottomMobile: "60vh",
     };
-    setTimeout(() => setRocketPosition(rocketPosition), 2000);
+    setTimeout(() => setRocketPosition(rocketPosition), 1000);
   });
 
   return (
     <TitleContainer>
+      <Anchor> AnchorElement</Anchor>
       <LeftContainer>
         <RocketContainer rocketPosition={rocketPosition}>
           <Rocket />
