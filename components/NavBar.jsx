@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import Switch from "./Switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +7,7 @@ import { ColoursContext } from "./ColoursContext";
 
 const Navbar = styled.div`
   position: fixed;
-  left: ${(props) => (props.mobileMenu ? "-60vw" : "0")};
+  left: ${(props) => (props.mobileMenu ? "-60vw" : props.navPosition)};
   top: 0;
   width: 100%;
   height: 100px;
@@ -95,14 +95,23 @@ const MenuButton = styled.div`
 `;
 
 function NavBar(props) {
+  const [navPosition, setNavPostion] = useState("100vw");
   const { foreground, background } = useContext(ColoursContext);
+
+  useEffect(() => {
+    setTimeout(() => setNavPostion("0"), 2200);
+  });
 
   function handleMenuClick() {
     props.setMobileMenu(props.mobileMenu ? false : true);
   }
 
   return (
-    <Navbar backgroundColour={background} mobileMenu={props.mobileMenu}>
+    <Navbar
+      backgroundColour={background}
+      mobileMenu={props.mobileMenu}
+      navPosition={navPosition}
+    >
       <NavList textColour={foreground}>
         <NavItem href="#about">
           <Link href="#about" textColour={foreground}>

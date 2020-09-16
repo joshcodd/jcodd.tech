@@ -1,6 +1,7 @@
 import React from "react";
 import Tag from "./Tag";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const TopProjectContainer = styled.div`
   width: 100%;
@@ -65,21 +66,25 @@ function TopProject(props) {
   const tags = props.tags || [];
 
   return (
-    <TopProjectContainer>
-      <ProjectImage src={imageSrc} float={imageFloat}></ProjectImage>
+    <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
+      <TopProjectContainer>
+        <ProjectImage src={imageSrc} float={imageFloat}></ProjectImage>
 
-      <ProjectContent float={textFloat}>
-        <ProjectTitle float={textFloat}>{title}</ProjectTitle>
+        <ProjectContent float={textFloat}>
+          <ProjectTitle float={textFloat}>{title}</ProjectTitle>
 
-        <ProjectDescription float={textFloat}>{description}</ProjectDescription>
+          <ProjectDescription float={textFloat}>
+            {description}
+          </ProjectDescription>
 
-        <ProjectTagContainer float={textFloat}>
-          {tags.map((tag, index) => {
-            return <Tag key={index} text={tag} />;
-          })}
-        </ProjectTagContainer>
-      </ProjectContent>
-    </TopProjectContainer>
+          <ProjectTagContainer float={textFloat}>
+            {tags.map((tag, index) => {
+              return <Tag key={index} text={tag} />;
+            })}
+          </ProjectTagContainer>
+        </ProjectContent>
+      </TopProjectContainer>
+    </ScrollAnimation>
   );
 }
 

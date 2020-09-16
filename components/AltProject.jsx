@@ -1,6 +1,7 @@
 import React from "react";
 import Tag from "./Tag";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const AltProjectContainer = styled.div`
   width: 90%;
@@ -25,17 +26,19 @@ function AltProject(props) {
   const tags = props.tags || [];
 
   return (
-    <AltProjectContainer>
-      <h2>{title}</h2>
+    <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
+      <AltProjectContainer>
+        <h2>{title}</h2>
 
-      <ProjectDescription>{description}</ProjectDescription>
+        <ProjectDescription>{description}</ProjectDescription>
 
-      <ProjectTagContainer>
-        {tags.map((tag, index) => {
-          return <Tag key={index} text={tag} />;
-        })}
-      </ProjectTagContainer>
-    </AltProjectContainer>
+        <ProjectTagContainer>
+          {tags.map((tag, index) => {
+            return <Tag key={index} text={tag} />;
+          })}
+        </ProjectTagContainer>
+      </AltProjectContainer>
+    </ScrollAnimation>
   );
 }
 

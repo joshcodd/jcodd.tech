@@ -2,15 +2,19 @@ import React from "react";
 import GlitchImage from "./GlitchImage";
 import Tag from "./Tag";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const AboutContainer = styled.div`
   max-width: 900px;
   width: 75vw;
   align-items: center;
-  margin: 0px auto 0px auto;
-
-  padding: 20vh 0px;
+  margin: 0px auto;
+  padding: 150px 0px;
   overflow: hidden;
+
+  @media (max-width: 450px) {
+    padding: 60px 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -87,47 +91,49 @@ const TagContainer = styled.div`
 
 function About() {
   return (
-    <AboutContainer>
-      <GlitchImageContainer>
-        <GlitchImage src="/Headshot2.jpg" />
-      </GlitchImageContainer>
+    <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
+      <AboutContainer>
+        <GlitchImageContainer>
+          <GlitchImage src="/Headshot2.jpg" />
+        </GlitchImageContainer>
 
-      <Title> About Me </Title>
-      <AboutContent>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur.
-        </p>
-        <TagContainer>
-          <SubHeading>Languages</SubHeading>
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-        </TagContainer>
-        <TagContainer>
-          <SubHeading>Frameworks</SubHeading>
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-          <Tag text="Java" />
-        </TagContainer>
-        <TagContainer>
-          <SubHeading>Tools</SubHeading>
-          <Tag text="Java" />
-          <Tag text="Java" />
-        </TagContainer>
-      </AboutContent>
-    </AboutContainer>
+        <Title> About Me </Title>
+        <AboutContent>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <TagContainer>
+            <SubHeading>Languages</SubHeading>
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+          </TagContainer>
+          <TagContainer>
+            <SubHeading>Frameworks</SubHeading>
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+            <Tag text="Java" />
+          </TagContainer>
+          <TagContainer>
+            <SubHeading>Tools</SubHeading>
+            <Tag text="Java" />
+            <Tag text="Java" />
+          </TagContainer>
+        </AboutContent>
+      </AboutContainer>
+    </ScrollAnimation>
   );
 }
 

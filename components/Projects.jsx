@@ -3,11 +3,16 @@ import GlitchText from "./GlitchText";
 import TopProject from "./TopProject";
 import AltProject from "./AltProject";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const ProjectsContainer = styled.div`
   width: 75vw;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   padding: 150px 0;
+
+  @media (max-width: 450px) {
+    padding: 60px 0;
+  }
 `;
 
 const GlitchTitle = styled.div`
@@ -32,9 +37,11 @@ const SubHeading = styled.h3`
 function Projects() {
   return (
     <ProjectsContainer>
-      <GlitchTitle>
-        <GlitchText text="Projects" />
-      </GlitchTitle>
+      <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
+        <GlitchTitle>
+          <GlitchText text="Projects" />
+        </GlitchTitle>
+      </ScrollAnimation>
 
       <TopProject
         title="Listening Habits"
@@ -60,7 +67,9 @@ function Projects() {
         eget mi proin sed libero. Consequat id porta nibh
       </TopProject>
 
-      <SubHeading> Other Projects </SubHeading>
+      <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
+        <SubHeading> Other Projects </SubHeading>
+      </ScrollAnimation>
 
       <AltProject title="Personal Website" tags={["JavaScript", "React"]}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

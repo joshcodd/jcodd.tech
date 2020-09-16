@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import GlitchText from "./GlitchText";
 import Rocket from "./Rocket";
 import styled from "styled-components";
 import { ColoursContext } from "./ColoursContext";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const TitleContainer = styled.div`
   height: 120vh;
@@ -92,21 +93,21 @@ function Title() {
     <TitleContainer>
       <LeftContainer>
         <TextContainer>
-          <GlitchText text="Hi, I'm Josh" />
+          <ScrollAnimation animateIn="animate__backInDown" duration={2}>
+            <GlitchText text="Hi, I'm Josh" />
 
-          <ImAText>
-            I'm a software engineer based in Swansea, Wales. Focused on writing
-            efficient, clean and readable code.
-          </ImAText>
+            <ImAText>
+              I'm a software engineer based in Swansea, Wales. Focused on
+              writing efficient, clean and readable code.
+            </ImAText>
 
-          <Email textColour={foreground} backgroundColour={background}>
-            jjc21@live.co.uk
-          </Email>
+            <Email textColour={foreground} backgroundColour={background}>
+              jjc21@live.co.uk
+            </Email>
+          </ScrollAnimation>
         </TextContainer>
 
-        <RocketContainer>
-          <Rocket />
-        </RocketContainer>
+        <RocketContainer>{/* <Rocket /> */}</RocketContainer>
       </LeftContainer>
     </TitleContainer>
   );
