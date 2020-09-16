@@ -8,7 +8,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 const TitleContainer = styled.div`
   height: 120vh;
   width: 100vw;
-  overflow: hidden;
 `;
 
 const LeftContainer = styled.div`
@@ -24,14 +23,15 @@ const RocketContainer = styled.div`
 
   transform: rotate(-30deg);
 
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 
   bottom: ${(props) => props.rocketPosition.bottom};
   height: 72vh;
   width: auto;
+
   right: ${(props) => props.rocketPosition.right};
   opacity: 0.5;
 
@@ -99,8 +99,8 @@ const Email = styled.h3`
 function Title() {
   const { foreground, background } = useContext(ColoursContext);
   const [rocketPosition, setRocketPosition] = useState({
-    right: "-100vw",
-    bottom: "-100vh",
+    right: "-150vw",
+    bottom: "-300vh",
     rightMobile: "-100vw",
     bottomMobile: "-100vh",
   });
