@@ -92,8 +92,10 @@ const NavListMobile = styled.div`
   }
 `;
 
-const NameLogo = styled.div`
+const NameLogo = styled.a`
   display: inline-block;
+  text-decoration: none;
+  color: #242424;
   font-family: "nunito", serif;
   font-size: 20px;
   font-weight: 700px;
@@ -162,7 +164,7 @@ function NavBar(props) {
       </NavList>
 
       <NavListMobile>
-        <NameLogo>josh codd</NameLogo>
+        <NameLogo href="#">josh codd</NameLogo>
 
         <MenuButton onClick={handleMenuClick}>
           <FontAwesomeIcon icon={faBars} size="xs" />

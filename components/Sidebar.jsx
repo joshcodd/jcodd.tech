@@ -22,11 +22,14 @@ const SidebarContainer = styled.div`
   }
 `;
 
-const NameLogo = styled.div`
+const NameLogo = styled.a`
   position: relative;
   top: 25px;
   left: -35px;
+  display: inline-block;
   transform: rotate(-90deg);
+  text-decoration: none;
+  color: #242424;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -92,7 +95,7 @@ function Sidebar() {
 
   return (
     <SidebarContainer position={position}>
-      <NameLogo>josh codd</NameLogo>
+      <NameLogo href="#">josh codd</NameLogo>
 
       <IconList>
         <IconListItem
