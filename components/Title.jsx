@@ -104,7 +104,7 @@ const Earth = styled.img`
   position: absolute;
   top: 45vh;
   right: 60vh;
-  opacity: 0.7;
+  opacity: 0.5;
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
@@ -146,6 +146,10 @@ const ParallaxContainer = styled.div`
   position: absolute;
   top: 100px;
   right: 0vw;
+`;
+
+const Anchor = styled.div`
+  display: none;
 `;
 
 const TextContainer = styled.div`
@@ -227,6 +231,7 @@ function Title() {
 
   return (
     <TitleContainer>
+      <Anchor>Anchor Element</Anchor>
       <LeftContainer>
         <ParallaxContainer>
           <Planet
