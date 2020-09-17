@@ -178,7 +178,7 @@ function Title() {
       <LeftContainer>
         <ParallaxContainer>
           <Planet
-            src="/simpleplanet.svg"
+            src="/Simpleplanet.svg"
             style={{ transform: `translateX(${parallax * 0.1}px)` }}
           />
           <Sat
