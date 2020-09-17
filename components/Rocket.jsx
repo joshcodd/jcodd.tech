@@ -145,7 +145,7 @@ const RocketContainer = styled.div`
   display: inline-block;
   position: relative;
   height: 100%;
-  opacity: 0.8;
+  opacity: 1;
   ${"" /* min-width: 310px; */}
 `;
 
@@ -183,8 +183,8 @@ const BoosterImageBottom = styled(BoosterImageTop)`
 function Rocket() {
   return (
     <RocketContainer>
-      <RocketImage src="rocket-size.svg" />
-      <RocketImageBehind src="rocket-size.svg" />
+      <RocketImage src="rocketmain.svg" />
+      <RocketImageBehind src="rocketmain.svg" />
       <BoosterImageTop src="rocket-short.svg" />
       <BoosterImageBottom src="rocket-short.svg" />
     </RocketContainer>

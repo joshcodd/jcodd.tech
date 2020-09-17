@@ -45,7 +45,7 @@ const RocketContainer = styled.div`
   width: auto;
   right: 15vw;
   bottom: 33vh;
-  opacity: 0.8;
+  opacity: 1;
   animation: ${rocketEntry} 1.5s;
 
   transition: transform 0.1s ease;
@@ -61,7 +61,7 @@ const Planet = styled.img`
   position: absolute;
   top: 10vh;
   right: 15vw;
-  opacity: 0.4;
+  opacity: 0.6;
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
@@ -71,8 +71,41 @@ const Planet = styled.img`
   }
 `;
 
+const Asteroid = styled.img`
+  width: 7vh;
+  position: absolute;
+  top: 70vh;
+  right: 5vw;
+  opacity: 0.4;
+  animation: ${spaceEntry} 0.5s;
+  transition: transform 0.1s ease;
+
+  @media (max-width: 450px) {
+  }
+`;
+
+const Earth = styled.img`
+  width: 11vh;
+  position: absolute;
+  top: 45vh;
+  right: 60vh;
+  opacity: 0.6;
+  animation: ${spaceEntry} 0.5s;
+  transition: transform 0.1s ease;
+
+  @media (max-width: 1500px) {
+    top: 45vh;
+    right: 60vh;
+  }
+
+  @media (max-width: 450px) {
+    right: 35vh;
+    top: 25vh;
+  }
+`;
+
 const Sat = styled.img`
-  width: 5vh;
+  width: 4vh;
   position: absolute;
   top: 30vh;
   right: 80vh;
@@ -191,11 +224,29 @@ function Title() {
               transform: `translate(${parallax * 0.4}px, ${parallax * 0.6}px) `,
             }}
           />
+
+          <Asteroid
+            src="/asteroid.png"
+            style={{
+              transform: `translate(-${parallax * 0.1}px, ${
+                parallax * 0.1
+              }px) `,
+            }}
+          />
+
+          <Earth
+            src="/earth.svg"
+            style={{
+              transform: `translate(${parallax * 0.5}px, -${
+                parallax * 0.5
+              }px) `,
+            }}
+          />
         </ParallaxContainer>
         <RocketContainer
           style={{
-            transform: `translate(${"-" + parallax * 0.2}px, ${
-              "-" + parallax * 0.2
+            transform: `translate(-${parallax * 0.2}px, -${
+              parallax * 0.2
             }px)  rotate(-30deg)`,
           }}
         >
