@@ -148,10 +148,6 @@ const ParallaxContainer = styled.div`
   right: 0vw;
 `;
 
-const Anchor = styled.div`
-  display: none;
-`;
-
 const TextContainer = styled.div`
   position: absolute;
   display: inline-block;
@@ -231,7 +227,6 @@ function Title() {
 
   return (
     <TitleContainer>
-      <Anchor>Anchor Element</Anchor>
       <LeftContainer>
         <ParallaxContainer>
           <Planet
