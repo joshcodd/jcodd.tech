@@ -87,7 +87,7 @@ function Sidebar() {
   const [position, setPostion] = useState("-100vw");
 
   useEffect(() => {
-    setTimeout(() => setPostion("0"), 2000);
+    setTimeout(() => setPostion("0"), 2400);
   });
 
   return (

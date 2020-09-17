@@ -4,6 +4,7 @@ import Rocket from "./Rocket";
 import styled from "styled-components";
 import { ColoursContext } from "./ColoursContext";
 import ScrollAnimation from "react-animate-on-scroll";
+import throttle from "lodash.throttle";
 
 const TitleContainer = styled.div`
   height: 120vh;
@@ -24,23 +25,40 @@ const RocketContainer = styled.div`
 
   transform: rotate(-30deg);
 
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: bottom 1s ease-in-out, right 1s ease-in-out;
+  -moz-transition: bottom 1s ease-in-out, right 1s ease-in-out;
+  -o-transition: bottom 1s ease-in-out, right 1s ease-in-out;
+  transition: bottom 1s ease-in-out, right 1s ease-in-out, transform 0.1s ease;
 
-  bottom: ${(props) => props.rocketPosition.bottom};
+  bottom: ${(props) => props.rocketPosition.bottom + "vh"};
   height: 72vh;
   width: auto;
 
-  right: ${(props) => props.rocketPosition.right};
+  right: ${(props) => props.rocketPosition.right + "vw"};
   opacity: 0.5;
 
   @media (max-width: 450px) {
     height: 50vh;
-    bottom: ${(props) => props.rocketPosition.bottomMobile};
-    right: ${(props) => props.rocketPosition.rightMobile};
+    bottom: ${(props) => props.rocketPosition.bottomMobile + "vh"};
+    right: ${(props) => props.rocketPosition.rightMobile + "vw"};
   }
+`;
+
+const Planet = styled.img`
+  width: 80px;
+  position: absolute;
+
+  opacity: 0.5;
+  transition: transform 0.1s ease-in-out;
+`;
+
+const ParallaxContainer = styled.div`
+  width: 40vw;
+  height: 30vw;
+
+  position: absolute;
+  bottom: 45vh;
+  right: 5vw;
 `;
 
 const TextContainer = styled.div`
@@ -105,32 +123,63 @@ const Email = styled.h3`
 
 function Title() {
   const { foreground, background } = useContext(ColoursContext);
+  const rocketRef = React.createRef(null);
+  const [parallax, setParallax] = useState(null);
+
   const [rocketPosition, setRocketPosition] = useState({
-    right: "-25vw",
-    bottom: "-50vh",
-    rightMobile: "-100vw",
-    bottomMobile: "-100vh",
+    right: -25,
+    bottom: -50,
+    rightMobile: -100,
+    bottomMobile: -100,
   });
 
   useEffect(() => {
     const rocketPosition = {
-      right: "15vw",
-      bottom: "35vh",
-      rightMobile: "20vh",
-      bottomMobile: "60vh",
+      right: 15,
+      bottom: 35,
+      rightMobile: 15,
+      bottomMobile: 60,
     };
     setTimeout(() => setRocketPosition(rocketPosition), 1000);
-  });
+
+    window.addEventListener("scroll", throttle(handleParallax, 100));
+
+    return () => {
+      window.removeEventListener("scroll", throttle(handleParallax, 100));
+    };
+  }, []);
+
+  function handleParallax() {
+    setParallax(window.pageYOffset);
+  }
 
   return (
     <TitleContainer>
       <Anchor> AnchorElement</Anchor>
       <LeftContainer>
-        <RocketContainer rocketPosition={rocketPosition}>
+        <ParallaxContainer>
+          <Planet
+            src="/simpleplanet.svg"
+            style={{ transform: `translateX(${parallax * 0.5}px)` }}
+          />
+        </ParallaxContainer>
+        <RocketContainer
+          rocketPosition={rocketPosition}
+          style={{
+            transform: `translate(${"-" + parallax * 0.2}px, ${
+              "-" + parallax * 0.2
+            }px)  rotate(-30deg)`,
+          }}
+        >
           <Rocket />
         </RocketContainer>
+
         <TextContainer>
-          <ScrollAnimation animateIn="animate__backInDown" duration={2}>
+          <ScrollAnimation
+            animateIn="animate__backInDown"
+            duration={2}
+            animateOnce={true}
+          >
             <GlitchText text="Hi, I'm Josh" />
 
             <ImAText>

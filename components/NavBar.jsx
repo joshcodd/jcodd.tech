@@ -114,7 +114,7 @@ function NavBar(props) {
   const { foreground, background } = useContext(ColoursContext);
 
   useEffect(() => {
-    setTimeout(() => setNavPostion("0"), 2200);
+    setTimeout(() => setNavPostion("0"), 2500);
   });
 
   function handleMenuClick() {
