@@ -44,7 +44,7 @@ const RocketContainer = styled.div`
   height: 72vh;
   width: auto;
   right: 15vw;
-  bottom: 35vh;
+  bottom: 33vh;
   opacity: 0.8;
   animation: ${rocketEntry} 1.5s;
 
@@ -104,7 +104,7 @@ const TextContainer = styled.div`
   position: absolute;
   display: inline-block;
   margin-left: 15vw;
-  bottom: 43vh;
+  bottom: 40vh;
   width: 48%;
   max-width: 450px;
   float: left;
@@ -118,7 +118,7 @@ const TextContainer = styled.div`
 const ImAText = styled.p`
   position: relative;
   opacity: 0.9;
-  margin: 10px 0 0 0;
+  margin: 10px 0 15px 0;
   @media (max-width: 630px) {
     width: 65%;
   }
