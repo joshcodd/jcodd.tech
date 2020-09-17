@@ -61,7 +61,7 @@ const Planet = styled.img`
   position: absolute;
   top: 10vh;
   right: 15vw;
-  opacity: 0.6;
+  opacity: 0.5;
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
@@ -76,11 +76,26 @@ const Asteroid = styled.img`
   position: absolute;
   top: 70vh;
   right: 5vw;
-  opacity: 0.4;
+  opacity: 0.2;
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
   @media (max-width: 450px) {
+  }
+`;
+
+const AsteroidTwo = styled.img`
+  width: 8vh;
+  position: absolute;
+  top: 0vh;
+  right: 5vw;
+  opacity: 0.7;
+  animation: ${spaceEntry} 0.5s;
+  transition: transform 0.1s ease;
+
+  @media (max-width: 450px) {
+    top: -40px;
+    right: 0vw;
   }
 `;
 
@@ -89,7 +104,7 @@ const Earth = styled.img`
   position: absolute;
   top: 45vh;
   right: 60vh;
-  opacity: 0.6;
+  opacity: 0.7;
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
@@ -104,8 +119,8 @@ const Earth = styled.img`
   }
 `;
 
-const Sat = styled.img`
-  width: 4vh;
+const Satellite = styled.img`
+  width: 5vh;
   position: absolute;
   top: 30vh;
   right: 80vh;
@@ -218,7 +233,7 @@ function Title() {
             src="/planet.svg"
             style={{ transform: `translateX(${parallax * 0.1}px)` }}
           />
-          <Sat
+          <Satellite
             src="/satellite.svg"
             style={{
               transform: `translate(${parallax * 0.4}px, ${parallax * 0.6}px) `,
@@ -230,6 +245,15 @@ function Title() {
             style={{
               transform: `translate(-${parallax * 0.1}px, ${
                 parallax * 0.1
+              }px) `,
+            }}
+          />
+
+          <AsteroidTwo
+            src="/asteroid.png"
+            style={{
+              transform: `translate(-${parallax * 0.9}px, ${
+                parallax * 0.9
               }px) `,
             }}
           />
