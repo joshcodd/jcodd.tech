@@ -17,7 +17,7 @@ const rocketEntry = keyframes`
 
 const spaceEntry = keyframes`
   0% {
-    transform: translate(100vw, 200vh)  ;
+    transform: translate(100vw, -200vh)  ;
   }
   100% {
     transform: translate(0, 0) ;
