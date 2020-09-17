@@ -148,9 +148,7 @@ const ParallaxContainer = styled.div`
   right: 0vw;
 `;
 
-const Anchor = styled.div`
-  display: none;
-`;
+const Anchor = styled.div``;
 
 const TextContainer = styled.div`
   position: absolute;
