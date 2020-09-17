@@ -8,10 +8,19 @@ import throttle from "lodash.throttle";
 
 const rocketEntry = keyframes`
   0% {
-    transform: translate(25vw, 50vh) rotate(-30deg)  ;
+    transform: translate(100vw, 200vh) rotate(-30deg)  ;
   }
   100% {
     transform: translate(0, 0) rotate(-30deg);
+  }
+`;
+
+const spaceEntry = keyframes`
+  0% {
+    transform: translate(100vw, 200vh)  ;
+  }
+  100% {
+    transform: translate(0, 0) ;
   }
 `;
 
@@ -32,25 +41,19 @@ const LeftContainer = styled.div`
 const RocketContainer = styled.div`
   position: absolute;
   transform: rotate(-30deg);
-
-  -webkit-transition: bottom 1s ease-in-out, right 1s ease-in-out;
-  -moz-transition: bottom 1s ease-in-out, right 1s ease-in-out;
-  -o-transition: bottom 1s ease-in-out, right 1s ease-in-out;
-  transition: bottom 1s ease-in-out, right 1s ease-in-out, transform 0.1s ease;
-
   height: 72vh;
   width: auto;
-
   right: 15vw;
   bottom: 35vh;
   opacity: 0.8;
+  animation: ${rocketEntry} 1.5s;
+
+  transition: transform 0.1s ease;
 
   @media (max-width: 450px) {
     height: 50vh;
     bottom: 60vh;
   }
-
-  animation: ${rocketEntry} 1s;
 `;
 
 const Planet = styled.img`
@@ -59,7 +62,8 @@ const Planet = styled.img`
   top: 10vh;
   right: 15vw;
   opacity: 0.4;
-  transition: transform 0.1s ease-in-out;
+  animation: ${spaceEntry} 0.5s;
+  transition: transform 0.1s ease;
 
   @media (max-width: 450px) {
     right: 10vw;
@@ -74,7 +78,8 @@ const Sat = styled.img`
   right: 80vh;
   opacity: 0.5;
   z-index: 0;
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease;
+  animation: ${spaceEntry} 0.5s;
 
   @media (max-width: 600px) {
     right: 60vh;
@@ -90,7 +95,6 @@ const Sat = styled.img`
 const ParallaxContainer = styled.div`
   width: 100vw;
   height: 72vh;
-
   position: absolute;
   top: 100px;
   right: 0vw;
@@ -111,16 +115,17 @@ const TextContainer = styled.div`
   }
 `;
 
-//Element to stop browser focusing on rocket
-//when animating from out of page.
-const Anchor = styled.div`
-  visibility: hidden;
-`;
-
 const ImAText = styled.p`
   position: relative;
-
   opacity: 0.9;
+  margin: 10px 0 0 0;
+  @media (max-width: 630px) {
+    width: 65%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
 
 const Email = styled.h3`
@@ -161,10 +166,10 @@ function Title() {
   const [parallax, setParallax] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", throttle(handleParallax, 100));
+    window.addEventListener("scroll", throttle(handleParallax, 50));
 
     return () => {
-      window.removeEventListener("scroll", throttle(handleParallax, 100));
+      window.removeEventListener("scroll", throttle(handleParallax, 50));
     };
   }, []);
 
@@ -174,7 +179,6 @@ function Title() {
 
   return (
     <TitleContainer>
-      <Anchor> AnchorElement</Anchor>
       <LeftContainer>
         <ParallaxContainer>
           <Planet
