@@ -141,14 +141,6 @@ const glitch = keyframes`
   }
  `;
 
-const RocketContainer = styled.div`
-  display: inline-block;
-  position: relative;
-  height: 100%;
-  opacity: 1;
-  ${"" /* min-width: 310px; */}
-`;
-
 const RocketImage = styled.img`
   position: relative;
   top: 0px;
@@ -180,14 +172,14 @@ const BoosterImageBottom = styled(BoosterImageTop)`
   animation: ${boosterAnimationBottom} 0.7s infinite;
 `;
 
-function Rocket() {
+function Rocket(props) {
   return (
-    <RocketContainer>
+    <div className={props.className} style={props.style}>
       <RocketImage src="rocketmain.svg" />
       <RocketImageBehind src="rocketmain.svg" />
       <BoosterImageTop src="rocket-short.svg" />
       <BoosterImageBottom src="rocket-short.svg" />
-    </RocketContainer>
+    </div>
   );
 }
 
