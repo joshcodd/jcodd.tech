@@ -49,7 +49,6 @@ function SideBarMenu(props) {
     } else {
       window.open(value);
     }
-
     props.setMobileMenu(false);
   }
 

@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import GlitchText from "./GlitchText";
-
 import SpaceScene from "./SpaceScene";
-import styled, { keyframes } from "styled-components";
-import { ColoursContext } from "./ColoursContext";
+import HoverButton from "./HoverButton";
+import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const TitleContainer = styled.div`
@@ -56,42 +55,13 @@ const ImAText = styled.p`
   }
 `;
 
-const Email = styled.h3`
-  display: inline-block;
-  position: relative;
+const EmailButton = styled(HoverButton)`
   top: 20px;
   padding: 5px 40px;
-  border-bottom: 2px solid ${(props) => props.textColour};
-  z-index: 1;
-
-  ::after {
-    position: absolute;
-    content: "";
-    background: ${(props) => props.textColour};
-    z-index: -1;
-    height: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  :hover {
-    color: ${(props) => props.backgroundColour};
-  }
-
-  :hover:after {
-    height: 100%;
-  }
+  border-bottom: 2px solid #242424;
 `;
 
 function Title() {
-  const { foreground, background } = useContext(ColoursContext);
-
   return (
     <TitleContainer>
       <div style={{ visibility: "hidden", position: "absolute" }}>Anchor</div>
@@ -110,9 +80,9 @@ function Title() {
               writing efficient, clean and readable code.
             </ImAText>
 
-            <Email textColour={foreground} backgroundColour={background}>
-              jjc21@live.co.uk
-            </Email>
+            <EmailButton href="mailto:jjc21@live.co.uk">
+              <h3>jjc21@live.co.uk</h3>
+            </EmailButton>
           </ScrollAnimation>
         </TextContainer>
       </LeftContainer>

@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import HoverButton from "./HoverButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { ColoursContext } from "./ColoursContext";
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -23,10 +23,9 @@ const SidebarContainer = styled.div`
 `;
 
 const NameLogo = styled.a`
-  position: relative;
+  position: absolute;
   top: 25px;
   left: -35px;
-  display: inline-block;
   transform: rotate(-90deg);
   text-decoration: none;
   color: #242424;
@@ -38,55 +37,23 @@ const NameLogo = styled.a`
 
 const IconList = styled.ul`
   list-style-type: none;
-  position: fixed;
+  position: absolute;
   bottom: 0px;
-  left: -20px;
-`;
-
-const IconListItem = styled.li`
-  position: relative;
-  padding: 5px 10px;
-  left: ${(props) => props.position};
-
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-
-  ::after {
-    position: absolute;
-    content: "";
-    background: ${(props) => props.textColour};
-    z-index: -1;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    width: 0%;
-
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  :hover {
-    color: ${(props) => props.backgroundColour};
-  }
-
-  :hover:after {
-    color: ${(props) => props.backgroundColour};
-    width: 100%;
-  }
+  padding: 0px;
+  left: 19px;
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-  margin: 3.6px 0 0 0px;
   width: 20px;
   height: 20px;
 `;
 
+const IconContainer = styled(HoverButton)`
+  transform: rotate(-90deg);
+  padding: 10px 9px 5px 9px;
+`;
+
 function Sidebar() {
-  const { foreground, background } = useContext(ColoursContext);
   const [position, setPostion] = useState("-100vw");
 
   useEffect(() => {
@@ -98,21 +65,17 @@ function Sidebar() {
       <NameLogo href="#">josh codd</NameLogo>
 
       <IconList>
-        <IconListItem
-          textColour={foreground}
-          backgroundColour={background}
-          position={position}
-        >
-          <Icon icon={faGithub} size="xs" transform={{ rotate: -90 }} />
-        </IconListItem>
+        <li>
+          <IconContainer href="https://github.com/joshcodd">
+            <Icon icon={faGithub} />
+          </IconContainer>
+        </li>
 
-        <IconListItem
-          textColour={foreground}
-          backgroundColour={background}
-          position={position}
-        >
-          <Icon icon={faLinkedin} size="xs" transform={{ rotate: -90 }} />
-        </IconListItem>
+        <li>
+          <IconContainer href="https://www.linkedin.com/in/joshcodd/">
+            <Icon icon={faLinkedin} />
+          </IconContainer>
+        </li>
       </IconList>
     </SidebarContainer>
   );
