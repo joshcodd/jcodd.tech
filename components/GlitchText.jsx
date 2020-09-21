@@ -205,7 +205,7 @@ function GlitchText(props) {
   const coloursContext = useContext(ColoursContext);
   const text = props.text;
   return (
-    <GlitchContainer>
+    <GlitchContainer className={props.className}>
       <Wrapper
         condition={coloursContext === Colours.dark}
         wrapper={(children) => <mark>{children}</mark>}
