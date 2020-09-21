@@ -84,10 +84,9 @@ const NameLogo = styled.a`
   float: left;
 `;
 
-const MenuButton = styled.div`
-  display: inline-block;
-  height: 20px;
-  width: 20px;
+const MenuButton = styled(FontAwesomeIcon)`
+  height: 22px;
+  width: 25px;
   margin: 6% 5% 0 0;
   float: right;
 `;
@@ -135,9 +134,7 @@ function NavBar(props) {
           <NameLogo>josh codd</NameLogo>
         </Link>
 
-        <MenuButton onClick={handleMenuClick}>
-          <FontAwesomeIcon icon={faBars} size="xs" />
-        </MenuButton>
+        <MenuButton icon={faBars} onClick={handleMenuClick} size={"2x"} />
       </NavListMobile>
     </Navbar>
   );
