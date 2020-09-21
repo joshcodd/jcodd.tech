@@ -8,7 +8,15 @@ const Headshot = styled.canvas`
 
 function GlitchImage(props) {
   const canvasRef = React.createRef(null);
-  const [mousePosition, setMousePosition] = useState({});
+  const [mousePosition, setMousePosition] = useState({
+    rOffsetX: -8,
+    gOffsetX: 0,
+    bOffsetX: 16,
+
+    rOffsetY: 0,
+    gOffsetY: 0,
+    bOffsetY: 0,
+  });
   let canvas = null;
 
   function handleMouseMove(event) {
@@ -53,6 +61,7 @@ function GlitchImage(props) {
   useEffect(() => {
     updateCanvas();
     document.onmousemove = handleMouseMove;
+    console.log(mousePosition);
   }, [mousePosition]);
 
   function updateCanvas() {
