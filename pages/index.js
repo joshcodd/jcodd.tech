@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout animate={true}>
       <Head>
         <title> Josh </title>
         <link rel="icon" href="" />

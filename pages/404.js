@@ -31,7 +31,7 @@ const GlitchTextContainer = styled.div`
 
 function NotFound() {
   return (
-    <Layout>
+    <Layout animate={false}>
       <GlitchTextContainer>
         <ErrorStyled text="Error" />
         <FourStyled text="404" />

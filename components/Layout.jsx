@@ -29,11 +29,12 @@ function Layout(props) {
     <ColoursContext.Provider value={colours}>
       <LayoutStyle style={documentStyle} mobileMenu={mobileMenu}>
         <NavBar
+          animate={props.animate}
           setColours={setColours}
           mobileMenu={mobileMenu}
           setMobileMenu={setMobileMenu}
         />
-        <Sidebar />
+        <Sidebar animate={props.animate} />
         <MobileMenu visible={mobileMenu} setMobileMenu={setMobileMenu} />
         {props.children}
       </LayoutStyle>

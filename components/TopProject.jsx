@@ -63,6 +63,7 @@ const Icon = styled(FontAwesomeIcon)`
   top: 3px;
   width: 25px;
   height: 25px;
+  font-size: 25px;
 `;
 
 const ProjectDescription = styled.p`

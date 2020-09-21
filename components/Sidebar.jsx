@@ -47,6 +47,7 @@ const IconList = styled.ul`
 const Icon = styled(FontAwesomeIcon)`
   width: 20px;
   height: 20px;
+  font-size: 20px;
 `;
 
 const IconContainer = styled(HoverButton)`
@@ -54,8 +55,9 @@ const IconContainer = styled(HoverButton)`
   padding: 10px 9px 5px 9px;
 `;
 
-function Sidebar() {
-  const [position, setPostion] = useState("-100vw");
+function Sidebar(props) {
+  const startingPosition = props.animate ? "-100vw" : "0";
+  const [position, setPostion] = useState(startingPosition);
 
   useEffect(() => {
     setTimeout(() => setPostion("0"), 2400);

@@ -85,14 +85,17 @@ const NameLogo = styled.a`
 `;
 
 const MenuButton = styled(FontAwesomeIcon)`
+  display: inline-block;
   height: 22px;
-  width: 25px;
+  width: 22px;
   margin: 6% 5% 0 0;
   float: right;
+  font-size: 25px;
 `;
 
 function NavBar(props) {
-  const [navPosition, setNavPostion] = useState("100vw");
+  const startingPosition = props.animate ? "100vw" : "0";
+  const [navPosition, setNavPostion] = useState(startingPosition);
   const { foreground, background } = useContext(ColoursContext);
 
   useEffect(() => {
@@ -134,7 +137,7 @@ function NavBar(props) {
           <NameLogo>josh codd</NameLogo>
         </Link>
 
-        <MenuButton icon={faBars} onClick={handleMenuClick} size={"2x"} />
+        <MenuButton icon={faBars} onClick={handleMenuClick} />
       </NavListMobile>
     </Navbar>
   );

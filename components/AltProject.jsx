@@ -24,6 +24,8 @@ const HoverButtonStyled = styled(HoverButton)`
   width: 17px;
   padding: 4px 5px;
   margin-left: 10px;
+
+  font-size: 18px;
 `;
 
 const ProjectDescription = styled.p`
