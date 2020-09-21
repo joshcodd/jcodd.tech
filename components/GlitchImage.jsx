@@ -61,7 +61,6 @@ function GlitchImage(props) {
   useEffect(() => {
     updateCanvas();
     document.onmousemove = handleMouseMove;
-    console.log(mousePosition);
   }, [mousePosition]);
 
   function updateCanvas() {
