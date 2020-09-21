@@ -15,6 +15,10 @@ body {
   overflow: clip;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 mark {
   background-color: #49cbe267;
 }

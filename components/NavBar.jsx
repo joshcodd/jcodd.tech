@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
+import Link from "next/link";
 import styled from "styled-components";
+import HoverSplit from "./HoverSplit";
 import Switch from "./Switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -47,11 +49,6 @@ const NavItem = styled.li`
   font-weight: 300;
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-  color: ${(props) => props.textColour};
-`;
-
 const BoxLink = styled.div`
   padding: 0px 30px;
   border: 1px solid #242424;
@@ -67,22 +64,6 @@ const BoxLink = styled.div`
   }
 `;
 
-const TopHalf = styled.div`
-  position: absolute;
-  clip-path: inset(0% 0% 50% 0px);
-  ${NavItem}:hover & {
-    transform: translate(7.5px, 0px);
-  }
-`;
-
-const BottomHalf = styled.div`
-  position: relative;
-  clip-path: inset(50% 0px 0px 0px);
-  ${NavItem}:hover & {
-    left: -5px;
-  }
-`;
-
 const NavListMobile = styled.div`
   display: none;
   @media (max-width: 600px) {
@@ -93,14 +74,10 @@ const NavListMobile = styled.div`
 `;
 
 const NameLogo = styled.a`
-  display: inline-block;
-  text-decoration: none;
   color: #242424;
   font-family: "nunito", serif;
   font-size: 20px;
   font-weight: 700px;
-  margin: 5% 0 0 5%;
-  float: left;
 `;
 
 const MenuButton = styled.div`
@@ -129,34 +106,20 @@ function NavBar(props) {
       mobileMenu={props.mobileMenu}
       navPosition={navPosition}
     >
-      <NavList textColour={foreground}>
-        <NavItem href="#about">
-          <Link href="#about" textColour={foreground}>
-            <TopHalf>ABOUT</TopHalf>
-            <BottomHalf>ABOUT</BottomHalf>
-          </Link>
+      <NavList>
+        <NavItem>
+          <HoverSplit href={"/#about"}>ABOUT</HoverSplit>
         </NavItem>
         <NavItem>
-          <Link href="#projects" textColour={foreground}>
-            <TopHalf> PROJECTS</TopHalf>
-            <BottomHalf>PROJECTS</BottomHalf>
-          </Link>
+          <HoverSplit href={"/#projects"}>PROJECTS</HoverSplit>
         </NavItem>
         <NavItem>
-          <Link href="#" textColour={foreground}>
-            <TopHalf>CONTACT</TopHalf>
-            <BottomHalf>CONTACT</BottomHalf>
-          </Link>
+          <HoverSplit href={"/#"}>CONTACT</HoverSplit>
         </NavItem>
         <NavItem>
-          <Link href="#" textColour={foreground}>
-            <TopHalf>
-              <BoxLink>CV</BoxLink>
-            </TopHalf>
-            <BottomHalf>
-              <BoxLink>CV</BoxLink>
-            </BottomHalf>
-          </Link>
+          <HoverSplit href={"/#about"}>
+            <BoxLink>CV</BoxLink>
+          </HoverSplit>
         </NavItem>
         <NavItem style={{ display: "none" }}>
           <Switch setColours={props.setColours} />
@@ -164,7 +127,9 @@ function NavBar(props) {
       </NavList>
 
       <NavListMobile>
-        <NameLogo href="#">josh codd</NameLogo>
+        <Link href="/#">
+          <NameLogo>josh codd</NameLogo>
+        </Link>
 
         <MenuButton onClick={handleMenuClick}>
           <FontAwesomeIcon icon={faBars} size="xs" />
