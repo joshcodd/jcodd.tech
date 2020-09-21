@@ -37,12 +37,13 @@ function AltProject(props) {
   const title = props.title;
   const description = props.children;
   const tags = props.tags || [];
+  const githubRepo = props.githubRepo;
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <AltProjectContainer>
         <h2 style={{ display: "inline-block" }}>{title}</h2>
-        <HoverButtonStyled>
+        <HoverButtonStyled href={githubRepo}>
           <FontAwesomeIcon icon={faGithub} />
         </HoverButtonStyled>
 

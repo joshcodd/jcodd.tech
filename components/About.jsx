@@ -3,6 +3,7 @@ import GlitchImage from "./GlitchImage";
 import Tag from "./Tag";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
+import data from "../content/aboutMe.json";
 
 const AboutContainer = styled.div`
   max-width: 900px;
@@ -94,42 +95,29 @@ function About() {
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <AboutContainer>
         <GlitchImageContainer>
-          <GlitchImage src="/Headshot2.jpg" />
+          <GlitchImage src={data.imageURL} />
         </GlitchImageContainer>
 
         <Title> About Me </Title>
         <AboutContent>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur.
-          </p>
+          <p>{data.description}</p>
           <TagContainer>
             <SubHeading>Languages</SubHeading>
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
+            {data.languages.map((language, index) => {
+              return <Tag key={index} text={language} />;
+            })}
           </TagContainer>
           <TagContainer>
             <SubHeading>Frameworks</SubHeading>
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
-            <Tag text="Java" />
+            {data.frameworks.map((framework, index) => {
+              return <Tag key={index} text={framework} />;
+            })}
           </TagContainer>
           <TagContainer>
             <SubHeading>Tools</SubHeading>
-            <Tag text="Java" />
-            <Tag text="Java" />
+            {data.tools.map((tool, index) => {
+              return <Tag key={index} text={tool} />;
+            })}
           </TagContainer>
         </AboutContent>
       </AboutContainer>

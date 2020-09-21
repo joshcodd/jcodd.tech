@@ -1,0 +1,28 @@
+{
+  "topProjects": [
+    {
+      "title": "Listening Habits",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus",
+      "imageUrl": "ListeningHabits.jpg",
+      "tags": ["JavaScript"],
+      "githubRepo": "https://github.com/joshcodd/listening-habits",
+      "float": "right"
+    },
+    {
+      "title": "Sorting Visualizer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus",
+      "imageUrl": "SortingVisualizer.jpg",
+      "tags": ["React"],
+      "githubRepo": "https://github.com/joshcodd/sorting-visualizer",
+      "float": "left"
+    }
+  ],
+  "otherProjects": [
+    {
+      "title": "Personal Website",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus",
+      "tags": ["Javascript", "React", "NextJs"],
+      "githubRepo": "https://github.com/joshcodd/personal-website"
+    }
+  ]
+}

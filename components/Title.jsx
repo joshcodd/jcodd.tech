@@ -4,6 +4,7 @@ import SpaceScene from "./SpaceScene";
 import HoverButton from "./HoverButton";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
+import data from "../content/title.json";
 
 const TitleContainer = styled.div`
   height: 120vh;
@@ -75,13 +76,10 @@ function Title() {
           >
             <GlitchText text="Hi, I'm Josh" />
 
-            <ImAText>
-              I'm a software engineer based in Swansea, Wales. Focused on
-              writing efficient, clean and readable code.
-            </ImAText>
+            <ImAText>{data.description}</ImAText>
 
-            <EmailButton href="mailto:jjc21@live.co.uk">
-              <h3>jjc21@live.co.uk</h3>
+            <EmailButton href={"mailto:" + data.email}>
+              <h3>{data.email}</h3>
             </EmailButton>
           </ScrollAnimation>
         </TextContainer>

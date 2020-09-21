@@ -66,7 +66,7 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 const ProjectDescription = styled.p`
-  display: inline-block;
+  display: block;
 `;
 
 const ProjectTagContainer = styled.div`
@@ -82,6 +82,7 @@ function TopProject(props) {
   const imageSrc = props.img;
   const description = props.children;
   const tags = props.tags || [];
+  const githubRepo = props.githubRepo;
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
@@ -91,7 +92,7 @@ function TopProject(props) {
         <ProjectContent float={textFloat}>
           <ProjectTitle>
             {title}
-            <HoverButtonStyled float={imageFloat}>
+            <HoverButtonStyled float={imageFloat} href={githubRepo}>
               <Icon icon={faGithub} />
             </HoverButtonStyled>
           </ProjectTitle>

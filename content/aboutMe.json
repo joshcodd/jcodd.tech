@@ -1,0 +1,7 @@
+{
+  "description": "This is my description.",
+  "imageURL": "/Headshot2.jpg",
+  "languages": ["Java", "JavaScript", "HTML", "CSS"],
+  "frameworks": ["React", "NodeJs", "NextJs"],
+  "tools": ["Git"]
+}
