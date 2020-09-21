@@ -2,6 +2,9 @@ import React from "react";
 import Tag from "./Tag";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
+import HoverButton from "./HoverButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const TopProjectContainer = styled.div`
   width: 100%;
@@ -30,7 +33,7 @@ const ProjectImage = styled.img`
 `;
 
 const ProjectContent = styled.div`
-  width: 35%;
+  width: 40%;
   float: ${(props) => (props.float === "right" ? "right" : "left")};
   text-align: ${(props) => (props.float === "right" ? "right" : "left")};
   border-radius: 5px;
@@ -45,13 +48,28 @@ const ProjectTitle = styled.h1`
   display: inline-block;
 `;
 
+const HoverButtonStyled = styled(HoverButton)`
+  font-size: 15px;
+  padding: 2px 7px;
+  margin-left: 10px;
+
+  @media (max-width: 775px) {
+    float: right;
+  }
+`;
+
+const Icon = styled(FontAwesomeIcon)`
+  position: relative;
+  top: 3px;
+  width: 25px;
+  height: 25px;
+`;
+
 const ProjectDescription = styled.p`
   display: inline-block;
 `;
 
 const ProjectTagContainer = styled.div`
-  margin: 30px 0 0 0;
-
   @media (max-width: 775px) {
     margin: 0;
   }
@@ -71,7 +89,12 @@ function TopProject(props) {
         <ProjectImage src={imageSrc} float={imageFloat}></ProjectImage>
 
         <ProjectContent float={textFloat}>
-          <ProjectTitle float={textFloat}>{title}</ProjectTitle>
+          <ProjectTitle>
+            {title}
+            <HoverButtonStyled float={imageFloat}>
+              <Icon icon={faGithub} />
+            </HoverButtonStyled>
+          </ProjectTitle>
 
           <ProjectDescription float={textFloat}>
             {description}

@@ -51,8 +51,6 @@ function Projects() {
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
       </TopProject>
 
       <TopProject
@@ -63,8 +61,6 @@ function Projects() {
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Non quam lacus
-        suspendisse faucibus interdum posuere lorem ipsum. Ultrices dui sapien
-        eget mi proin sed libero. Consequat id porta nibh
       </TopProject>
 
       <ScrollAnimation animateIn="animate__fadeIn" duration={2}>

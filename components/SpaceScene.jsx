@@ -93,9 +93,9 @@ const Earth = styled.img`
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
-  @media (max-width: 1500px) {
-    top: 45vh;
-    right: 60vh;
+  @media (max-width: 1000px) {
+    top: 30vh;
+    right: 50vh;
   }
 
   @media (max-width: 450px) {

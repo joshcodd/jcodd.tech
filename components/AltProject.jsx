@@ -2,6 +2,9 @@ import React from "react";
 import Tag from "./Tag";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
+import HoverButton from "./HoverButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const AltProjectContainer = styled.div`
   width: 90%;
@@ -11,6 +14,16 @@ const AltProjectContainer = styled.div`
   @media (max-width: 450px) {
     width: 100%;
   }
+`;
+
+const HoverButtonStyled = styled(HoverButton)`
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  height: 17px;
+  width: 17px;
+  padding: 4px 5px;
+  margin-left: 10px;
 `;
 
 const ProjectDescription = styled.p`
@@ -28,7 +41,10 @@ function AltProject(props) {
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <AltProjectContainer>
-        <h2>{title}</h2>
+        <h2 style={{ display: "inline-block" }}>{title}</h2>
+        <HoverButtonStyled>
+          <FontAwesomeIcon icon={faGithub} />
+        </HoverButtonStyled>
 
         <ProjectDescription>{description}</ProjectDescription>
 
