@@ -74,10 +74,14 @@ const NavListMobile = styled.div`
 `;
 
 const NameLogo = styled.a`
+  display: inline-block;
+  text-decoration: none;
   color: #242424;
   font-family: "nunito", serif;
   font-size: 20px;
   font-weight: 700px;
+  margin: 5% 0 0 5%;
+  float: left;
 `;
 
 const MenuButton = styled.div`
@@ -117,7 +121,7 @@ function NavBar(props) {
           <HoverSplit href={"/#"}>CONTACT</HoverSplit>
         </NavItem>
         <NavItem>
-          <HoverSplit href={"/#about"}>
+          <HoverSplit href={"/#"}>
             <BoxLink>CV</BoxLink>
           </HoverSplit>
         </NavItem>

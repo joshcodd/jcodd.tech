@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import HoverButton from "./HoverButton";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -24,10 +25,10 @@ const SidebarContainer = styled.div`
 
 const NameLogo = styled.a`
   position: absolute;
+  text-decoration: none;
   top: 25px;
   left: -35px;
   transform: rotate(-90deg);
-  text-decoration: none;
   color: #242424;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
@@ -62,7 +63,9 @@ function Sidebar() {
 
   return (
     <SidebarContainer position={position}>
-      <NameLogo href="#">josh codd</NameLogo>
+      <Link href="/#">
+        <NameLogo>josh codd</NameLogo>
+      </Link>
 
       <IconList>
         <li>

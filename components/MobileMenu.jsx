@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -29,10 +30,13 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
+  margin: 12px 20px;
+`;
+
+const AStyled = styled.a`
   font-size: 25px;
   font-family: "Nunito", sans-serif;
   font-weight: 100;
-  margin: 12px 20px;
 `;
 
 const Icon = styled(FontAwesomeIcon)`
@@ -44,25 +48,50 @@ function SideBarMenu(props) {
   const isVisible = props.visible;
 
   function handleClick(value) {
-    if (value.charAt(0) === "#") {
-      window.location.href = value;
-    } else {
+    if (value.length > 0) {
       window.open(value);
     }
+
     props.setMobileMenu(false);
   }
 
   return (
     <SideBarMenuStyle isVisible={isVisible}>
       <NavList>
-        <NavItem onClick={() => handleClick("#")}>HOME</NavItem>
-        <NavItem onClick={() => handleClick("#about")}>ABOUT</NavItem>
-        <NavItem onClick={() => handleClick("#projects")}>PROJECTS</NavItem>
-        <NavItem onClick={() => handleClick("#contact")}>CONTACT</NavItem>
-        <NavItem onClick={() => handleClick("#CV")}>CV</NavItem>
+        <NavItem onClick={handleClick}>
+          <Link href="/#">
+            <AStyled>HOME</AStyled>
+          </Link>
+        </NavItem>
+
+        <NavItem onClick={handleClick}>
+          <Link href="/#about">
+            <AStyled>ABOUT</AStyled>
+          </Link>
+        </NavItem>
+
+        <NavItem onClick={handleClick}>
+          <Link href="/#projects">
+            <AStyled>PROJECTS</AStyled>
+          </Link>
+        </NavItem>
+
+        <NavItem onClick={handleClick}>
+          <Link href="/#">
+            <AStyled>CONTACT</AStyled>
+          </Link>
+        </NavItem>
+
+        <NavItem onClick={handleClick}>
+          <Link href="/#">
+            <AStyled>CV</AStyled>
+          </Link>
+        </NavItem>
+
         <NavItem onClick={() => handleClick("https://github.com/joshcodd")}>
           <Icon icon={faGithub} />
         </NavItem>
+
         <NavItem
           onClick={() => handleClick("https://www.linkedin.com/in/joshcodd/")}
         >
