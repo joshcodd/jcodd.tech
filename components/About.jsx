@@ -90,9 +90,12 @@ const TagContainer = styled.div`
 `;
 
 function About() {
-  const desc = data.description.split("/n").map((section) => {
-    return <p>{section}</p>;
-  });
+  //allow /n char in string to be a line break.
+  const aboutDescription = data.description
+    .split("/n")
+    .map((section, index) => {
+      return <p key={index}>{section}</p>;
+    });
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
@@ -103,7 +106,7 @@ function About() {
 
         <Title> About Me </Title>
         <AboutContent>
-          <p>{desc}</p>
+          <div>{aboutDescription}</div>
           <TagContainer>
             <SubHeading style={{ margin: "0" }}>Languages</SubHeading>
             {data.languages.map((language, index) => {
