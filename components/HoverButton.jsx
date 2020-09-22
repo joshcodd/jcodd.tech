@@ -23,6 +23,7 @@ const ButtonHov = styled.div`
 
   :hover {
     color: white;
+    cursor: pointer;
   }
 
   :hover:after {
