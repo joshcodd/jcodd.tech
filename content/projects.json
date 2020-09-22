@@ -2,17 +2,17 @@
   "topProjects": [
     {
       "title": "Listening Habits",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus",
+      "description": "A web application for viewing Spotify data such as a user's top tracks, artists and genres. Track and artist data retrieved from Spotify Web API, with top genres being calculated from this data.",
       "imageUrl": "ListeningHabits.jpg",
-      "tags": ["JavaScript"],
+      "tags": ["JavaScript", "React", "Nodejs", "Express", "Spotify Web API"],
       "githubRepo": "https://github.com/joshcodd/listening-habits",
       "float": "right"
     },
     {
       "title": "Sorting Visualizer",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus",
+      "description": "A web application to visualize common sorting algorithms. Collection size can be adjusted as well as the speed of the sort.",
       "imageUrl": "SortingVisualizer.jpg",
-      "tags": ["React"],
+      "tags": ["JavaScript", "React"],
       "githubRepo": "https://github.com/joshcodd/sorting-visualizer",
       "float": "left"
     }
@@ -20,7 +20,7 @@
   "otherProjects": [
     {
       "title": "Personal Website",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus",
+      "description": "You're currently looking at this project! I built this website using React to use as a CV. When building this application I decided to learn about styled-components. ",
       "tags": ["Javascript", "React", "NextJs"],
       "githubRepo": "https://github.com/joshcodd/personal-website"
     }

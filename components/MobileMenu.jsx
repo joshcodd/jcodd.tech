@@ -79,12 +79,6 @@ function SideBarMenu(props) {
 
         <NavItem onClick={handleClick}>
           <Link href="/#">
-            <AStyled>CONTACT</AStyled>
-          </Link>
-        </NavItem>
-
-        <NavItem onClick={handleClick}>
-          <Link href="/#">
             <AStyled>CV</AStyled>
           </Link>
         </NavItem>

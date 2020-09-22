@@ -114,13 +114,13 @@ function NavBar(props) {
     >
       <NavList>
         <NavItem>
+          <HoverSplit href={"/#"}>HOME</HoverSplit>
+        </NavItem>
+        <NavItem>
           <HoverSplit href={"/#about"}>ABOUT</HoverSplit>
         </NavItem>
         <NavItem>
           <HoverSplit href={"/#projects"}>PROJECTS</HoverSplit>
-        </NavItem>
-        <NavItem>
-          <HoverSplit href={"/#"}>CONTACT</HoverSplit>
         </NavItem>
         <NavItem>
           <HoverSplit href={"/#"}>
