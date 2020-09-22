@@ -42,6 +42,7 @@ const AStyled = styled.a`
 const Icon = styled(FontAwesomeIcon)`
   width: 20px;
   height: 20px;
+  font-size: 20px;
 `;
 
 function SideBarMenu(props) {
