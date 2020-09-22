@@ -175,10 +175,10 @@ const BoosterImageBottom = styled(BoosterImageTop)`
 function Rocket(props) {
   return (
     <div className={props.className} style={props.style}>
-      <RocketImage src="rocketmain.svg" alt="Rocket" />
-      <RocketImageBehind src="rocketmain.svg" alt="Rocket" />
-      <BoosterImageTop src="rocket-short.svg" alt="Rocket flame" />
-      <BoosterImageBottom src="rocket-short.svg" alt="Rocket flame" />
+      <RocketImage src="/space/rocketmain.svg" alt="Rocket" />
+      <RocketImageBehind src="/space/rocketmain.svg" alt="Rocket" />
+      <BoosterImageTop src="/space/rocket-short.svg" alt="Rocket flame" />
+      <BoosterImageBottom src="/space/rocket-short.svg" alt="Rocket flame" />
     </div>
   );
 }

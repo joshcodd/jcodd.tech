@@ -152,12 +152,12 @@ function SpaceScene(props) {
       ></RocketStyled>
 
       <Planet
-        src="/planet.svg"
+        src="/space/planet.svg"
         alt="Planet"
         style={{ transform: `translateX(${parallax * 0.1}px)` }}
       />
       <Satellite
-        src="/satellite.svg"
+        src="/space/satellite.svg"
         alt="Satellite"
         style={{
           transform: `translate(${parallax * 0.4}px, ${parallax * 0.6}px) `,
@@ -165,7 +165,7 @@ function SpaceScene(props) {
       />
 
       <Asteroid
-        src="/asteroid.png"
+        src="/space/asteroid.png"
         alt="Asteroid"
         style={{
           transform: `translate(-${parallax * 0.1}px, ${parallax * 0.1}px) `,
@@ -173,7 +173,7 @@ function SpaceScene(props) {
       />
 
       <AsteroidTwo
-        src="/asteroid.png"
+        src="/space/asteroid.png"
         alt="Asteroid"
         style={{
           transform: `translate(-${parallax * 0.9}px, ${parallax * 0.9}px) `,
@@ -181,7 +181,7 @@ function SpaceScene(props) {
       />
 
       <Earth
-        src="/earth.svg"
+        src="/space/earth.svg"
         alt="Planet earth"
         style={{
           transform: `translate(${parallax * 0.4}px)`,
