@@ -101,7 +101,7 @@ function About() {
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <AboutContainer>
         <GlitchImageContainer>
-          <GlitchImage src={data.imageURL} />
+          <GlitchImage src="SelfImage." />
         </GlitchImageContainer>
 
         <Title> About Me </Title>
