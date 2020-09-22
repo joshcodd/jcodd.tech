@@ -15,7 +15,7 @@ export default function Home() {
       setShowContact={setShowContact}
     >
       <Head>
-        <title> Josh </title>
+        <title> Josh Codd </title>
         <link rel="icon" href="favicon.ico" />
         <meta
           name="description"
