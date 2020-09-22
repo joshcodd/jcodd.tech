@@ -53,6 +53,7 @@ function Projects() {
             float={topProject.float}
             tags={topProject.tags}
             githubRepo={topProject.githubRepo}
+            alt={topProject.alt}
           >
             {topProject.description}
           </TopProject>

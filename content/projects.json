@@ -4,6 +4,7 @@
       "title": "Listening Habits",
       "description": "A web application for viewing Spotify data such as a user's top tracks, artists and genres. Track and artist data retrieved from Spotify Web API, with top genres then being calculated from this data.",
       "imageUrl": "ListeningHabits.jpg",
+      "alt": "Listening Habits App",
       "tags": ["JavaScript", "React", "Node.js", "Express", "Spotify Web API"],
       "githubRepo": "https://github.com/joshcodd/listening-habits",
       "float": "right"
@@ -12,6 +13,7 @@
       "title": "Sorting Visualizer",
       "description": "A web application to visualize various sorting algorithms. Collection size can be adjusted as well as the speed of the sort. I built this to revise sorting algorithms further.",
       "imageUrl": "SortingVisualizer.jpg",
+      "alt": "Sorting Visualizer App",
       "tags": ["JavaScript", "React"],
       "githubRepo": "https://github.com/joshcodd/sorting-visualizer",
       "float": "left"

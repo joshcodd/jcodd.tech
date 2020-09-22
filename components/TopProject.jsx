@@ -84,11 +84,16 @@ function TopProject(props) {
   const description = props.children;
   const tags = props.tags || [];
   const githubRepo = props.githubRepo;
+  const alt = props.alt;
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <TopProjectContainer>
-        <ProjectImage src={imageSrc} float={imageFloat}></ProjectImage>
+        <ProjectImage
+          src={imageSrc}
+          float={imageFloat}
+          alt={alt}
+        ></ProjectImage>
 
         <ProjectContent float={textFloat}>
           <ProjectTitle>
