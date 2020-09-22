@@ -6,7 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import data from "../content/aboutMe.json";
 
 const AboutContainer = styled.div`
-  max-width: 900px;
+  max-width: 950px;
   width: 75vw;
   align-items: center;
   margin: 0px auto;
@@ -40,14 +40,13 @@ const SubHeading = styled.h3`
   display: block;
   float: right;
   width: 100%;
-  margin: 10px 0 3px 0;
+  margin-top: 8px;
 `;
 
 const GlitchImageContainer = styled.div`
   display: inline-block;
   float: left;
-  max-width: 400px;
-  max-height: 500px;
+  max-width: 420px;
   width: 45%;
   height: auto;
 
@@ -87,10 +86,14 @@ const AboutContent = styled.div`
 const TagContainer = styled.div`
   width: 100%;
   display: block;
-  line-height: 20px;
+  line-height: 20.5px;
 `;
 
 function About() {
+  const desc = data.description.split("/n").map((section) => {
+    return <p>{section}</p>;
+  });
+
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <AboutContainer>
@@ -100,9 +103,9 @@ function About() {
 
         <Title> About Me </Title>
         <AboutContent>
-          <p>{data.description}</p>
+          <p>{desc}</p>
           <TagContainer>
-            <SubHeading>Languages</SubHeading>
+            <SubHeading style={{ margin: "0" }}>Languages</SubHeading>
             {data.languages.map((language, index) => {
               return <Tag key={index} text={language} />;
             })}
