@@ -1,6 +1,6 @@
 {
   "description": "Hello, I'm Josh! I'm currently in my second year at Swansea University, studying towards a degree in Computer Science. I'm passionate about solving problems with efficient, clean and readable code. /n /n My mindset as a software engineer is to always be a student, I'm eager to learn new skills and always improve. Currently, my short term goal is getting an internship as a software engineer throughout the summer of 2021. Please contact with any opportunities!  /n /n On a side note, I'm interested in space, along with space exploration and also enjoy listening to podcasts as well as watching documentaries. /n /n Below are some technologies that I use regularly. ",
-  "imageURL": "Headshot.jpg",
+  "imageURL": "/Headshot.jpg",
   "languages": ["Java", "JavaScript", "HTML", "CSS"],
   "frameworks": ["React", "Node.js", "Next.js", "Express"],
   "tools": ["Git", "GitHub", "MongoDB", "Terminal"]
