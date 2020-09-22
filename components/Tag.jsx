@@ -5,7 +5,7 @@ const TagStyle = styled.h4`
   display: inline-block;
   border: 1px solid;
   border-radius: 5px;
-  padding: 0px 10px;
+  padding: 1px 10px;
   margin: 5px 7px 5px 0;
 `;
 
