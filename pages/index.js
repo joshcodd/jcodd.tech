@@ -16,7 +16,7 @@ export default function Home() {
     >
       <Head>
         <title> Josh </title>
-        <link rel="icon" href="" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <section id="home">
