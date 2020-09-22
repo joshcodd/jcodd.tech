@@ -21,6 +21,7 @@ export default function Home() {
           name="description"
           content="Josh Codd: A software engineer based in Swansea, Wales. Focused on writing efficient, clean and readable code."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <section id="home">
