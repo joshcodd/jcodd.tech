@@ -49,21 +49,14 @@ const ProjectTitle = styled.h2`
 `;
 
 const HoverButtonStyled = styled(HoverButton)`
-  font-size: 15px;
-  padding: 2px 7px;
+  font-size: 27px;
+  padding: 7px;
   margin-left: 10px;
+  line-height: 27px;
 
   @media (max-width: 775px) {
     float: right;
   }
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  position: relative;
-  top: 3px;
-  width: 25px;
-  height: 25px;
-  font-size: 25px;
 `;
 
 const ProjectDescription = styled.p`
@@ -99,7 +92,7 @@ function TopProject(props) {
           <ProjectTitle>
             {title}
             <HoverButtonStyled float={imageFloat} href={githubRepo}>
-              <Icon icon={faGithub} />
+              <FontAwesomeIcon icon={faGithub} />
             </HoverButtonStyled>
           </ProjectTitle>
 

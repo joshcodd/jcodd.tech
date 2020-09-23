@@ -39,20 +39,15 @@ const NameLogo = styled.a`
 const IconList = styled.ul`
   list-style-type: none;
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
   padding: 0px;
-  left: 19px;
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
+  display: flex;
+  transform: rotate(-90deg);
 `;
 
 const IconContainer = styled(HoverButton)`
-  transform: rotate(-90deg);
-  padding: 10px 9px 5px 9px;
+  padding: 10px;
+  font-size: 20px;
 `;
 
 function Sidebar(props) {
@@ -71,14 +66,14 @@ function Sidebar(props) {
 
       <IconList>
         <li>
-          <IconContainer href="https://github.com/joshcodd">
-            <Icon icon={faGithub} />
+          <IconContainer href="https://www.linkedin.com/in/joshcodd/">
+            <FontAwesomeIcon icon={faLinkedin} />
           </IconContainer>
         </li>
 
         <li>
-          <IconContainer href="https://www.linkedin.com/in/joshcodd/">
-            <Icon icon={faLinkedin} />
+          <IconContainer href="https://github.com/joshcodd">
+            <FontAwesomeIcon icon={faGithub} />
           </IconContainer>
         </li>
       </IconList>

@@ -29,7 +29,6 @@ const RocketStyled = styled(Rocket)`
   width: auto;
   right: 15vw;
   top: 17.5vh;
-  margin-top: -100px;
   opacity: 1;
   animation: ${rocketEntry} 1.5s;
   transition: transform 0.2s linear;
@@ -41,6 +40,7 @@ const RocketStyled = styled(Rocket)`
 `;
 
 const SpaceItem = styled.img`
+  margin-top: 100px;
   position: absolute;
   transition: transform 0.2s linear;
   animation: ${spaceEntry} 0.5s;

@@ -14,9 +14,9 @@ const SpaceStyled = styled(SpaceScene)`
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 100px;
   z-index: 0;
   opacity: 0.7;
+  overflow: hidden;
 `;
 
 const TextContainer = styled.div`
@@ -30,7 +30,7 @@ const TextContainer = styled.div`
 
   @media (max-width: 1050px) {
     top: 60vh;
-    margin-left: 8vw;
+    margin-left: 10vw;
   }
 
   @media (max-width: 630px) {

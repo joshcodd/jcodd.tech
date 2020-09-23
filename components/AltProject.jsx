@@ -17,14 +17,12 @@ const AltProjectContainer = styled.div`
 `;
 
 const HoverButtonStyled = styled(HoverButton)`
-  display: inline-block;
   position: relative;
   top: 1px;
-  height: 17px;
-  width: 17px;
-  padding: 4px 5px;
+  padding: 5px;
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 22px;
 `;
 
 const ProjectDescription = styled.p`

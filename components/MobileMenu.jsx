@@ -32,18 +32,13 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   margin: 12px 20px;
+  font-size: 30px;
 `;
 
 const Anchor = styled.a`
   font-size: 25px;
   font-family: "Nunito", sans-serif;
   font-weight: 100;
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
 `;
 
 function SideBarMenu(props) {
@@ -85,13 +80,13 @@ function SideBarMenu(props) {
         </NavItem>
 
         <NavItem onClick={() => handleClick("https://github.com/joshcodd")}>
-          <Icon icon={faGithub} />
+          <FontAwesomeIcon icon={faGithub} />
         </NavItem>
 
         <NavItem
           onClick={() => handleClick("https://www.linkedin.com/in/joshcodd/")}
         >
-          <Icon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} />
         </NavItem>
       </NavList>
     </MobileMenuContainer>
