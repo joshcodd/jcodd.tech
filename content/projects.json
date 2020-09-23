@@ -21,10 +21,10 @@
   ],
   "otherProjects": [
     {
-      "title": "Personal Website",
+      "title": "jcodd.tech",
       "description": "You're currently looking at this project! I built this website using React to use as a CV. When building this application I decided to learn about styled-components and Next.js.",
       "tags": ["Javascript", "React", "Next.js"],
-      "githubRepo": "https://github.com/joshcodd/personal-website"
+      "githubRepo": "https://github.com/joshcodd/jcodd.tech"
     }
   ]
 }
