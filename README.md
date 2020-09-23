@@ -5,7 +5,7 @@ to be used to showcase past and future projects. <br/>
 Access at: <https://jcodd.tech>
 
 <br/>
-![github](https://user-images.githubusercontent.com/65715894/94065082-8be99a00-fde2-11ea-8d4b-d831def76b39.gif)
+![giffy](https://user-images.githubusercontent.com/65715894/94065808-817bd000-fde3-11ea-9c87-97aabc629291.gif)
 
 ## What did i learn?
 
