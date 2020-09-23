@@ -64,7 +64,7 @@ const ImAText = styled.p`
 
 const EmailButton = styled.a`
   position: relative;
-  min-width: 180px;
+  width: 180px;
   height: 40px;
   text-align: center;
   line-height: 40px;
@@ -74,14 +74,14 @@ const EmailButton = styled.a`
   display: inline-block;
   text-decoration: none;
 
-  -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   :hover {
     transform: scale(1.15);
-    background-color: #272722;
+    background-color: #2f313a;
   }
 `;
 
