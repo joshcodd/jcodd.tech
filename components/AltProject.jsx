@@ -44,7 +44,7 @@ function AltProject(props) {
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <AltProjectContainer>
-        <h2 style={{ display: "inline-block" }}>{title}</h2>
+        <h3 style={{ display: "inline-block" }}>{title}</h3>
         <HoverButtonStyled href={githubRepo}>
           <FontAwesomeIcon icon={faGithub} />
         </HoverButtonStyled>

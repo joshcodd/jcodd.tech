@@ -44,7 +44,7 @@ const ProjectContent = styled.div`
   }
 `;
 
-const ProjectTitle = styled.h1`
+const ProjectTitle = styled.h2`
   display: inline-block;
 `;
 

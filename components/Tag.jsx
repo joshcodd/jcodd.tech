@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const TagStyle = styled.h4`
+const TagStyle = styled.h5`
   display: inline-block;
   border: 1px solid;
   border-radius: 5px;

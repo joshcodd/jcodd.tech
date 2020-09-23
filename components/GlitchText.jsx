@@ -3,22 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { Colours, ColoursContext } from "./ColoursContext";
 
 const GlitchContainer = styled.div`
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
   display: inline-block;
-  font-size: 70px;
-
-  @media (max-width: 775px) {
-    font-size: 50px;
-  }
-
-  @media (max-width: 415px) {
-    font-size: 45px;
-  }
-
-  @media (max-width: 365px) {
-    font-size: 35px;
-  }
 `;
 const ColourSplit = styled.span`
   position: absolute;
@@ -206,19 +191,21 @@ function GlitchText(props) {
   const text = props.text;
   return (
     <GlitchContainer className={props.className}>
-      <Wrapper
-        condition={coloursContext === Colours.dark}
-        wrapper={(children) => <mark>{children}</mark>}
-      >
-        <Hidden>{text}</Hidden>
+      <h1>
+        <Wrapper
+          condition={coloursContext === Colours.dark}
+          wrapper={(children) => <mark>{children}</mark>}
+        >
+          <Hidden>{text}</Hidden>
 
-        <Blue>{text}</Blue>
-        <Yellow>{text}</Yellow>
-        <Pink>{text}</Pink>
+          <Blue>{text}</Blue>
+          <Yellow>{text}</Yellow>
+          <Pink>{text}</Pink>
 
-        <Blue>{text}</Blue>
-        <Yellow>{text}</Yellow>
-      </Wrapper>
+          <Blue>{text}</Blue>
+          <Yellow>{text}</Yellow>
+        </Wrapper>
+      </h1>
     </GlitchContainer>
   );
 }

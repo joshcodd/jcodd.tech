@@ -26,7 +26,7 @@ const GlitchTitle = styled.div`
   }
 `;
 
-const SubHeading = styled.h3`
+const SubHeading = styled.h4`
   margin: 130px 0 0 0;
   text-align: center;
 

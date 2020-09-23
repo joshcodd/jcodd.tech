@@ -18,7 +18,7 @@ const AboutContainer = styled.div`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   display: inline-block;
   float: right;
   width: 50%;
@@ -36,7 +36,7 @@ const Title = styled.h1`
   }
 `;
 
-const SubHeading = styled.h3`
+const SubHeading = styled.h4`
   display: block;
   float: right;
   width: 100%;

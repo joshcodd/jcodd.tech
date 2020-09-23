@@ -79,7 +79,7 @@ function Title() {
             <ImAText>{data.description}</ImAText>
 
             <EmailButton href={"mailto:" + data.email}>
-              <h3>{data.email}</h3>
+              <h4>{data.email}</h4>
             </EmailButton>
           </ScrollAnimation>
         </TextContainer>
