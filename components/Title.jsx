@@ -45,6 +45,7 @@ const TextContainer = styled.div`
 
 const ImAText = styled.p`
   position: relative;
+  top: -5px;
   opacity: 0.9;
   margin: 10px 0 15px 0;
   @media (max-width: 630px) {
@@ -57,7 +58,7 @@ const ImAText = styled.p`
 `;
 
 const EmailButton = styled(HoverButton)`
-  top: 20px;
+  top: 5px;
   padding: 5px 40px;
   border-bottom: 2px solid #242424;
 `;
