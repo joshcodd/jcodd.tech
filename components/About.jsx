@@ -18,7 +18,9 @@ const AboutContainer = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled.h1`
+  font-size: 30px;
+  font-weight: 500;
   display: inline-block;
   float: right;
   width: 50%;
@@ -26,7 +28,6 @@ const Title = styled.h2`
   @media (max-width: 775px) {
     display: block;
     float: none;
-    margin: 0;
     width: 75%;
     margin: 0 auto;
   }

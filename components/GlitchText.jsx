@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
 import { Colours, ColoursContext } from "./ColoursContext";
 
-const GlitchContainer = styled.div`
+const GlitchContainer = styled.h1`
   display: inline-block;
 `;
-const ColourSplit = styled.h1`
+const ColourSplit = styled.span`
   position: absolute;
   left: 0;
   mix-blend-mode: multiply;
