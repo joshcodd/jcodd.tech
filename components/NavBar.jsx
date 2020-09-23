@@ -2,10 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import HoverSplit from "./HoverSplit";
-import Switch from "./Switch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { ColoursContext } from "./ColoursContext";
 
 const Navbar = styled.div`
   position: fixed;
@@ -14,11 +12,7 @@ const Navbar = styled.div`
   width: 100%;
   height: 100px;
   background-color: white;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0),
-    ${(props) => props.backgroundColour} 100%
-  );
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), #ffffff 100%);
   z-index: 150;
 
   -webkit-transition: all 0.5s ease-in-out;
@@ -34,7 +28,7 @@ const NavList = styled.ul`
   margin: 0;
   padding: 0;
   float: right;
-  color: ${(props) => props.textColour};
+  color: #242424;
 
   @media (max-width: 600px) {
     display: none;
@@ -96,7 +90,6 @@ const MenuButton = styled(FontAwesomeIcon)`
 function NavBar(props) {
   const startingPosition = props.animate ? "100vw" : "0";
   const [navPosition, setNavPostion] = useState(startingPosition);
-  const { foreground, background } = useContext(ColoursContext);
 
   useEffect(() => {
     setTimeout(() => setNavPostion("0"), 2500);
@@ -107,11 +100,7 @@ function NavBar(props) {
   }
 
   return (
-    <Navbar
-      backgroundColour={background}
-      mobileMenu={props.mobileMenu}
-      navPosition={navPosition}
-    >
+    <Navbar mobileMenu={props.mobileMenu} navPosition={navPosition}>
       <NavList>
         <NavItem>
           <HoverSplit href={"/#"}>HOME</HoverSplit>
@@ -126,9 +115,6 @@ function NavBar(props) {
           <HoverSplit href={"/#"}>
             <BoxLink>CV</BoxLink>
           </HoverSplit>
-        </NavItem>
-        <NavItem style={{ display: "none" }}>
-          <Switch setColours={props.setColours} />
         </NavItem>
       </NavList>
 

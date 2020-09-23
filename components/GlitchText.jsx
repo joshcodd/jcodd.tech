@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
-import { Colours, ColoursContext } from "./ColoursContext";
 
 const GlitchContainer = styled.h1`
   display: inline-block;
@@ -181,29 +180,18 @@ const Blue = styled(ColourSplit)`
   animation: ${blueAnimation} 6s infinite;
 `;
 
-//Conditionally wrap, courtesy of:
-//https://arjayosma.com/how-to-conditionally-wrap-a-react-component/
-const Wrapper = ({ children, condition, wrapper }) =>
-  condition ? wrapper(children) : children;
-
 function GlitchText(props) {
-  const coloursContext = useContext(ColoursContext);
   const text = props.text;
   return (
     <GlitchContainer className={props.className}>
-      <Wrapper
-        condition={coloursContext === Colours.dark}
-        wrapper={(children) => <mark>{children}</mark>}
-      >
-        <Hidden>{text}</Hidden>
+      <Hidden>{text}</Hidden>
 
-        <Blue>{text}</Blue>
-        <Yellow>{text}</Yellow>
-        <Pink>{text}</Pink>
+      <Blue>{text}</Blue>
+      <Yellow>{text}</Yellow>
+      <Pink>{text}</Pink>
 
-        <Blue>{text}</Blue>
-        <Yellow>{text}</Yellow>
-      </Wrapper>
+      <Blue>{text}</Blue>
+      <Yellow>{text}</Yellow>
     </GlitchContainer>
   );
 }

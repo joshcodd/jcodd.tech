@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Sidebar from "../components/Sidebar";
 import NavBar from "../components/NavBar";
 import MobileMenu from "../components/MobileMenu";
-import { Colours, ColoursContext } from "../components/ColoursContext";
 
 const LayoutStyle = styled.div`
   @media (max-width: 600px) {
@@ -17,28 +16,19 @@ const LayoutStyle = styled.div`
 `;
 
 function Layout(props) {
-  const [colours, setColours] = useState(Colours.light);
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const documentStyle = {
-    backgroundColor: colours.background,
-    color: colours.foreground,
-  };
-
   return (
-    <ColoursContext.Provider value={colours}>
-      <LayoutStyle style={documentStyle} mobileMenu={mobileMenu}>
-        <NavBar
-          animate={props.animate}
-          setColours={setColours}
-          mobileMenu={mobileMenu}
-          setMobileMenu={setMobileMenu}
-        />
-        <Sidebar animate={props.animate} />
-        <MobileMenu visible={mobileMenu} setMobileMenu={setMobileMenu} />
-        {props.children}
-      </LayoutStyle>
-    </ColoursContext.Provider>
+    <LayoutStyle mobileMenu={mobileMenu}>
+      <NavBar
+        animate={props.animate}
+        mobileMenu={mobileMenu}
+        setMobileMenu={setMobileMenu}
+      />
+      <Sidebar animate={props.animate} />
+      <MobileMenu visible={mobileMenu} setMobileMenu={setMobileMenu} />
+      {props.children}
+    </LayoutStyle>
   );
 }
 

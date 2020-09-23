@@ -81,7 +81,7 @@ const Earth = styled(SpaceItem)`
   width: 9vh;
   top: 40vh;
   right: 60vh;
-  opacity: 0.75;
+  opacity: 0.7;
 
   @media (max-width: 1050px) {
     top: 25vh;
@@ -97,7 +97,7 @@ const Satellite = styled(SpaceItem)`
   width: 3vh;
   top: 15vh;
   right: 65vw;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: 0;
 
   @media (max-width: 1000px) {
