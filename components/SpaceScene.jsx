@@ -32,7 +32,7 @@ const RocketStyled = styled(Rocket)`
   margin-top: -100px;
   opacity: 1;
   animation: ${rocketEntry} 1.5s;
-  transition: transform 0.1s ease;
+  transition: transform 0.2s linear;
   z-index: 1;
   @media (max-width: 700px) {
     height: 50vh;
@@ -42,7 +42,7 @@ const RocketStyled = styled(Rocket)`
 
 const SpaceItem = styled.img`
   position: absolute;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s linear;
   animation: ${spaceEntry} 0.5s;
 `;
 
@@ -139,7 +139,7 @@ function SpaceScene(props) {
         src="/space/satellite.svg"
         alt="Satellite"
         style={{
-          transform: `translate(${parallax * 0.4}px, ${parallax * 0.6}px) `,
+          transform: `translate(${parallax * 0.5}px, ${parallax * 0.8}px) `,
         }}
       />
 
