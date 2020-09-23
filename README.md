@@ -1,30 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# jcodd.tech
 
-## Getting Started
+React application built using Next.js and styled components. Jcodd.tech is my personal portfolio website, made
+to be used to showcase past and future projects. <br/>
+Access at: <https://jcodd.tech>
 
-First, run the development server:
+<br/>
+![desktop](https://user-images.githubusercontent.com/65715894/94065082-8be99a00-fde2-11ea-8d4b-d831def76b39.gif)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## What did i learn?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- React context, despite it not being used in final application (Removed light/dark mode switch).
+- Styled Components.
+- Next.js.
+- HTML canvas and manipulating images/pixels.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## More...
 
-## Learn More
+In the root of the project run:
 
-To learn more about Next.js, take a look at the following resources:
+### `npm install`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Then, start the development server with:
 
-## Deploy on Vercel
+### `npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br/>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view website in the browser.
