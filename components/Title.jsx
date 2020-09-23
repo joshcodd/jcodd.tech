@@ -23,7 +23,7 @@ const TextContainer = styled.div`
   position: absolute;
   display: inline-block;
   margin-left: 15vw;
-  top: 40vh;
+  top: 39vh;
   width: 48%;
   max-width: 450px;
   float: left;
