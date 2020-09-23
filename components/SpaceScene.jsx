@@ -24,10 +24,10 @@ const spaceEntry = keyframes`
 const RocketStyled = styled(Rocket)`
   position: absolute;
   transform: rotate(-30deg);
-  height: 72vh;
+  height: 65vh;
   width: auto;
   right: 15vw;
-  bottom: 33vh;
+  bottom: 36vh;
   margin-bottom: 100px;
   opacity: 1;
   animation: ${rocketEntry} 1.5s;
@@ -87,7 +87,7 @@ const AsteroidTwo = styled.img`
 const Earth = styled.img`
   width: 11vh;
   position: absolute;
-  top: 45vh;
+  top: 40vh;
   right: 60vh;
   opacity: 0.6;
   animation: ${spaceEntry} 0.5s;
@@ -146,7 +146,7 @@ function SpaceScene(props) {
       <RocketStyled
         style={{
           transform: `translate(-${parallax * 0.2}px, -${
-            parallax * 0.2
+            parallax * 0.3
           }px)  rotate(-30deg)`,
         }}
       ></RocketStyled>
