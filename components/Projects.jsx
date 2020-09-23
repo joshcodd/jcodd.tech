@@ -16,14 +16,10 @@ const ProjectsContainer = styled.div`
   }
 `;
 
-const GlitchTitle = styled.div`
+const GlitchTitle = styled(GlitchText)`
   position: relative;
   display: inline-block;
-  margin-bottom: 40px;
-
-  @media (max-width: 775px) {
-    margin-bottom: 25px;
-  }
+  margin-bottom: 30px;
 `;
 
 const SubHeading = styled.h4`
@@ -39,9 +35,7 @@ function Projects() {
   return (
     <ProjectsContainer>
       <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
-        <GlitchTitle>
-          <GlitchText text="Projects" />
-        </GlitchTitle>
+        <GlitchTitle text="Projects" />
       </ScrollAnimation>
 
       {data.topProjects.map((topProject, index) => {
