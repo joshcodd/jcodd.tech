@@ -1,9 +1,10 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const GlitchContainer = styled.h1`
+const GlitchTextContainer = styled.h1`
   display: inline-block;
 `;
+
 const ColourSplit = styled.span`
   position: absolute;
   left: 0;
@@ -183,7 +184,7 @@ const Blue = styled(ColourSplit)`
 function GlitchText(props) {
   const text = props.text;
   return (
-    <GlitchContainer className={props.className}>
+    <GlitchTextContainer className={props.className}>
       <Hidden>{text}</Hidden>
 
       <Blue>{text}</Blue>
@@ -192,7 +193,7 @@ function GlitchText(props) {
 
       <Blue>{text}</Blue>
       <Yellow>{text}</Yellow>
-    </GlitchContainer>
+    </GlitchTextContainer>
   );
 }
 

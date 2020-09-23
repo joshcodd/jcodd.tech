@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const ButtonHov = styled.div`
+const HoverButtonStyled = styled.div`
   z-index: 1;
   display: inline-block;
   position: relative;
+
   ::after {
     position: absolute;
     content: "";
@@ -33,6 +34,7 @@ const ButtonHov = styled.div`
 
 function HoverButton(props) {
   const href = props.href || "";
+
   function handleClick() {
     if (href.charAt(0) === "#") {
       window.location.href = href;
@@ -42,9 +44,9 @@ function HoverButton(props) {
   }
 
   return (
-    <ButtonHov className={props.className} onClick={handleClick}>
+    <HoverButtonStyled className={props.className} onClick={handleClick}>
       {props.children}
-    </ButtonHov>
+    </HoverButtonStyled>
   );
 }
 

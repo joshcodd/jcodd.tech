@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import HoverSplit from "./HoverSplit";
@@ -46,7 +46,6 @@ const NavItem = styled.li`
 const BoxLink = styled.div`
   padding: 0px 30px;
   border: 1px solid #242424;
-
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
@@ -60,6 +59,7 @@ const BoxLink = styled.div`
 
 const NavListMobile = styled.div`
   display: none;
+
   @media (max-width: 600px) {
     display: inline-block;
     width: 100%;

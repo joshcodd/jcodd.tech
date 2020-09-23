@@ -4,8 +4,9 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const SideBarMenuStyle = styled.div`
+const MobileMenuContainer = styled.div`
   display: none;
+
   @media (max-width: 600px) {
     display: inline-block;
     left: ${(props) => (props.isVisible ? "0vw" : "60vw")};
@@ -33,7 +34,7 @@ const NavItem = styled.li`
   margin: 12px 20px;
 `;
 
-const AStyled = styled.a`
+const Anchor = styled.a`
   font-size: 25px;
   font-family: "Nunito", sans-serif;
   font-weight: 100;
@@ -57,29 +58,29 @@ function SideBarMenu(props) {
   }
 
   return (
-    <SideBarMenuStyle isVisible={isVisible}>
+    <MobileMenuContainer isVisible={isVisible}>
       <NavList>
         <NavItem onClick={handleClick}>
           <Link href="/#">
-            <AStyled>HOME</AStyled>
+            <Anchor>HOME</Anchor>
           </Link>
         </NavItem>
 
         <NavItem onClick={handleClick}>
           <Link href="/#about">
-            <AStyled>ABOUT</AStyled>
+            <Anchor>ABOUT</Anchor>
           </Link>
         </NavItem>
 
         <NavItem onClick={handleClick}>
           <Link href="/#projects">
-            <AStyled>PROJECTS</AStyled>
+            <Anchor>PROJECTS</Anchor>
           </Link>
         </NavItem>
 
         <NavItem onClick={handleClick}>
           <Link href="/#">
-            <AStyled>CV</AStyled>
+            <Anchor>CV</Anchor>
           </Link>
         </NavItem>
 
@@ -93,7 +94,7 @@ function SideBarMenu(props) {
           <Icon icon={faLinkedin} />
         </NavItem>
       </NavList>
-    </SideBarMenuStyle>
+    </MobileMenuContainer>
   );
 }
 

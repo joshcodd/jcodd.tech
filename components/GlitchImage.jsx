@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const Headshot = styled.canvas`
+const GlitchImageStyled = styled.canvas`
   width: 100%;
   height: 100%;
 `;
@@ -107,7 +107,13 @@ function GlitchImage(props) {
     return new ImageData(yData, imageData.width, imageData.height);
   }
 
-  return <Headshot width="375" height="500" ref={canvasRef}></Headshot>;
+  return (
+    <GlitchImageStyled
+      width="375"
+      height="500"
+      ref={canvasRef}
+    ></GlitchImageStyled>
+  );
 }
 
 export default GlitchImage;

@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar";
 import NavBar from "../components/NavBar";
 import MobileMenu from "../components/MobileMenu";
 
-const LayoutStyle = styled.div`
+const LayoutContainer = styled.div`
   @media (max-width: 600px) {
     position: relative;
     left: ${(props) => (props.mobileMenu ? "-60vw" : "0")};
@@ -19,7 +19,7 @@ function Layout(props) {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <LayoutStyle mobileMenu={mobileMenu}>
+    <LayoutContainer mobileMenu={mobileMenu}>
       <NavBar
         animate={props.animate}
         mobileMenu={mobileMenu}
@@ -28,7 +28,7 @@ function Layout(props) {
       <Sidebar animate={props.animate} />
       <MobileMenu visible={mobileMenu} setMobileMenu={setMobileMenu} />
       {props.children}
-    </LayoutStyle>
+    </LayoutContainer>
   );
 }
 

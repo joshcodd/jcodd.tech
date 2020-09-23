@@ -84,7 +84,7 @@ const AboutContent = styled.div`
   }
 `;
 
-const TagContainer = styled.div`
+const Tags = styled.div`
   width: 100%;
   display: block;
   line-height: 20.5px;
@@ -108,24 +108,24 @@ function About() {
         <Title> About Me </Title>
         <AboutContent>
           <div>{aboutDescription}</div>
-          <TagContainer>
+          <Tags>
             <SubHeading style={{ margin: "0" }}>Languages</SubHeading>
             {data.languages.map((language, index) => {
               return <Tag key={index} text={language} />;
             })}
-          </TagContainer>
-          <TagContainer>
+          </Tags>
+          <Tags>
             <SubHeading>Frameworks</SubHeading>
             {data.frameworks.map((framework, index) => {
               return <Tag key={index} text={framework} />;
             })}
-          </TagContainer>
-          <TagContainer>
+          </Tags>
+          <Tags>
             <SubHeading>Tools</SubHeading>
             {data.tools.map((tool, index) => {
               return <Tag key={index} text={tool} />;
             })}
-          </TagContainer>
+          </Tags>
         </AboutContent>
       </AboutContainer>
     </ScrollAnimation>

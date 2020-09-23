@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const TagStyle = styled.h5`
+const TagStyled = styled.h5`
   display: inline-block;
   border: 1px solid;
   border-radius: 5px;
@@ -10,7 +10,7 @@ const TagStyle = styled.h5`
 `;
 
 function Tag(props) {
-  return <TagStyle>{props.text}</TagStyle>;
+  return <TagStyled>{props.text}</TagStyled>;
 }
 
 export default Tag;

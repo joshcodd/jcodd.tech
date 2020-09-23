@@ -10,15 +10,6 @@ const TitleContainer = styled.div`
   width: 100vw;
 `;
 
-const LeftContainer = styled.div`
-  position: relative;
-  height: 100%;
-  width: 100vw;
-  float: left;
-  box-sizing: border-box;
-  overflow: hidden;
-`;
-
 const SpaceStyled = styled(SpaceScene)`
   width: 100%;
   height: 100%;
@@ -48,11 +39,12 @@ const TextContainer = styled.div`
   }
 `;
 
-const ImAText = styled.p`
+const Description = styled.p`
   position: relative;
   top: -5px;
   opacity: 0.9;
   margin: 10px 0 15px 0;
+
   @media (max-width: 630px) {
     width: 65%;
   }
@@ -62,7 +54,7 @@ const ImAText = styled.p`
   }
 `;
 
-const EmailButton = styled.a`
+const Email = styled.a`
   position: relative;
   width: 180px;
   height: 40px;
@@ -89,24 +81,20 @@ function Title() {
   return (
     <TitleContainer>
       <div style={{ visibility: "hidden", position: "absolute" }}>Anchor</div>
-      <LeftContainer>
-        <SpaceStyled />
-        <TextContainer>
-          <ScrollAnimation
-            animateIn="animate__backInDown"
-            duration={2}
-            animateOnce={true}
-          >
-            <GlitchText text="Hi, I'm Josh" />
-
-            <ImAText>{data.description}</ImAText>
-
-            <EmailButton href={"mailto:" + data.email}>
-              <h4>{data.email}</h4>
-            </EmailButton>
-          </ScrollAnimation>
-        </TextContainer>
-      </LeftContainer>
+      <SpaceStyled />
+      <TextContainer>
+        <ScrollAnimation
+          animateIn="animate__backInDown"
+          duration={2}
+          animateOnce={true}
+        >
+          <GlitchText text="Hi, I'm Josh" />
+          <Description>{data.description}</Description>
+          <Email href={"mailto:" + data.email}>
+            <h4>{data.email}</h4>
+          </Email>
+        </ScrollAnimation>
+      </TextContainer>
     </TitleContainer>
   );
 }

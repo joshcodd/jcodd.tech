@@ -24,7 +24,6 @@ const HoverButtonStyled = styled(HoverButton)`
   width: 17px;
   padding: 4px 5px;
   margin-left: 10px;
-
   font-size: 18px;
 `;
 
@@ -32,8 +31,6 @@ const ProjectDescription = styled.p`
   font-family: "Nunito", sans-serif;
   margin: 5px 0 12px 0px;
 `;
-
-const ProjectTagContainer = styled.div``;
 
 function AltProject(props) {
   const title = props.title;
@@ -51,11 +48,9 @@ function AltProject(props) {
 
         <ProjectDescription>{description}</ProjectDescription>
 
-        <ProjectTagContainer>
-          {tags.map((tag, index) => {
-            return <Tag key={index} text={tag} />;
-          })}
-        </ProjectTagContainer>
+        {tags.map((tag, index) => {
+          return <Tag key={index} text={tag} />;
+        })}
       </AltProjectContainer>
     </ScrollAnimation>
   );
