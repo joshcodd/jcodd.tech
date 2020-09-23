@@ -32,9 +32,7 @@ const RocketStyled = styled(Rocket)`
   margin-top: -100px;
   opacity: 1;
   animation: ${rocketEntry} 1.5s;
-
   transition: transform 0.1s ease;
-
   z-index: 1;
   @media (max-width: 700px) {
     height: 50vh;
@@ -42,14 +40,17 @@ const RocketStyled = styled(Rocket)`
   }
 `;
 
-const Planet = styled.img`
-  width: 10vh;
+const SpaceItem = styled.img`
   position: absolute;
+  transition: transform 0.2s ease;
+  animation: ${spaceEntry} 0.5s;
+`;
+
+const Planet = styled(SpaceItem)`
+  width: 10vh;
   top: 10vh;
   right: 15vw;
   opacity: 0.5;
-  animation: ${spaceEntry} 0.5s;
-  transition: transform 0.1s ease;
 
   @media (max-width: 700px) {
     right: 10vw;
@@ -57,24 +58,18 @@ const Planet = styled.img`
   }
 `;
 
-const Asteroid = styled.img`
+const Asteroid = styled(SpaceItem)`
   width: 3vh;
-  position: absolute;
   top: 70vh;
   right: 5vw;
   opacity: 0.5;
-  animation: ${spaceEntry} 0.5s;
-  transition: transform 0.1s ease;
 `;
 
-const AsteroidTwo = styled.img`
+const AsteroidTwo = styled(SpaceItem)`
   width: 4vh;
-  position: absolute;
   top: 0vh;
   right: 5vw;
   opacity: 0.9;
-  animation: ${spaceEntry} 0.5s;
-  transition: transform 0.1s ease;
 
   @media (max-width: 700px) {
     top: -40px;
@@ -82,14 +77,11 @@ const AsteroidTwo = styled.img`
   }
 `;
 
-const Earth = styled.img`
+const Earth = styled(SpaceItem)`
   width: 9vh;
-  position: absolute;
-  top: 20vh;
-  right: 70vh;
-  opacity: 0.8;
-  animation: ${spaceEntry} 0.5s;
-  transition: transform 0.1s ease;
+  top: 40vh;
+  right: 60vh;
+  opacity: 0.75;
 
   @media (max-width: 1050px) {
     top: 25vh;
@@ -101,15 +93,12 @@ const Earth = styled.img`
   }
 `;
 
-const Satellite = styled.img`
+const Satellite = styled(SpaceItem)`
   width: 3vh;
-  position: absolute;
   top: 35vh;
   right: 70vh;
   opacity: 0.5;
   z-index: 0;
-  transition: transform 0.1s ease;
-  animation: ${spaceEntry} 0.5s;
 
   @media (max-width: 1050px) {
     right: 60vh;
@@ -163,7 +152,7 @@ function SpaceScene(props) {
         src="/space/asteroid.png"
         alt="Asteroid"
         style={{
-          transform: `translate(-${parallax * 0.1}px, ${parallax * 0.1}px) `,
+          transform: `translate(-${parallax * 0.2}px, ${parallax * 0.2}px) `,
         }}
       />
 
@@ -179,11 +168,9 @@ function SpaceScene(props) {
         src="/space/earth.svg"
         alt="Planet earth"
         style={{
-          transform: `translate(${parallax * 0.4}px)`,
+          transform: `translate(${parallax * 0.4}px, ${parallax * 0.05}px)`,
         }}
       />
-
-      {props.children}
     </div>
   );
 }

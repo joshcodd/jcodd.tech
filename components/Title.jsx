@@ -73,6 +73,7 @@ const EmailButton = styled.a`
   border-radius: 3px;
   display: inline-block;
   text-decoration: none;
+
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
