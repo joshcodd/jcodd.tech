@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import GlitchText from "./GlitchText";
 import SpaceScene from "./SpaceScene";
-import HoverButton from "./HoverButton";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 import data from "../content/title.json";
@@ -33,15 +32,19 @@ const TextContainer = styled.div`
   position: absolute;
   display: inline-block;
   margin-left: 15vw;
-  bottom: 55vh;
+  top: 42vh;
   width: 48%;
   max-width: 450px;
   float: left;
 
+  @media (max-width: 1050px) {
+    top: 60vh;
+    margin-left: 8vw;
+  }
+
   @media (max-width: 630px) {
     margin-left: 5%;
     width: 75%;
-    bottom: 42vh;
   }
 `;
 
@@ -59,29 +62,24 @@ const ImAText = styled.p`
   }
 `;
 
-const EmailButton = styled.div`
+const EmailButton = styled.a`
   position: relative;
-
-  width: 40%;
+  min-width: 180px;
   height: 40px;
   text-align: center;
   line-height: 40px;
-
   color: white;
-
-  display: inline-block;
-
   background-color: #242424;
   border-radius: 3px;
-
+  display: inline-block;
+  text-decoration: none;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
 
   :hover {
-    cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.15);
     background-color: #272722;
   }
 `;

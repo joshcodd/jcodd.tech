@@ -25,19 +25,20 @@ const RocketStyled = styled(Rocket)`
   position: absolute;
   transform: rotate(-30deg);
   height: 65vh;
+  max-height: 800px;
   width: auto;
   right: 15vw;
-  bottom: 36vh;
-  margin-bottom: 100px;
+  top: 17.5vh;
+  margin-top: -100px;
   opacity: 1;
   animation: ${rocketEntry} 1.5s;
 
   transition: transform 0.1s ease;
 
   z-index: 1;
-  @media (max-width: 450px) {
+  @media (max-width: 700px) {
     height: 50vh;
-    bottom: 60vh;
+    top: 10vh;
   }
 `;
 
@@ -50,7 +51,7 @@ const Planet = styled.img`
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
-  @media (max-width: 450px) {
+  @media (max-width: 700px) {
     right: 10vw;
     top: 5vh;
   }
@@ -61,12 +62,9 @@ const Asteroid = styled.img`
   position: absolute;
   top: 70vh;
   right: 5vw;
-  opacity: 0.2;
+  opacity: 0.5;
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
-
-  @media (max-width: 450px) {
-  }
 `;
 
 const AsteroidTwo = styled.img`
@@ -78,7 +76,7 @@ const AsteroidTwo = styled.img`
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
-  @media (max-width: 450px) {
+  @media (max-width: 700px) {
     top: -40px;
     right: 0vw;
   }
@@ -87,42 +85,39 @@ const AsteroidTwo = styled.img`
 const Earth = styled.img`
   width: 9vh;
   position: absolute;
-  top: 40vh;
-  right: 60vh;
-  opacity: 0.6;
+  top: 20vh;
+  right: 70vh;
+  opacity: 0.8;
   animation: ${spaceEntry} 0.5s;
   transition: transform 0.1s ease;
 
-  @media (max-width: 1000px) {
-    top: 30vh;
+  @media (max-width: 1050px) {
+    top: 25vh;
     right: 50vh;
   }
 
   @media (max-width: 450px) {
     right: 35vh;
-    top: 25vh;
-    opacity: 0.8;
   }
 `;
 
 const Satellite = styled.img`
   width: 3vh;
   position: absolute;
-  top: 30vh;
-  right: 80vh;
+  top: 35vh;
+  right: 70vh;
   opacity: 0.5;
   z-index: 0;
   transition: transform 0.1s ease;
   animation: ${spaceEntry} 0.5s;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1050px) {
     right: 60vh;
-    top: 20vh;
+    top: 10vh;
   }
 
   @media (max-width: 450px) {
-    right: 40vh;
-    top: 20vh;
+    right: 50vh;
   }
 `;
 
@@ -146,7 +141,7 @@ function SpaceScene(props) {
       <RocketStyled
         style={{
           transform: `translate(-${parallax * 0.2}px, -${
-            parallax * 0.4
+            parallax * 0.3
           }px)  rotate(-30deg)`,
         }}
       ></RocketStyled>
