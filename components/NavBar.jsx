@@ -82,7 +82,7 @@ const MenuButton = styled(FontAwesomeIcon)`
   display: inline-block;
   height: 22px;
   width: 22px;
-  margin: 6% 5% 0 0;
+  margin: 5% 5% 0 0;
   float: right;
   font-size: 25px;
 `;

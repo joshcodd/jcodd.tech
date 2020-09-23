@@ -10,7 +10,7 @@ const TopHalf = styled.div`
   position: absolute;
   clip-path: inset(0% 0% 50% 0px);
   ${HoverSplitContainer}:hover & {
-    transform: translate(7.5px, 0px);
+    transform: translate(7px, 0px);
   }
 `;
 
@@ -18,7 +18,7 @@ const BottomHalf = styled.div`
   position: relative;
   clip-path: inset(50% 0px 0px 0px);
   ${HoverSplitContainer}:hover & {
-    left: -5px;
+    left: -7px;
   }
 `;
 
