@@ -26,13 +26,14 @@ const SpaceStyled = styled(SpaceScene)`
   position: absolute;
   top: 100px;
   z-index: 0;
+  opacity: 0.7;
 `;
 
 const TextContainer = styled.div`
   position: absolute;
   display: inline-block;
   margin-left: 15vw;
-  bottom: 40vh;
+  bottom: 55vh;
   width: 48%;
   max-width: 450px;
   float: left;
@@ -40,6 +41,7 @@ const TextContainer = styled.div`
   @media (max-width: 630px) {
     margin-left: 5%;
     width: 75%;
+    bottom: 42vh;
   }
 `;
 
@@ -57,10 +59,31 @@ const ImAText = styled.p`
   }
 `;
 
-const EmailButton = styled(HoverButton)`
-  top: 5px;
-  padding: 5px 40px;
-  border-bottom: 2px solid #242424;
+const EmailButton = styled.div`
+  position: relative;
+
+  width: 40%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+
+  color: white;
+
+  display: inline-block;
+
+  background-color: #242424;
+  border-radius: 3px;
+
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+
+  :hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #272722;
+  }
 `;
 
 function Title() {

@@ -70,7 +70,7 @@ const Asteroid = styled.img`
 `;
 
 const AsteroidTwo = styled.img`
-  width: 5vh;
+  width: 4vh;
   position: absolute;
   top: 0vh;
   right: 5vw;
@@ -85,7 +85,7 @@ const AsteroidTwo = styled.img`
 `;
 
 const Earth = styled.img`
-  width: 11vh;
+  width: 9vh;
   position: absolute;
   top: 40vh;
   right: 60vh;
@@ -106,7 +106,7 @@ const Earth = styled.img`
 `;
 
 const Satellite = styled.img`
-  width: 5vh;
+  width: 3vh;
   position: absolute;
   top: 30vh;
   right: 80vh;
@@ -146,7 +146,7 @@ function SpaceScene(props) {
       <RocketStyled
         style={{
           transform: `translate(-${parallax * 0.2}px, -${
-            parallax * 0.3
+            parallax * 0.4
           }px)  rotate(-30deg)`,
         }}
       ></RocketStyled>
