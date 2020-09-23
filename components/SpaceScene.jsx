@@ -95,14 +95,13 @@ const Earth = styled(SpaceItem)`
 
 const Satellite = styled(SpaceItem)`
   width: 3vh;
-  top: 35vh;
-  right: 70vh;
+  top: 15vh;
+  right: 90vh;
   opacity: 0.5;
   z-index: 0;
 
   @media (max-width: 1050px) {
     right: 60vh;
-    top: 10vh;
   }
 
   @media (max-width: 450px) {
