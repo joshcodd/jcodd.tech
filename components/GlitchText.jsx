@@ -5,7 +5,7 @@ import { Colours, ColoursContext } from "./ColoursContext";
 const GlitchContainer = styled.div`
   display: inline-block;
 `;
-const ColourSplit = styled.span`
+const ColourSplit = styled.h1`
   position: absolute;
   left: 0;
   mix-blend-mode: multiply;
@@ -191,21 +191,19 @@ function GlitchText(props) {
   const text = props.text;
   return (
     <GlitchContainer className={props.className}>
-      <h1>
-        <Wrapper
-          condition={coloursContext === Colours.dark}
-          wrapper={(children) => <mark>{children}</mark>}
-        >
-          <Hidden>{text}</Hidden>
+      <Wrapper
+        condition={coloursContext === Colours.dark}
+        wrapper={(children) => <mark>{children}</mark>}
+      >
+        <Hidden>{text}</Hidden>
 
-          <Blue>{text}</Blue>
-          <Yellow>{text}</Yellow>
-          <Pink>{text}</Pink>
+        <Blue>{text}</Blue>
+        <Yellow>{text}</Yellow>
+        <Pink>{text}</Pink>
 
-          <Blue>{text}</Blue>
-          <Yellow>{text}</Yellow>
-        </Wrapper>
-      </h1>
+        <Blue>{text}</Blue>
+        <Yellow>{text}</Yellow>
+      </Wrapper>
     </GlitchContainer>
   );
 }
