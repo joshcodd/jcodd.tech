@@ -7,7 +7,7 @@ Access at: <https://jcodd.tech>
 <br/>
 
 
-![Desktop App](https://user-images.githubusercontent.com/65715894/94067829-5181fc00-fde6-11ea-892b-344a2ef669d1.gif)
+![Desktop App](https://user-images.githubusercontent.com/65715894/94068022-8f7f2000-fde6-11ea-8501-af5a75233611.gif)
 
 ## What did i learn?
 
