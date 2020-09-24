@@ -20,11 +20,17 @@ const GlitchTitle = styled(GlitchText)`
   position: relative;
   display: inline-block;
   margin-bottom: 30px;
+  font-size: 70px;
+
+  @media (max-width: 775px) {
+    font-size: 60px;
+  }
 `;
 
-const SubHeading = styled.h4`
-  margin: 130px 0 0 0;
+const SubHeading = styled.h3`
+  margin: 150px 0 20px 0;
   text-align: center;
+  font-weight: 200;
 
   @media (max-width: 450px) {
     margin: 80px 0 0 0;
@@ -47,6 +53,7 @@ function Projects() {
             float={topProject.float}
             tags={topProject.tags}
             githubRepo={topProject.githubRepo}
+            liveLink={topProject.liveLink}
             alt={topProject.alt}
           >
             {topProject.description}
@@ -65,6 +72,7 @@ function Projects() {
             title={otherProject.title}
             tags={otherProject.tags}
             githubRepo={otherProject.githubRepo}
+            liveLink={otherProject.liveLink}
           >
             {otherProject.description}
           </AltProject>

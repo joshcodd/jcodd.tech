@@ -26,7 +26,7 @@ const MobileMenuContainer = styled.div`
 const NavList = styled.ul`
   list-style-type: none;
   text-align: right;
-  margin-top: 200px;
+  margin-top: 20vh;
   padding: 0;
 `;
 

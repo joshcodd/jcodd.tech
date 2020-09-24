@@ -30,6 +30,10 @@ const Icons = styled.span`
   margin-left: 15px;
 `;
 
+const Icon = styled(FontAwesomeIcon)`
+  opacity: 0.8;
+`;
+
 const ProjectDescription = styled.p`
   font-family: "Nunito", sans-serif;
   margin: 5px 0 12px 0px;
@@ -40,6 +44,7 @@ function AltProject(props) {
   const description = props.children;
   const tags = props.tags || [];
   const githubRepo = props.githubRepo;
+  const liveLink = props.liveLink;
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
@@ -48,11 +53,11 @@ function AltProject(props) {
 
         <Icons>
           <HoverButtonStyled href={githubRepo}>
-            <FontAwesomeIcon icon={faGithub} />
+            <Icon icon={faGithub} />
           </HoverButtonStyled>
 
-          <HoverButtonStyled href={githubRepo}>
-            <FontAwesomeIcon icon={faDesktop} />
+          <HoverButtonStyled href={liveLink}>
+            <Icon icon={faDesktop} />
           </HoverButtonStyled>
         </Icons>
 

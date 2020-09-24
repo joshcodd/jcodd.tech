@@ -46,7 +46,7 @@ const SpaceItem = styled.img`
   animation: ${spaceEntry} 0.5s;
 
   @media (max-width: 700px) {
-    transition: transform 0.4s linear;
+    transition: transform 0.3s linear;
   }
 `;
 
@@ -159,7 +159,7 @@ function SpaceScene(props) {
         src="/space/asteroid.png"
         alt="Asteroid"
         style={{
-          transform: `translate(-${parallax * 0.7}px, ${parallax * 0.7}px) `,
+          transform: `translate(-${parallax * 0.7}px, ${parallax * 0.8}px) `,
         }}
       />
 

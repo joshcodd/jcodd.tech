@@ -7,6 +7,7 @@
       "alt": "Listening Habits App",
       "tags": ["JavaScript", "React", "Node.js", "Express", "Spotify Web API"],
       "githubRepo": "https://github.com/joshcodd/listening-habits",
+      "liveLink": "https://listening-habits.herokuapp.com/",
       "float": "right"
     },
     {
@@ -16,6 +17,7 @@
       "alt": "Sorting Visualizer App",
       "tags": ["JavaScript", "React"],
       "githubRepo": "https://github.com/joshcodd/sorting-visualizer",
+      "liveLink": "https://joshcodd.github.io/sorting-visualizer/",
       "float": "left"
     }
   ],
@@ -24,7 +26,8 @@
       "title": "jcodd.tech",
       "description": "You're currently looking at this project! I built this website using React to use as a CV. When building this application I decided to learn about styled-components and Next.js.",
       "tags": ["Javascript", "React", "Next.js"],
-      "githubRepo": "https://github.com/joshcodd/jcodd.tech"
+      "githubRepo": "https://github.com/joshcodd/jcodd.tech",
+      "liveLink": "https://jcodd.tech"
     }
   ]
 }

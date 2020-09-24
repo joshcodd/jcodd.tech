@@ -71,6 +71,10 @@ const ProjectTagContainer = styled.div`
   }
 `;
 
+const Icon = styled(FontAwesomeIcon)`
+  opacity: 0.8;
+`;
+
 function TopProject(props) {
   const textFloat = props.float;
   const imageFloat = textFloat === "right" ? "left" : "right";
@@ -79,6 +83,7 @@ function TopProject(props) {
   const description = props.children;
   const tags = props.tags || [];
   const githubRepo = props.githubRepo;
+  const liveLink = props.liveLink;
   const alt = props.alt;
 
   return (
@@ -96,11 +101,11 @@ function TopProject(props) {
 
             <Icons>
               <HoverButtonStyled href={githubRepo}>
-                <FontAwesomeIcon icon={faGithub} />
+                <Icon icon={faGithub} />
               </HoverButtonStyled>
 
-              <HoverButtonStyled href={githubRepo}>
-                <FontAwesomeIcon icon={faDesktop} />
+              <HoverButtonStyled href={liveLink}>
+                <Icon icon={faDesktop} />
               </HoverButtonStyled>
             </Icons>
           </ProjectTitle>
