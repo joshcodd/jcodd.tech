@@ -70,10 +70,8 @@ function SideBarMenu(props) {
           </Link>
         </NavItem>
 
-        <NavItem onClick={handleClick}>
-          <Link href="/#">
-            <Anchor>CV</Anchor>
-          </Link>
+        <NavItem onClick={() => handleClick("CV.pdf")}>
+          <Anchor>CV</Anchor>
         </NavItem>
 
         <NavItem onClick={() => handleClick("https://github.com/joshcodd")}>

@@ -102,8 +102,8 @@ function NavBar(props) {
           <HoverSplit href={"/#projects"}>PROJECTS</HoverSplit>
         </NavItem>
         <NavItem>
-          <HoverSplit href={"/#"}>
-            <BoxLink>CV</BoxLink>
+          <HoverSplit href={""}>
+            <BoxLink onClick={() => window.open("CV.pdf")}>CV</BoxLink>
           </HoverSplit>
         </NavItem>
       </NavList>
