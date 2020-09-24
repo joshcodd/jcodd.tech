@@ -51,7 +51,7 @@ const ProjectTitle = styled.h2`
 `;
 
 const HoverButtonStyled = styled(HoverButton)`
-  font-size: 25px;
+  font-size: 23px;
   padding: 7px;
   line-height: 25px;
 `;
