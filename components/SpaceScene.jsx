@@ -44,6 +44,10 @@ const SpaceItem = styled.img`
   position: absolute;
   transition: transform 0.2s linear;
   animation: ${spaceEntry} 0.5s;
+
+  @media (max-width: 500px) {
+    transition: transform 0.5s linear;
+  }
 `;
 
 const Planet = styled(SpaceItem)`
@@ -109,10 +113,10 @@ function SpaceScene(props) {
   const [parallax, setParallax] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", throttle(handleParallax, 200));
+    window.addEventListener("scroll", throttle(handleParallax, 150));
 
     return () => {
-      window.removeEventListener("scroll", throttle(handleParallax, 200));
+      window.removeEventListener("scroll", throttle(handleParallax, 150));
     };
   }, []);
 
