@@ -45,8 +45,8 @@ const SpaceItem = styled.img`
   transition: transform 0.2s linear;
   animation: ${spaceEntry} 0.5s;
 
-  @media (max-width: 500px) {
-    transition: transform 0.5s linear;
+  @media (max-width: 700px) {
+    transition: transform 0.4s linear;
   }
 `;
 

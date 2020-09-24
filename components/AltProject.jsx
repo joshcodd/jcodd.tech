@@ -5,7 +5,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import HoverButton from "./HoverButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
+import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 
 const AltProjectContainer = styled.div`
   width: 90%;
@@ -52,7 +52,7 @@ function AltProject(props) {
           </HoverButtonStyled>
 
           <HoverButtonStyled href={githubRepo}>
-            <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+            <FontAwesomeIcon icon={faDesktop} />
           </HoverButtonStyled>
         </Icons>
 
