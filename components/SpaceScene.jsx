@@ -46,7 +46,7 @@ const SpaceItem = styled.img`
   animation: ${spaceEntry} 0.5s;
 
   @media (max-width: 500px) {
-    transition: transform 1s linear;
+    transition: transform 0.5s linear;
   }
 `;
 
@@ -113,10 +113,10 @@ function SpaceScene(props) {
   const [parallax, setParallax] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleParallax);
+    window.addEventListener("scroll", throttle(handleParallax, 20));
 
     return () => {
-      window.removeEventListener("scroll", handleParallax);
+      window.removeEventListener("scroll", throttle(handleParallax, 20));
     };
   }, []);
 
@@ -143,7 +143,7 @@ function SpaceScene(props) {
         src="/space/satellite.svg"
         alt="Satellite"
         style={{
-          transform: `translate(${parallax * 0.5}px, ${parallax * 0.8}px) `,
+          transform: `translate(${parallax * 0.5}px, ${parallax * 0.7}px) `,
         }}
       />
 
@@ -159,7 +159,7 @@ function SpaceScene(props) {
         src="/space/asteroid.png"
         alt="Asteroid"
         style={{
-          transform: `translate(-${parallax * 0.9}px, ${parallax * 0.9}px) `,
+          transform: `translate(-${parallax * 0.7}px, ${parallax * 0.7}px) `,
         }}
       />
 
