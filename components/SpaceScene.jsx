@@ -109,10 +109,10 @@ function SpaceScene(props) {
   const [parallax, setParallax] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", throttle(handleParallax, 0));
+    window.addEventListener("scroll", throttle(handleParallax, 200));
 
     return () => {
-      window.removeEventListener("scroll", throttle(handleParallax, 0));
+      window.removeEventListener("scroll", throttle(handleParallax, 200));
     };
   }, []);
 
