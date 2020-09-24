@@ -21,8 +21,8 @@ const HoverButtonStyled = styled(HoverButton)`
   position: relative;
   top: 1px;
   padding: 5px;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 20px;
 `;
 
 const Icons = styled.span`
