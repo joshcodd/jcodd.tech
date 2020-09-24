@@ -5,6 +5,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import HoverButton from "./HoverButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
 
 const TopProjectContainer = styled.div`
   width: 100%;
@@ -46,17 +47,22 @@ const ProjectContent = styled.div`
 
 const ProjectTitle = styled.h2`
   display: inline-block;
+  margin-right: 15px;
 `;
 
 const HoverButtonStyled = styled(HoverButton)`
-  font-size: 27px;
+  font-size: 25px;
   padding: 7px;
-  margin-left: 10px;
-  line-height: 27px;
+  line-height: 25px;
 
   @media (max-width: 775px) {
     float: right;
   }
+`;
+
+const Icons = styled.span`
+  white-space: nowrap;
+  margin-left: 15px;
 `;
 
 const ProjectDescription = styled.p`
@@ -91,9 +97,16 @@ function TopProject(props) {
         <ProjectContent float={textFloat}>
           <ProjectTitle>
             {title}
-            <HoverButtonStyled float={imageFloat} href={githubRepo}>
-              <FontAwesomeIcon icon={faGithub} />
-            </HoverButtonStyled>
+
+            <Icons>
+              <HoverButtonStyled href={githubRepo}>
+                <FontAwesomeIcon icon={faGithub} />
+              </HoverButtonStyled>
+
+              <HoverButtonStyled href={githubRepo}>
+                <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+              </HoverButtonStyled>
+            </Icons>
           </ProjectTitle>
 
           <ProjectDescription float={textFloat}>

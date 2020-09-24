@@ -5,6 +5,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import HoverButton from "./HoverButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
 
 const AltProjectContainer = styled.div`
   width: 90%;
@@ -20,9 +21,13 @@ const HoverButtonStyled = styled(HoverButton)`
   position: relative;
   top: 1px;
   padding: 5px;
-  margin-left: 10px;
   font-size: 22px;
   line-height: 22px;
+`;
+
+const Icons = styled.span`
+  white-space: nowrap;
+  margin-left: 15px;
 `;
 
 const ProjectDescription = styled.p`
@@ -40,9 +45,16 @@ function AltProject(props) {
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
       <AltProjectContainer>
         <h3 style={{ display: "inline-block" }}>{title}</h3>
-        <HoverButtonStyled href={githubRepo}>
-          <FontAwesomeIcon icon={faGithub} />
-        </HoverButtonStyled>
+
+        <Icons>
+          <HoverButtonStyled href={githubRepo}>
+            <FontAwesomeIcon icon={faGithub} />
+          </HoverButtonStyled>
+
+          <HoverButtonStyled href={githubRepo}>
+            <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+          </HoverButtonStyled>
+        </Icons>
 
         <ProjectDescription>{description}</ProjectDescription>
 
