@@ -25,7 +25,7 @@ const RocketStyled = styled(Rocket)`
   position: absolute;
   transform: rotate(-30deg);
   height: 65vh;
-  max-height: 800px;
+  max-height: 700px;
   width: auto;
   right: 15vw;
   top: 17.5vh;

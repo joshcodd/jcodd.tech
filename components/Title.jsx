@@ -21,19 +21,19 @@ const SpaceStyled = styled(SpaceScene)`
 
 const TextContainer = styled.div`
   position: absolute;
-  display: inline-block;
   margin-left: 15vw;
   top: 39vh;
-  width: 48%;
-  max-width: 450px;
+  width: 45%;
+  max-width: 600px;
   float: left;
 
   @media (max-width: 1050px) {
     top: 60vh;
     margin-left: 10vw;
+    width: 50%;
   }
 
-  @media (max-width: 630px) {
+  @media (max-width: 600px) {
     margin-left: 5%;
     width: 75%;
   }
@@ -44,14 +44,7 @@ const Description = styled.p`
   top: -5px;
   opacity: 0.9;
   margin: 10px 0 15px 0;
-
-  @media (max-width: 630px) {
-    width: 65%;
-  }
-
-  @media (max-width: 450px) {
-    width: 100%;
-  }
+  width: 100%;
 `;
 
 const Email = styled.a`
@@ -65,15 +58,10 @@ const Email = styled.a`
   border-radius: 3px;
   display: inline-block;
   text-decoration: none;
-
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 
   :hover {
     transform: scale(1.15);
-    background-color: #2f313a;
   }
 `;
 

@@ -14,10 +14,6 @@ const Navbar = styled.div`
   background-color: white;
   background: linear-gradient(to top, rgba(255, 255, 255, 0), #ffffff 100%);
   z-index: 150;
-
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 `;
 
@@ -46,9 +42,6 @@ const NavItem = styled.li`
 const BoxLink = styled.div`
   padding: 0px 30px;
   border: 1px solid #242424;
-  -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 
   ${NavItem}:hover & {

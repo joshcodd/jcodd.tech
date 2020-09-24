@@ -8,7 +8,6 @@ import data from "../content/aboutMe.json";
 const AboutContainer = styled.div`
   max-width: 950px;
   width: 75vw;
-  align-items: center;
   margin: 0px auto;
   padding: 150px 0px;
   overflow: hidden;
@@ -21,7 +20,6 @@ const AboutContainer = styled.div`
 const Title = styled.h1`
   font-size: 30px;
   font-weight: 500;
-  display: inline-block;
   float: right;
   width: 50%;
 

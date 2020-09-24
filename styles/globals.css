@@ -10,15 +10,12 @@ body {
   width: 100%;
   height: 100%;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
 
 a:hover {
   cursor: pointer;
-}
-
-mark {
-  background-color: #49cbe267;
 }
 
 h1 {

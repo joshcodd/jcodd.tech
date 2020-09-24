@@ -15,10 +15,6 @@ const HoverButtonStyled = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
     transition: all 0.4s;
   }
 
