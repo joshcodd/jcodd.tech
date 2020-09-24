@@ -46,7 +46,7 @@ const SpaceItem = styled.img`
   animation: ${spaceEntry} 0.5s;
 
   @media (max-width: 500px) {
-    transition: transform 0.15s linear;
+    transition: transform 0.1s linear;
   }
 `;
 
@@ -113,10 +113,10 @@ function SpaceScene(props) {
   const [parallax, setParallax] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", throttle(handleParallax, 80));
+    window.addEventListener("scroll", throttle(handleParallax, 75));
 
     return () => {
-      window.removeEventListener("scroll", throttle(handleParallax, 80));
+      window.removeEventListener("scroll", throttle(handleParallax, 75));
     };
   }, []);
 
