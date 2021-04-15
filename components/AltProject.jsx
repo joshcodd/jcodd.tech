@@ -59,7 +59,7 @@ function AltProject(props) {
 
           {isWeb && (
             <HoverButtonStyled href={liveLink}>
-              <Icon icon={faDesktop} size="s" style={{ fontSize: 18 }} />
+              <Icon icon={faDesktop} style={{ fontSize: 18 }} />
             </HoverButtonStyled>
           )}
         </Icons>
