@@ -30,6 +30,13 @@
       "liveLink": "https://github.com/joshcodd/Labyrinth/blob/master/README.md"
     },
     {
+      "title": "Zoom Lectures prototype",
+      "description": "A prototype for an improvement to video conferencing software, Zoom. When using Zoom for university, I observed an issue with the use of the chat feed during lectures, making it hard to interact with the lecturer. This prototype was built to be demonstrated as part of an assignment and features a live chat with the ability to upvote and downvote questions. Top questions are always displayed for all participants and can be spoken using text-to-speech.",
+      "tags": ["JavaScript", "React", "Firebase"],
+      "githubRepo": "https://github.com/joshcodd/zoom-prototype",
+      "liveLink": "https://joshcodd.github.io/zoom-prototype/"
+    },
+    {
       "title": "jcodd.tech",
       "description": "You're currently looking at this project! I built this website using React to use as a CV. When building this application I decided to learn about styled-components and Next.js.",
       "tags": ["Javascript", "React", "Next.js"],
