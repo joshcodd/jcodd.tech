@@ -45,7 +45,7 @@ function AltProject(props) {
   const tags = props.tags || [];
   const githubRepo = props.githubRepo;
   const liveLink = props.liveLink;
-  const isWeb = props.isWeb;
+  const isWeb = liveLink !== null;
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>

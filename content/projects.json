@@ -27,7 +27,7 @@
       "description": "An implementation of the board game Labyrinth using Java. This project was produced as coursework for CS-230: Software Development, in which I took the role of the project manager. This involved me organising how the project was going to be implemented, managing other members of the team and also developing the game myself. I learned a lot about building software as a team and improved my leadership skills. I also learned JaxaFx/GUI programming in Java. I found success in this project and role, achieving 100% in the assignment, along with receiving excellent feedback.",
       "tags": ["Java", "JavaFX"],
       "githubRepo": "https://github.com/joshcodd/Labyrinth",
-      "liveLink": "https://github.com/joshcodd/Labyrinth/blob/master/README.md"
+      "liveLink": null
     },
     {
       "title": "Zoom Lectures prototype",
