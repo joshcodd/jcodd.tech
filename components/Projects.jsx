@@ -73,6 +73,7 @@ function Projects() {
             tags={otherProject.tags}
             githubRepo={otherProject.githubRepo}
             liveLink={otherProject.liveLink}
+            isWeb={otherProject.isWeb}
           >
             {otherProject.description}
           </AltProject>
