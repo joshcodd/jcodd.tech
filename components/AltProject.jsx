@@ -57,7 +57,7 @@ function AltProject(props) {
           </HoverButtonStyled>
 
           <HoverButtonStyled href={liveLink}>
-            <Icon icon={faDesktop} />
+            <Icon icon={faDesktop} size="s" style={{ fontSize: 18 }} />
           </HoverButtonStyled>
         </Icons>
 
