@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import throttle from "lodash.throttle";
 
 const GlitchImageStyled = styled.canvas`
   width: 100%;
@@ -60,7 +61,7 @@ function GlitchImage(props) {
   //Update canvas when mouse moves.
   useEffect(() => {
     updateCanvas();
-    document.onmousemove = handleMouseMove;
+    document.onmousemove = throttle(handleMouseMove, 10);
   }, [mousePosition]);
 
   function updateCanvas() {
