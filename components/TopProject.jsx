@@ -105,7 +105,7 @@ function TopProject(props) {
               </HoverButtonStyled>
 
               <HoverButtonStyled href={liveLink}>
-                <Icon icon={faDesktop} />
+                <Icon icon={faDesktop} style={{ fontSize: 21 }} />
               </HoverButtonStyled>
             </Icons>
           </ProjectTitle>
