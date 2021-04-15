@@ -45,6 +45,7 @@ function AltProject(props) {
   const tags = props.tags || [];
   const githubRepo = props.githubRepo;
   const liveLink = props.liveLink;
+  const isWeb = props.isWeb;
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
@@ -56,9 +57,11 @@ function AltProject(props) {
             <Icon icon={faGithub} />
           </HoverButtonStyled>
 
-          <HoverButtonStyled href={liveLink}>
-            <Icon icon={faDesktop} size="s" style={{ fontSize: 18 }} />
-          </HoverButtonStyled>
+          {isWeb && (
+            <HoverButtonStyled href={liveLink}>
+              <Icon icon={faDesktop} size="s" style={{ fontSize: 18 }} />
+            </HoverButtonStyled>
+          )}
         </Icons>
 
         <ProjectDescription>{description}</ProjectDescription>
