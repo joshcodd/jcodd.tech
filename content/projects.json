@@ -1,6 +1,16 @@
 {
   "topProjects": [
     {
+      "title": "Volume Rendering",
+      "description": "A Java application for viewing CT scans using various volume rendering techniques. Viewing as a normal CT scan is possible, as well as rendering a range of Hounsfield Units using gradient shading and other methods. Some sample datasets and further information can be found in the Github Repository.",
+      "imageUrl": "volumerendering.gif",
+      "alt": "CT SCAN",
+      "tags": ["Java", "JavaFX"],
+      "githubRepo": "https://github.com/joshcodd/volume-rendering",
+      "liveLink": null,
+      "float": "right"
+    },
+    {
       "title": "Listening Habits",
       "description": "A web application for viewing Spotify data such as a user's top tracks, artists and genres. Track and artist data retrieved from Spotify Web API, with top genres then being calculated from this data. The front end is built with React, with a Node.js back end for authorization.",
       "imageUrl": "listeninghabits.jpg",
