@@ -18,16 +18,6 @@
       "tags": ["JavaScript", "React", "Node.js", "Express", "Spotify Web API"],
       "githubRepo": "https://github.com/joshcodd/listening-habits",
       "liveLink": "https://listening-habits.herokuapp.com/",
-      "float": "right"
-    },
-    {
-      "title": "Sorting Visualizer",
-      "description": "A web application to visualize various sorting algorithms. Collection size can be adjusted as well as the speed of the sort. I built this to revise sorting algorithms further and to learn React!",
-      "imageUrl": "sortingvisualizer.jpg",
-      "alt": "Sorting Visualizer App",
-      "tags": ["JavaScript", "React"],
-      "githubRepo": "https://github.com/joshcodd/sorting-visualizer",
-      "liveLink": "https://joshcodd.github.io/sorting-visualizer/",
       "float": "left"
     }
   ],
@@ -45,6 +35,13 @@
       "tags": ["JavaScript", "React", "Firebase"],
       "githubRepo": "https://github.com/joshcodd/zoom-prototype",
       "liveLink": "https://joshcodd.github.io/zoom-prototype/"
+    },
+    {
+      "title": "Sorting Visualizer",
+      "description": "A web application to visualize various sorting algorithms. Collection size can be adjusted as well as the speed of the sort. I built this to revise sorting algorithms further and to learn React!",
+      "tags": ["JavaScript", "React"],
+      "githubRepo": "https://github.com/joshcodd/sorting-visualizer",
+      "liveLink": "https://joshcodd.github.io/sorting-visualizer/"
     },
     {
       "title": "jcodd.tech",
