@@ -85,6 +85,7 @@ function TopProject(props) {
   const githubRepo = props.githubRepo;
   const liveLink = props.liveLink;
   const alt = props.alt;
+  const isWeb = liveLink !== null;
 
   return (
     <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
@@ -104,9 +105,11 @@ function TopProject(props) {
                 <Icon icon={faGithub} />
               </HoverButtonStyled>
 
-              <HoverButtonStyled href={liveLink}>
-                <Icon icon={faDesktop} style={{ fontSize: 21 }} />
-              </HoverButtonStyled>
+              {isWeb && (
+                <HoverButtonStyled href={liveLink}>
+                  <Icon icon={faDesktop} style={{ fontSize: 21 }} />
+                </HoverButtonStyled>
+              )}
             </Icons>
           </ProjectTitle>
 
