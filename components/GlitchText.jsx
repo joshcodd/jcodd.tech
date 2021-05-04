@@ -8,6 +8,7 @@ const GlitchTextContainer = styled.h1`
 const ColourSplit = styled.span`
   position: absolute;
   left: 0;
+  top: 0;
   mix-blend-mode: multiply;
   color: transparent;
 `;
