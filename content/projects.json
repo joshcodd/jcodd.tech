@@ -6,7 +6,7 @@
       "imageUrl": "iridescence.gif",
       "alt": "Iridescence app demo",
       "tags": ["C++", "OpenGL", "Dear ImGui"],
-      "githubRepo": "https://github.com/joshcodd/volume-rendering",
+      "githubRepo": "https://github.com/joshcodd/iridescence",
       "liveLink": null,
       "float": "left"
     },
