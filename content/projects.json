@@ -1,6 +1,26 @@
 {
   "topProjects": [
     {
+      "title": "Iridescence",
+      "description": "Iridescence is a Ray Tracing engine that I have been working on since May 2021. As of December 2021, Iridescence can perform direct lighting Ray Tracing to render scenes consisting of millions of triangles at over 15 FPS utilising just the CPU. This speed is obtained by using an acceleration data structure in the form of a KD-Tree. Scenes can also be rasterised using OpenGl to provide GPU acceleration, allowing real-time previewing of a scene. This rasterised preview ensures Iridescence is always interactive, even when more complex light transport algorithms are implemented in the future. Currently, I am implementing Path Tracing to achieve physically-based global illumination to render photo-realistic images. The future of Iridescene involves exploring various Bidirectional Reflectance Distribution Functions such as the Disney principled BRDF.",
+      "imageUrl": "iridescence.gif",
+      "alt": "Iridescence app demo",
+      "tags": ["C++", "OpenGL", "Dear ImGui"],
+      "githubRepo": "https://github.com/joshcodd/volume-rendering",
+      "liveLink": null,
+      "float": "left"
+    },
+    {
+      "title": "Post Office",
+      "description": "Post Office is a blog-like social networking application where each user has their own blog to which they can post images and text-based media. Users can interact with other users' posts and comments by liking and commenting on these items. Real-time push notifications using WebSockets and mail notifications are implemented for these interactions. Multiple levels of authentication are present for both user and admin accounts, with users also being able to reset their forgotten passwords. Post Office uses Laravel for its back-end and a mixture of Blade and Vue for the user interface. Heroku hosts the application, so the initial load can take some time to start the server.",
+      "imageUrl": "post-office.gif",
+      "alt": "Post Office web app demo",
+      "tags": ["Laravel", "PHP", "Vue", "Websockets"],
+      "githubRepo": "https://github.com/joshcodd/post-office",
+      "liveLink": "https://post0ffice.herokuapp.com/",
+      "float": "right"
+    },
+    {
       "title": "Volume Rendering",
       "description": "A Java application for viewing CT scans using various volume rendering techniques. Viewing as a normal CT scan is possible, as well as rendering a range of Hounsfield Units using gradient shading and other methods. Some sample datasets and further information can be found in the Github Repository.",
       "imageUrl": "volumerendering.gif",
@@ -8,20 +28,17 @@
       "tags": ["Java", "JavaFX"],
       "githubRepo": "https://github.com/joshcodd/volume-rendering",
       "liveLink": null,
-      "float": "right"
-    },
-    {
-      "title": "Listening Habits",
-      "description": "A web application for viewing Spotify data such as a user's top tracks, artists and genres. Track and artist data retrieved from Spotify Web API, with top genres then being calculated from this data. The front end is built with React, with a Node.js back end for authorization.",
-      "imageUrl": "listeninghabits.jpg",
-      "alt": "Listening Habits App",
-      "tags": ["JavaScript", "React", "Node.js", "Express", "Spotify Web API"],
-      "githubRepo": "https://github.com/joshcodd/listening-habits",
-      "liveLink": "https://listening-habits.herokuapp.com/",
       "float": "left"
     }
   ],
   "otherProjects": [
+    {
+      "title": "Listening Habits",
+      "description": "A web application for viewing Spotify data such as a user's top tracks, artists and genres. Track and artist data retrieved from Spotify Web API, with top genres then being calculated from this data. The front end is built with React, with a Node.js back end for authorization.",
+      "tags": ["JavaScript", "React", "Node.js", "Express", "Spotify Web API"],
+      "githubRepo": "https://github.com/joshcodd/listening-habits",
+      "liveLink": "https://listening-habits.herokuapp.com/"
+    },
     {
       "title": "Labyrinth",
       "description": "An implementation of the board game Labyrinth using Java. This project was produced as coursework for CS-230: Software Development, in which I took the role of the project manager. This involved me organising how the project was going to be implemented, managing other members of the team and also developing the game myself. I learned a lot about building software as a team and improved my leadership skills. I also learned JaxaFx/GUI programming in Java. I found success in this project and role, achieving 100% in the assignment, along with receiving excellent feedback.",
