@@ -12,10 +12,10 @@
     },
     {
       "title": "Post Office",
-      "description": "Post Office is a blog-like social networking application where each user has their own blog to which they can post images and text-based media. Users can interact with other users' posts and comments by liking and commenting on these items. Real-time push notifications using WebSockets and mail notifications are implemented for these interactions. Multiple levels of authentication are present for both user and admin accounts, with users also being able to reset their forgotten passwords. Post Office uses Laravel for its back-end and a mixture of Blade and Vue for the user interface. Heroku hosts the application, so the initial load can take some time to start the server.",
+      "description": "Post Office is a blog-like social networking application where each user has their own blog to which they can post images and text-based media. Users can interact with other users' posts and comments by liking and commenting on these items. Real-time push notifications using WebSockets and mail notifications are implemented for these interactions. Multiple levels of authentication are present for both user and admin accounts, with users also being able to reset their forgotten passwords. Post Office uses Laravel for its back-end and a mixture of Blade and Vue for the user interface. Heroku hosts the application, so the initial load can take some time to start the server. Images are stored using Amazon S3",
       "imageUrl": "post-office.gif",
       "alt": "Post Office web app demo",
-      "tags": ["Laravel", "PHP", "Vue", "Websockets"],
+      "tags": ["Laravel", "PHP", "Vue", "Websockets", "AWS"],
       "githubRepo": "https://github.com/joshcodd/post-office",
       "liveLink": "https://post0ffice.herokuapp.com/",
       "float": "right"
